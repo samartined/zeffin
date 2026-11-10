@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/chat.conversation.json",
+  "title": "chat.conversation",
+  "description": "One conversation, new or changed.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.conversation"
+    },
+    "item": {
+      "$ref": "../defs.json#/$defs/conversation"
+    }
+  },
+  "required": [
+    "type",
+    "item"
+  ],
+  "additionalProperties": false
+}

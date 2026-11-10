@@ -1,0 +1,15 @@
+{
+  "n": 9,
+  "at": 1793000030.2,
+  "kind": "permission",
+  "id": "7d2e4a9c1f0b",
+  "tool": "Write",
+  "input": {
+    "file_path": "/home/demo/projects/zeffin-agent/ir/all-remotes.ir",
+    "content": "Filetype: IR signals file\nVersion: 1\n...(+70114)"
+  },
+  "deadline": 1793000150.2,
+  "always": false,
+  "rules": [],
+  "whole": false
+}

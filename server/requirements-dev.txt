@@ -1,0 +1,9 @@
+-r requirements.txt
+httpx==0.28.1
+pytest==9.1.1
+pytest-asyncio==1.4.0
+pytest-xdist==3.8.0  # runs the tests in four workers (addopts in pyproject.toml)
+jsonschema==4.25.1  # tests only: the /app schemas in docs/protocol/app
+hypothesis==6.170.12  # tests only: the properties in tests/test_properties.py and tests/test_malformed_messages.py
+mypy==2.4.0
+ruff==0.17.2

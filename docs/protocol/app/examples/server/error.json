@@ -1,0 +1,5 @@
+{
+  "type": "error",
+  "error": "not_connected",
+  "message": "The Flipper is not connected"
+}

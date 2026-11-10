@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/pairing/pair.request.json",
+  "title": "POST /app/pair, the request",
+  "description": "The scanned code, sent only after the TLS handshake proved the pinned key.",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "code"
+  ],
+  "additionalProperties": false
+}

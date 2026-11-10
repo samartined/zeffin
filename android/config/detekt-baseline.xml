@@ -1,0 +1,163 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ComplexCondition:AppGraph.kt$AppGraph$s.autoStart &amp;&amp; configured &amp;&amp; !relay.runtime.state.value.running &amp;&amp; relay.radio.state() == RadioState.ON</ID>
+    <ID>ComplexCondition:ChatStore.kt$ChatStore$!o.more || o.loading || pages.any { it.first == o.id &amp;&amp; it.second == Page.BEFORE }</ID>
+    <ID>ComplexCondition:Json.kt$(ch.isISOControl() &amp;&amp; ch != '\n' &amp;&amp; ch != '\t') || bidi</ID>
+    <ID>ComplexCondition:Present.kt$Present$offline == null &amp;&amp; gate != "stopped" &amp;&amp; !stale &amp;&amp; frame != null</ID>
+    <ID>ComplexCondition:PresentChat.kt$PresentChat$state.busyHere &amp;&amp; streaming.isEmpty() &amp;&amp; items.lastOrNull().let { it !is ChatItem.Ask &amp;&amp; it !is ChatItem.Plan &amp;&amp; !(it is ChatItem.Tool &amp;&amp; it.meta == t("running…", "en curso…")) }</ID>
+    <ID>CyclomaticComplexMethod:AppLink.kt$AppLink$internal fun handle(text: String)</ID>
+    <ID>CyclomaticComplexMethod:AppNav.kt$@Composable fun AppNav(graph: AppGraph, openRoute: MutableState&lt;String?&gt;)</ID>
+    <ID>CyclomaticComplexMethod:AppNav.kt$@Composable private fun PairRoute(graph: AppGraph, settings: AppSettings, tokens: Tokens, startManual: Boolean, onDone: () -&gt; Unit)</ID>
+    <ID>CyclomaticComplexMethod:AppNav.kt$@Composable private fun RelayServerRoute(graph: AppGraph, settings: AppSettings, tokens: Tokens, onBack: () -&gt; Unit)</ID>
+    <ID>CyclomaticComplexMethod:Attachments.kt$ImageScaler$fun prepare(name: String, type: String, bytes: ByteArray): Prepared</ID>
+    <ID>CyclomaticComplexMethod:BleFlipperConnector.kt$BleFlipperConnector$private suspend fun open(port: GattPort, step: (FlipperStep) -&gt; Unit): FlipperLink</ID>
+    <ID>CyclomaticComplexMethod:Chat.kt$@Composable private fun ChatItemContent(item: ChatItem, callbacks: ChatCallbacks)</ID>
+    <ID>CyclomaticComplexMethod:ChatProtocol.kt$ChatIn$fun conversation(o: JsonObject): Conversation?</ID>
+    <ID>CyclomaticComplexMethod:ChatProtocol.kt$ChatIn$fun event(o: JsonObject): ChatEvent?</ID>
+    <ID>CyclomaticComplexMethod:ChatProtocol.kt$ChatIn$fun status(m: JsonObject): ChatStatus</ID>
+    <ID>CyclomaticComplexMethod:ChatStore.kt$ChatStore$fun onMessage(m: JsonObject)</ID>
+    <ID>CyclomaticComplexMethod:Chrome.kt$@Composable fun UnderlineTextField( label: String, value: String, onValueChange: (String) -&gt; Unit, hint: String? = null, error: String? = null, secret: Boolean = false, mono: Boolean = true, keyboard: KeyboardType = KeyboardType.Uri, )</ID>
+    <ID>CyclomaticComplexMethod:Conversation.kt$@Composable fun ConversationScreen( home: HomeUi, chat: ConversationChat, frame: ByteArray?, orientation: Int, landscape: Boolean, large: Boolean, onToggleScreen: () -&gt; Unit, onBack: () -&gt; Unit, )</ID>
+    <ID>CyclomaticComplexMethod:Conversations.kt$@OptIn(ExperimentalFoundationApi::class) @Composable fun ConversationsScreen( ui: ConversationsUi, nav: NavUi, searching: Boolean, onTab: (Tab) -&gt; Unit, onFavorites: (Boolean) -&gt; Unit = {}, onNew: () -&gt; Unit = {}, onOpen: (String) -&gt; Unit = {}, onActions: (String) -&gt; Unit = {}, onSearch: () -&gt; Unit = {}, onQuery: (String) -&gt; Unit = {}, onFilters: () -&gt; Unit = {}, )</ID>
+    <ID>CyclomaticComplexMethod:Markdown.kt$Markdown$private fun AnnotatedString.Builder.appendInline(parent: Node)</ID>
+    <ID>CyclomaticComplexMethod:Markdown.kt$Markdown$private fun block(node: Node): Block?</ID>
+    <ID>CyclomaticComplexMethod:Markdown.kt$MarkdownDraw$@Composable fun block(b: Markdown.Block, last: Boolean)</ID>
+    <ID>CyclomaticComplexMethod:Present.kt$Present$fun diagnosticsUi(relay: RelayState, link: AppLinkState, log: List&lt;LogEntry&gt;, nowMs: Long, diagAt: Long?): DiagnosticsUi</ID>
+    <ID>CyclomaticComplexMethod:Present.kt$Present$fun feedItem(a: AuditItem): FeedItem</ID>
+    <ID>CyclomaticComplexMethod:Present.kt$Present$fun homeUi(relay: RelayState, link: AppLinkState, frame: Frame?, settings: AppSettings, pairing: PairingRecord?, nowMs: Long): HomeUi</ID>
+    <ID>CyclomaticComplexMethod:Present.kt$Present$fun relayUi(relay: RelayState, link: AppLinkState, settings: AppSettings, pairing: PairingRecord?, warnings: Warnings, lastLog: LogEntry?, nowMs: Long): RelayUi</ID>
+    <ID>CyclomaticComplexMethod:Present.kt$Present$fun serverUi(link: AppLinkState, settings: AppSettings, pairing: PairingRecord?): ServerUi</ID>
+    <ID>CyclomaticComplexMethod:Present.kt$Present$private fun flipperRow(s: RelayState, name: String): Pair&lt;String, Tone?&gt;</ID>
+    <ID>CyclomaticComplexMethod:Present.kt$Present$private fun phoneLine(p: PhoneEvent): LogLineUi</ID>
+    <ID>CyclomaticComplexMethod:Present.kt$Present$private fun problemBanner(s: RelayState, nowMs: Long): BannerUi?</ID>
+    <ID>CyclomaticComplexMethod:PresentChat.kt$PresentChat$fun chatUi(state: ChatState, streaming: Map&lt;String, String&gt;): ChatUi</ID>
+    <ID>CyclomaticComplexMethod:PresentChat.kt$PresentChat$fun errorText(e: ChatError, remote: PresentRemote? = null): String</ID>
+    <ID>CyclomaticComplexMethod:PresentConversations.kt$PresentConversations$fun conversationsUi(state: ChatState, favorites: Boolean, filters: ConversationFilters, query: String, nowMs: Long): ConversationsUi</ID>
+    <ID>CyclomaticComplexMethod:RelayEngine.kt$RelayEngine$private suspend fun cycle()</ID>
+    <ID>CyclomaticComplexMethod:RelayEngine.kt$RelayEngine$private suspend fun flipperLink(flipper: FlipperChoice): FlipperLink?</ID>
+    <ID>CyclomaticComplexMethod:RelayStrings.kt$RelayStrings.En$override fun flipper(failure: FlipperFailure)</ID>
+    <ID>CyclomaticComplexMethod:RelayStrings.kt$RelayStrings.En$override fun problem(problem: Problem, detail: Detail?)</ID>
+    <ID>CyclomaticComplexMethod:RelayStrings.kt$RelayStrings.Es$override fun flipper(failure: FlipperFailure)</ID>
+    <ID>CyclomaticComplexMethod:RelayStrings.kt$RelayStrings.Es$override fun problem(problem: Problem, detail: Detail?)</ID>
+    <ID>EmptyElseBlock:AppNav.kt$if (pick != null) graph.chat.settings(mode = pick)</ID>
+    <ID>EmptyElseBlock:AppNav.kt$if (pick != null) graph.chat.settings(model = pick)</ID>
+    <ID>EmptyElseBlock:AppNav.kt$if (pick != null) graph.chat.settings(permissionTimeoutS = pick)</ID>
+    <ID>EmptyElseBlock:AppNav.kt$if (pick != null) setFilters(filters.copy(period = pick))</ID>
+    <ID>EmptyElseBlock:AppNav.kt$if (pick != null) setFilters(filters.copy(sort = pick))</ID>
+    <ID>EmptyElseBlock:Attachments.kt$ImageScaler$if (scale &lt; 1f) postScale(scale, scale)</ID>
+    <ID>EmptyElseBlock:Markdown.kt$Markdown$if (length &gt; 0) append('\n')</ID>
+    <ID>LongMethod:AppNav.kt$@Composable fun AppNav(graph: AppGraph, openRoute: MutableState&lt;String?&gt;)</ID>
+    <ID>LongMethod:AppNav.kt$@Composable private fun PairRoute(graph: AppGraph, settings: AppSettings, tokens: Tokens, startManual: Boolean, onDone: () -&gt; Unit)</ID>
+    <ID>LongMethod:Conversation.kt$@Composable fun ConversationScreen( home: HomeUi, chat: ConversationChat, frame: ByteArray?, orientation: Int, landscape: Boolean, large: Boolean, onToggleScreen: () -&gt; Unit, onBack: () -&gt; Unit, )</ID>
+    <ID>LongMethod:EffortDial.kt$@Composable fun EffortDial( levels: List&lt;Effort&gt;, level: Effort, name: (Effort) -&gt; String, description: (Effort) -&gt; String, onLevel: (Effort) -&gt; Unit, modifier: Modifier = Modifier, dragging: Boolean = false, )</ID>
+    <ID>LongMethod:Present.kt$Present$fun homeUi(relay: RelayState, link: AppLinkState, frame: Frame?, settings: AppSettings, pairing: PairingRecord?, nowMs: Long): HomeUi</ID>
+    <ID>LongMethod:Present.kt$Present$fun relayUi(relay: RelayState, link: AppLinkState, settings: AppSettings, pairing: PairingRecord?, warnings: Warnings, lastLog: LogEntry?, nowMs: Long): RelayUi</ID>
+    <ID>LongMethod:PresentChat.kt$PresentChat$fun chatUi(state: ChatState, streaming: Map&lt;String, String&gt;): ChatUi</ID>
+    <ID>LongMethod:RelayEngine.kt$RelayEngine$private suspend fun cycle()</ID>
+    <ID>LongParameterList:Agent.kt$(ui: AgentUi, notify: NotifySettingsUi, onBack: () -&gt; Unit, onSheet: (AgentSheet) -&gt; Unit, notifyCallbacks: NotifyCallbacks = NotifyCallbacks(), scroll: ScrollState = rememberScrollState())</ID>
+    <ID>LongParameterList:Basics.kt$( modifier: Modifier = Modifier, title: String? = null, state: Pair&lt;Tone, String&gt;? = null, headEnd: (@Composable RowScope.() -&gt; Unit)? = null, titleLines: Int = 1, /** Right after the title's text (an icon), before the state. */ titleEnd: (@Composable () -&gt; Unit)? = null, content: CardScope.() -&gt; Unit, )</ID>
+    <ID>LongParameterList:Basics.kt$( text: String, modifier: Modifier = Modifier, kind: ButtonKind = ButtonKind.PRIMARY, small: Boolean = false, enabled: Boolean = true, onClick: () -&gt; Unit, )</ID>
+    <ID>LongParameterList:Basics.kt$( text: String, style: TextStyle = FbType.body, modifier: Modifier = Modifier, color: Color = style.color, maxLines: Int = Int.MAX_VALUE, align: TextAlign? = null, )</ID>
+    <ID>LongParameterList:Basics.kt$( title: String, desc: String? = null, value: String? = null, checked: Boolean? = null, descContent: (@Composable () -&gt; Unit)? = null, descMaxLines: Int = Int.MAX_VALUE, onClick: (() -&gt; Unit)? = null, onCheckedChange: ((Boolean) -&gt; Unit)? = null, )</ID>
+    <ID>LongParameterList:BleFlipperConnector.kt$BleFlipperConnector$( private val radio: BleRadio, private val address: String, private val knownName: String, private val log: RelayLog, /** Set when the Flipper dropped the link during the MTU exchange: the next attempt skips it, the one after tries again. */ private val skipMtu: AtomicBoolean, private val scope: CoroutineScope = defaultScope(), /** The words for the log, in the user's language at the time. */ private val strings: () -&gt; RelayStrings = { RelayStrings.En }, )</ID>
+    <ID>LongParameterList:BleFlipperConnector.kt$BleFlipperLink$( private val port: GattPort, override val name: String, @Volatile override var mtu: Int, private val credits: CreditWriter, override val received: Channel&lt;ByteArray&gt;, overflow: CompletableDeferred&lt;FlipperException&gt;, scope: CoroutineScope, )</ID>
+    <ID>LongParameterList:Chat.kt$(a: AttachmentUi, modifier: Modifier = Modifier, onRemove: (() -&gt; Unit)? = null, progress: Float? = null, thumb: (@Composable () -&gt; Unit)? = null, error: Boolean = false)</ID>
+    <ID>LongParameterList:Chat.kt$(title: String, options: List&lt;OptionUi&lt;T&gt;&gt;, note: String?, top: Dp, width: Dp?, onPick: (T) -&gt; Unit, onBack: () -&gt; Unit, onDismiss: () -&gt; Unit)</ID>
+    <ID>LongParameterList:Chat.kt$(title: String, sub: String, text: String, stop: String, keep: String, onStop: () -&gt; Unit, onKeep: () -&gt; Unit)</ID>
+    <ID>LongParameterList:Chat.kt$(title: String, text: String?, meta: String?, error: Boolean, screen: Frame?, remote: String? = null)</ID>
+    <ID>LongParameterList:Chat.kt$(ui: ConversationSettingsUi, top: Dp, width: Dp?, onSheet: (ChatSheet) -&gt; Unit, onEffort: (Effort) -&gt; Unit, labels: (Effort) -&gt; Pair&lt;String, String&gt;, dragging: Boolean = false, canDelete: Boolean = false, onRemote: (Boolean) -&gt; Unit = {})</ID>
+    <ID>LongParameterList:ChatFixtures.kt$ChatFixtures$(id: Int, title: String, last: String, updated: Double, favorite: Boolean = false, pinned: Boolean = false, turns: Int = 4, attachments: Int = 0)</ID>
+    <ID>LongParameterList:Chrome.kt$( label: String, value: String, onValueChange: (String) -&gt; Unit, hint: String? = null, error: String? = null, secret: Boolean = false, mono: Boolean = true, keyboard: KeyboardType = KeyboardType.Uri, )</ID>
+    <ID>LongParameterList:Chrome.kt$(title: String, sub: String? = null, top: Dp, width: Dp? = null, onBack: (() -&gt; Unit)? = null, onDismiss: () -&gt; Unit, content: @Composable ColumnScope.() -&gt; Unit)</ID>
+    <ID>LongParameterList:Conversation.kt$( home: HomeUi, chat: ConversationChat, frame: ByteArray?, orientation: Int, landscape: Boolean, large: Boolean, onToggleScreen: () -&gt; Unit, onBack: () -&gt; Unit, )</ID>
+    <ID>LongParameterList:Conversation.kt$ConversationChat$( val ui: ChatUi, val draft: String, val callbacks: ChatCallbacks, val sheet: ChatSheet = ChatSheet.NONE, val onSheet: (ChatSheet) -&gt; Unit = {}, val onEffort: (Effort) -&gt; Unit = {}, val onModel: (String) -&gt; Unit = {}, val onMode: (Mode) -&gt; Unit = {}, /** Remote Control on or off in this conversation. */ val onRemote: (Boolean) -&gt; Unit = {}, val onLoadOlder: () -&gt; Unit = {}, /** Above the composer: the files attached to the next message. */ val tray: (@Composable () -&gt; Unit)? = null, /** The Attach sheet's content. */ val attachSheet: (@Composable BoxScope.() -&gt; Unit)? = null, /** The sheet of a tapped link. */ val linkSheet: (@Composable BoxScope.() -&gt; Unit)? = null, /** Deleting this conversation asks first; without it (an older server) the settings have no Delete. */ val deleteSheet: (@Composable BoxScope.() -&gt; Unit)? = null, /** Over everything: the image viewer. */ val overlay: (@Composable BoxScope.() -&gt; Unit)? = null, /** For screenshots: draw the effort dial while dragging, and the keyboard as open. */ val dialDragging: Boolean = false, val keyboardOpen: Boolean? = null, /** The agent's remote access as the server names it, for the turn-off sheet's words. */ val remote: dev.zeffin.link.RemoteCapability? = null, )</ID>
+    <ID>LongParameterList:Conversations.kt$( filters: ConversationFilters, sortName: String, periodName: String, count: Int, onChange: (ConversationFilters) -&gt; Unit, onSheet: (ConvSheet) -&gt; Unit, )</ID>
+    <ID>LongParameterList:Conversations.kt$( row: ConvRowUi, sub: String, onDismiss: () -&gt; Unit, onPin: () -&gt; Unit, onFavorite: () -&gt; Unit, onRename: () -&gt; Unit, onCopy: () -&gt; Unit, onDelete: (() -&gt; Unit)?, )</ID>
+    <ID>LongParameterList:Conversations.kt$( ui: ConversationsUi, nav: NavUi, searching: Boolean, onTab: (Tab) -&gt; Unit, onFavorites: (Boolean) -&gt; Unit = {}, onNew: () -&gt; Unit = {}, onOpen: (String) -&gt; Unit = {}, onActions: (String) -&gt; Unit = {}, onSearch: () -&gt; Unit = {}, onQuery: (String) -&gt; Unit = {}, onFilters: () -&gt; Unit = {}, )</ID>
+    <ID>LongParameterList:Device.kt$(ui: DeviceListUi, onBack: () -&gt; Unit, onRefresh: () -&gt; Unit, onUse: (DeviceUi) -&gt; Unit, onPairNew: () -&gt; Unit, onFix: (Fix) -&gt; Unit)</ID>
+    <ID>LongParameterList:EffortDial.kt$( levels: List&lt;Effort&gt;, level: Effort, name: (Effort) -&gt; String, description: (Effort) -&gt; String, onLevel: (Effort) -&gt; Unit, modifier: Modifier = Modifier, dragging: Boolean = false, )</ID>
+    <ID>LongParameterList:FlipperScreen.kt$( data: ByteArray?, orientation: Int, mode: ScreenMode, badge: String? = null, scale: Int = 2, description: String? = null, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:Home.kt$( ui: HomeUi, frame: ByteArray?, orientation: Int, landscape: Boolean, onPause: () -&gt; Unit, onResume: () -&gt; Unit, onOpenRelay: () -&gt; Unit, onOpenServer: () -&gt; Unit, onTab: (Tab) -&gt; Unit, last: LastConversationUi? = null, onOpenConversation: (String?) -&gt; Unit = {}, onNewConversation: () -&gt; Unit = {}, onAnswer: (String, PermissionAnswer) -&gt; Unit = { _, _ -&gt; }, )</ID>
+    <ID>LongParameterList:Markdown.kt$(text: String, color: Color = FbColors.ink, streaming: Boolean = false, modifier: Modifier = Modifier, onLink: (String) -&gt; Unit = {}, onCopy: (String) -&gt; Unit = {})</ID>
+    <ID>LongParameterList:Pair.kt$( manual: ManualUi?, banner: BannerUi?, onBack: () -&gt; Unit, onManual: () -&gt; Unit, onFix: (Fix) -&gt; Unit, onBase: (String) -&gt; Unit, onAppToken: (String) -&gt; Unit, onPhoneToken: (String) -&gt; Unit, onSave: () -&gt; Unit, pairing: String? = null, camera: @Composable () -&gt; Unit, )</ID>
+    <ID>LongParameterList:Present.kt$Present$(relay: RelayState, link: AppLinkState, frame: Frame?, settings: AppSettings, pairing: PairingRecord?, nowMs: Long)</ID>
+    <ID>LongParameterList:Present.kt$Present$(relay: RelayState, link: AppLinkState, settings: AppSettings, pairing: PairingRecord?, warnings: Warnings, lastLog: LogEntry?, nowMs: Long)</ID>
+    <ID>LongParameterList:Present.kt$Present.Companion$(version: String, android: String, relay: RelayState, link: AppLinkState, settings: AppSettings, pairing: PairingRecord?, log: List&lt;LogEntry&gt;)</ID>
+    <ID>LongParameterList:Relay.kt$( ui: RelayUi, onBack: () -&gt; Unit, onToggle: (Boolean) -&gt; Unit, onRetry: () -&gt; Unit, onFix: (Fix) -&gt; Unit, onServer: () -&gt; Unit, onDevice: () -&gt; Unit, onAutoStart: (Boolean) -&gt; Unit, onDiagnostics: () -&gt; Unit, )</ID>
+    <ID>LongParameterList:RelayEngine.kt$RelayEngine$( private val loadConfig: suspend () -&gt; ConfigState, private val backends: RelayBackends, private val runtime: RelayRuntime, private val log: RelayLog, private val appVersion: String, private val clock: Clock = Clock.System, random: Random = Random.Default, /** The words for the log, in the user's language at the time. */ private val strings: () -&gt; RelayStrings = { RelayStrings.En }, /** One log line per frame from the server with the BLE write time and the Flipper's first answers (the test app). */ private val rpcTiming: Boolean = false, )</ID>
+    <ID>LongParameterList:RelayEngine.kt$RelayEngine$( stage: Stage, problem: Problem? = null, detail: Detail? = null, serverSide: ServerSide? = null, flipperSide: FlipperSide? = null, quiet: Boolean = false, nextRetryAt: Long? = null, )</ID>
+    <ID>LongParameterList:RelayServer.kt$( ui: RelayServerUi, onBack: () -&gt; Unit, onUrl: (String) -&gt; Unit, onToken: (String) -&gt; Unit, onTest: () -&gt; Unit, onSave: () -&gt; Unit, )</ID>
+    <ID>LongParameterList:RelaySession.kt$RelaySession$( private val socket: PhoneSocket, private val link: FlipperLink, private val appVersion: String, private val onTraffic: (fromFlipper: Long, toFlipper: Long) -&gt; Unit = { _, _ -&gt; }, /** When set, one log line per frame from the server says how long BLE took and when the Flipper answered. */ private val timing: RelayLog? = null, private val clock: Clock = Clock.System, private val strings: () -&gt; RelayStrings = { RelayStrings.En }, )</ID>
+    <ID>LongParameterList:RelayStrings.kt$RelayStrings$(bytes: Int, writeMs: Long, replies: List&lt;Pair&lt;Long, Int&gt;&gt;, more: Boolean, largeChunks: Int, largeBytes: Int)</ID>
+    <ID>LongParameterList:ScreenshotTest.kt$ScreenshotTest$(name: String, relay: dev.zeffin.relay.RelayState, link: dev.zeffin.link.AppLinkState, frame: dev.zeffin.link.Frame? = F.frame, landscape: Boolean = false, chat: ChatState? = C.blocked())</ID>
+    <ID>LongParameterList:ScreenshotTest.kt$ScreenshotTest$(name: String, state: ChatState, streaming: Map&lt;String, String&gt; = emptyMap(), sheet: ChatSheet = ChatSheet.NONE, dragging: Boolean = false, landscape: Boolean = false, keyboard: Boolean = false, draft: String = "", tray: List&lt;Upload&gt; = emptyList(), large: Boolean = false, link: String? = null)</ID>
+    <ID>LongParameterList:Server.kt$( ui: ServerUi, choosingOrientation: Boolean, onBack: () -&gt; Unit, onRetry: () -&gt; Unit, onPair: () -&gt; Unit, onManual: () -&gt; Unit, onOrientation: () -&gt; Unit, onPickOrientation: (ScreenOrientation?) -&gt; Unit, onOpenView: () -&gt; Unit, onFix: (Fix) -&gt; Unit, )</ID>
+    <ID>LongParameterList:Settings.kt$(ui: SettingsUi, onRelay: () -&gt; Unit, onServer: () -&gt; Unit, onDiagnostics: () -&gt; Unit, onAbout: () -&gt; Unit, onLanguage: () -&gt; Unit, onTab: (Tab) -&gt; Unit, onAgent: () -&gt; Unit = {})</ID>
+    <ID>LoopWithTooManyJumpStatements:CreditWriter.kt$CreditWriter$while</ID>
+    <ID>LoopWithTooManyJumpStatements:Notifier.kt$Notifier$for</ID>
+    <ID>MatchingDeclarationName:AppNav.kt$Routes</ID>
+    <ID>MatchingDeclarationName:Conversation.kt$ConversationChat</ID>
+    <ID>MatchingDeclarationName:Icons.kt$FbIcons</ID>
+    <ID>MatchingDeclarationName:LinkHold.kt$LinkRelease</ID>
+    <ID>MatchingDeclarationName:Pair.kt$ManualUi</ID>
+    <ID>MatchingDeclarationName:QrCamera.kt$QrDecoder</ID>
+    <ID>MatchingDeclarationName:RelayServer.kt$RelayServerUi</ID>
+    <ID>NestedBlockDepth:FlipperScreen.kt$FlipperFrame$fun decode(data: ByteArray, orientation: Int): Pixels?</ID>
+    <ID>NestedBlockDepth:PresentChat.kt$PresentChat$fun chatUi(state: ChatState, streaming: Map&lt;String, String&gt;): ChatUi</ID>
+    <ID>ReturnCount:AndroidBle.kt$AndroidBleRadio$override fun state(): RadioState</ID>
+    <ID>ReturnCount:AppGraph.kt$AppGraph$private suspend fun server(): Pair&lt;okhttp3.HttpUrl, String&gt;?</ID>
+    <ID>ReturnCount:AppLink.kt$AppLink$internal fun handle(text: String)</ID>
+    <ID>ReturnCount:Attachments.kt$ImageScaler$fun prepare(name: String, type: String, bytes: ByteArray): Prepared</ID>
+    <ID>ReturnCount:ChatProtocol.kt$ChatIn$fun delta(m: JsonObject): Delta?</ID>
+    <ID>ReturnCount:ChatProtocol.kt$ChatIn$private fun frame(o: JsonObject): Frame?</ID>
+    <ID>ReturnCount:ChatStore.kt$ChatStore$fun onMessage(m: JsonObject)</ID>
+    <ID>ReturnCount:Conversation.kt$@Composable private fun BoxScope.ConversationSheets(chat: ConversationChat, bar: BarArea)</ID>
+    <ID>ReturnCount:Lang.kt$Lang.Companion$fun pick(tags: List&lt;String&gt;): Lang</ID>
+    <ID>ReturnCount:NotifyReceiver.kt$NotifyReceiver$override fun onReceive(context: Context, intent: Intent)</ID>
+    <ID>ReturnCount:PresentChat.kt$PresentChat$fun lastConversation(state: ChatState): LastConversationUi?</ID>
+    <ID>ReturnCount:PresentChat.kt$PresentChat$fun toolText(name: String, input: JsonElement?, attachments: Map&lt;String, String&gt;? = null): String?</ID>
+    <ID>ReturnCount:PresentConversations.kt$PresentConversations$fun matches(c: Conversation, filters: ConversationFilters, favoritesOnly: Boolean, query: String, nowMs: Long): Boolean</ID>
+    <ID>ReturnCount:RelayController.kt$RelayController$private suspend fun loadConfig(): ConfigState</ID>
+    <ID>ReturnCount:RelayEngine.kt$RelayEngine$private suspend fun cycle()</ID>
+    <ID>ReturnCount:RelayEngine.kt$RelayEngine$private suspend fun flipperLink(flipper: FlipperChoice): FlipperLink?</ID>
+    <ID>ReturnCount:RelayService.kt$RelayService$override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int</ID>
+    <ID>ReturnCount:Thumbnails.kt$Thumbnails$override suspend fun load(conversation: String, id: String, maxPx: Int): ImageBitmap?</ID>
+    <ID>SwallowedException:AppLink.kt$AppLink$e: Exception</ID>
+    <ID>SwallowedException:BleFlipperConnector.kt$BleFlipperLink$e: GattError</ID>
+    <ID>SwallowedException:NotifyService.kt$NotifyService$e: ForegroundServiceStartNotAllowedException</ID>
+    <ID>SwallowedException:NotifyService.kt$NotifyService.Companion$e: ForegroundServiceStartNotAllowedException</ID>
+    <ID>SwallowedException:OkHttpServer.kt$OkHttpServerChecker$e: Exception</ID>
+    <ID>SwallowedException:Pairing.kt$PairingQr.Companion$e: Exception</ID>
+    <ID>SwallowedException:QrCamera.kt$QrDecoder$e: Exception</ID>
+    <ID>SwallowedException:QrCamera.kt$QrDecoder$e: NotFoundException</ID>
+    <ID>ThrowsCount:Addresses.kt$Addresses$fun parseBase(input: String): HttpUrl</ID>
+    <ID>ThrowsCount:Pairing.kt$PairingQr.Companion$fun parse(text: String): PairingQr</ID>
+    <ID>TooGenericExceptionCaught:AppLink.kt$AppLink$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BleFlipperConnector.kt$BleFlipperConnector$e: Throwable</ID>
+    <ID>TooGenericExceptionCaught:OkHttpServer.kt$OkHttpServerChecker$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:Pairing.kt$PairingQr.Companion$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:QrCamera.kt$QrDecoder$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:RelayService.kt$RelayService$e: Exception</ID>
+    <ID>TooManyFunctions:AndroidBle.kt$AndroidGattPort : BluetoothGattCallbackGattPort</ID>
+    <ID>TooManyFunctions:AndroidNotifications.kt$AndroidNotifications : NotifySink</ID>
+    <ID>TooManyFunctions:AppLink.kt$AppLink</ID>
+    <ID>TooManyFunctions:AppNav.kt$dev.zeffin.ui.AppNav.kt</ID>
+    <ID>TooManyFunctions:Basics.kt$dev.zeffin.ui.components.Basics.kt</ID>
+    <ID>TooManyFunctions:Chat.kt$dev.zeffin.ui.screens.Chat.kt</ID>
+    <ID>TooManyFunctions:ChatProtocol.kt$ChatOut</ID>
+    <ID>TooManyFunctions:ChatStore.kt$ChatStore</ID>
+    <ID>TooManyFunctions:Chrome.kt$dev.zeffin.ui.components.Chrome.kt</ID>
+    <ID>TooManyFunctions:Json.kt$dev.zeffin.link.Json.kt</ID>
+    <ID>TooManyFunctions:Notifier.kt$Notifier</ID>
+    <ID>TooManyFunctions:Present.kt$Present</ID>
+    <ID>TooManyFunctions:PresentChat.kt$PresentChat</ID>
+    <ID>TooManyFunctions:PresentConversations.kt$PresentConversations</ID>
+    <ID>TooManyFunctions:RelayEngine.kt$RelayEngine</ID>
+    <ID>TooManyFunctions:RelayStrings.kt$RelayStrings</ID>
+    <ID>TooManyFunctions:RelayStrings.kt$RelayStrings$En : RelayStrings</ID>
+    <ID>TooManyFunctions:RelayStrings.kt$RelayStrings$Es : RelayStrings</ID>
+    <ID>UnusedParameter:RelayController.kt$RelayController$service: RelayService</ID>
+  </CurrentIssues>
+</SmellBaseline>

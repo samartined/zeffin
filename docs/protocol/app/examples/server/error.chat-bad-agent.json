@@ -1,0 +1,12 @@
+{
+  "type": "error",
+  "error": "bad_agent",
+  "data": {
+    "agents": [
+      "claude-code",
+      "opencode"
+    ]
+  },
+  "request": "chat.new",
+  "message": "chat.new failed: bad_agent"
+}

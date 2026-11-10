@@ -1,0 +1,9 @@
+{
+  "description": "A fixed P-256 public key (its private half was never kept), its pin and its fingerprint. Both sides' tests read this file: the server's tlskey.pin and tlskey.fingerprint, and the app's PinnedKey, must give these values.",
+  "spki_der_hex": "3059301306072a8648ce3d020106082a8648ce3d03010703420004b7a0fc559cf3c68c12ce2e1420a4e96b4ec2592b0dbecd4731852a6abbd4ee5865299e8b25bbe11d3eb79f3b0e5f3da1ef4d453942f42f891748d737847dd59c",
+  "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEt6D8VZzzxowSzi4UIKTpa07CWSsN\nvs1HMYUqarvU7lhlKZ6LJbvhHT63nzsOXz2h701FOUL0L4kXSNc3hH3VnA==\n-----END PUBLIC KEY-----\n",
+  "pin": "J7pCvj_X0luG9SgZ7rrB0TGpD72G8BVi5G3NaLsCPS8",
+  "pin_sha256_hex": "27ba42be3fd7d25b86f52819eebac1d131a90fbd86f01562e46dcd68bb023d2f",
+  "pin_standard_base64": "J7pCvj/X0luG9SgZ7rrB0TGpD72G8BVi5G3NaLsCPS8=",
+  "fingerprint": "27BA 42BE 3FD7 D25B 86F5"
+}

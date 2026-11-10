@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/pairing/cancel.request.json",
+  "title": "POST /app/pair/cancel, the request",
+  "description": "The phone gives up its waiting request.",
+  "type": "object",
+  "properties": {
+    "pairing": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "pairing"
+  ],
+  "additionalProperties": false
+}

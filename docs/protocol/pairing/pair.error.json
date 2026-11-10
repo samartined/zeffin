@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/pairing/pair.error.json",
+  "title": "POST /app/pair, refused",
+  "description": "401 bad_code (not a code of this pairing), 409 code_used (another request is waiting, or the code already paired), 410 code_expired (rotated out, or no pairing is open), 413 too_large.",
+  "type": "object",
+  "properties": {
+    "error": {
+      "enum": [
+        "bad_code",
+        "code_used",
+        "code_expired",
+        "too_large"
+      ]
+    }
+  },
+  "required": [
+    "error"
+  ],
+  "additionalProperties": false
+}

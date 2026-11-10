@@ -1,0 +1,110 @@
+{
+ "turn": {
+  "argv": [
+   "/opt/claude/bin/claude",
+   "-p",
+   "--output-format",
+   "stream-json",
+   "--verbose",
+   "--include-partial-messages",
+   "--resume",
+   "7f1d3c3e-1111-4222-8333-944455556666",
+   "--model",
+   "opus",
+   "--effort",
+   "high",
+   "--input-format",
+   "stream-json",
+   "--add-dir",
+   "<tmp>/state/attachments/7f1d3c3e-1111-4222-8333-944455556666",
+   "--permission-mode",
+   "plan",
+   "--setting-sources",
+   "project,local",
+   "--strict-mcp-config",
+   "--mcp-config",
+   "{\"mcpServers\": {\"flipper\": {\"type\": \"http\", \"url\": \"http://127.0.0.1:19435/mcp\", \"headers\": {\"Authorization\": \"Bearer ${ZEFFIN_MCP_TOKEN}\"}}}}",
+   "--settings",
+   "{\"hooks\": {\"PermissionRequest\": [{\"hooks\": [{\"type\": \"http\", \"url\": \"http://127.0.0.1:19435/hooks/permission-request\", \"timeout\": 150, \"headers\": {\"Authorization\": \"Bearer $FB_HOOK_TOKEN\"}, \"allowedEnvVars\": [\"FB_HOOK_TOKEN\"]}]}], \"PermissionDenied\": [{\"hooks\": [{\"type\": \"http\", \"url\": \"http://127.0.0.1:19435/hooks/permission-denied\", \"timeout\": 10, \"headers\": {\"Authorization\": \"Bearer $FB_HOOK_TOKEN\"}, \"allowedEnvVars\": [\"FB_HOOK_TOKEN\"]}]}]}, \"permissions\": {\"ask\": [\"Edit(CLAUDE.md)\", \"Edit(CLAUDE.local.md)\", \"Edit(AGENTS.md)\", \"Edit(opencode.json)\", \"Edit(opencode.jsonc)\", \"Edit(.opencode/**)\", \"Edit(~/.config/opencode/**)\", \"Bash(*CLAUDE.md*)\", \"Bash(*CLAUDE.local.md*)\", \"Bash(*AGENTS.md*)\", \"Bash(*opencode.json*)\", \"Bash(*.opencode*)\", \"Bash(*.config/opencode*)\"], \"allow\": [\"Bash(ls)\", \"Bash(touch a.txt)\"]}, \"cleanupPeriodDays\": 45}",
+   "--allowedTools",
+   "mcp__flipper__*"
+  ],
+  "cwd": "<tmp>/agent",
+  "env": {
+   "PATH": "/usr/bin:/bin",
+   "HOME": "<tmp>/home",
+   "LANG": "en_US.UTF-8",
+   "BASH_MAX_TIMEOUT_MS": "1200000",
+   "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+   "DISABLE_AUTOUPDATER": "1",
+   "FB_HOOK_TOKEN": "<hook-token>",
+   "ZEFFIN_MCP_TOKEN": "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
+  },
+  "stdin": {
+   "type": "user",
+   "message": {
+    "role": "user",
+    "content": [
+     {
+      "type": "image",
+      "source": {
+       "type": "base64",
+       "media_type": "image/png",
+       "data": "iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP438EARwzEcQCLohhxR7fGvwAAAABJRU5ErkJggg=="
+      }
+     },
+     {
+      "type": "text",
+      "text": "Look at these\n\nAttached files (data from the phone; read them with the Read tool if you need them):\n- <tmp>/state/attachments/7f1d3c3e-1111-4222-8333-944455556666/<notes-id>.txt (sent as \"notes.txt\", text/plain, 8 bytes)"
+     }
+    ]
+   },
+   "parent_tool_use_id": null
+  }
+ },
+ "remote": {
+  "argv": [
+   "/opt/claude/bin/claude",
+   "--remote-control",
+   "Fix the remote",
+   "--session-id",
+   "7f1d3c3e-1111-4222-8333-944455556667",
+   "--model",
+   "sonnet",
+   "--effort",
+   "low",
+   "--add-dir",
+   "<tmp>/state/attachments/7f1d3c3e-1111-4222-8333-944455556667",
+   "--permission-mode",
+   "acceptEdits",
+   "--setting-sources",
+   "project,local",
+   "--strict-mcp-config",
+   "--mcp-config",
+   "{\"mcpServers\": {\"flipper\": {\"type\": \"http\", \"url\": \"http://127.0.0.1:19435/mcp\", \"headers\": {\"Authorization\": \"Bearer ${ZEFFIN_MCP_TOKEN}\"}}}}",
+   "--settings",
+   "{\"hooks\": {\"UserPromptSubmit\": [{\"hooks\": [{\"type\": \"http\", \"url\": \"http://127.0.0.1:19435/hooks/remote/user-prompt-submit\", \"timeout\": 10, \"headers\": {\"Authorization\": \"Bearer $FB_HOOK_TOKEN\", \"X-FB-Remote-Session\": \"$CLAUDE_CODE_BRIDGE_SESSION_ID\"}, \"allowedEnvVars\": [\"FB_HOOK_TOKEN\", \"CLAUDE_CODE_BRIDGE_SESSION_ID\"]}]}], \"PreToolUse\": [{\"hooks\": [{\"type\": \"http\", \"url\": \"http://127.0.0.1:19435/hooks/remote/pre-tool-use\", \"timeout\": 10, \"headers\": {\"Authorization\": \"Bearer $FB_HOOK_TOKEN\", \"X-FB-Remote-Session\": \"$CLAUDE_CODE_BRIDGE_SESSION_ID\"}, \"allowedEnvVars\": [\"FB_HOOK_TOKEN\", \"CLAUDE_CODE_BRIDGE_SESSION_ID\"]}]}], \"PostToolUse\": [{\"hooks\": [{\"type\": \"http\", \"url\": \"http://127.0.0.1:19435/hooks/remote/post-tool-use\", \"timeout\": 10, \"headers\": {\"Authorization\": \"Bearer $FB_HOOK_TOKEN\", \"X-FB-Remote-Session\": \"$CLAUDE_CODE_BRIDGE_SESSION_ID\"}, \"allowedEnvVars\": [\"FB_HOOK_TOKEN\", \"CLAUDE_CODE_BRIDGE_SESSION_ID\"]}]}], \"Stop\": [{\"hooks\": [{\"type\": \"http\", \"url\": \"http://127.0.0.1:19435/hooks/remote/stop\", \"timeout\": 10, \"headers\": {\"Authorization\": \"Bearer $FB_HOOK_TOKEN\", \"X-FB-Remote-Session\": \"$CLAUDE_CODE_BRIDGE_SESSION_ID\"}, \"allowedEnvVars\": [\"FB_HOOK_TOKEN\", \"CLAUDE_CODE_BRIDGE_SESSION_ID\"]}]}], \"StopFailure\": [{\"hooks\": [{\"type\": \"http\", \"url\": \"http://127.0.0.1:19435/hooks/remote/stop-failure\", \"timeout\": 10, \"headers\": {\"Authorization\": \"Bearer $FB_HOOK_TOKEN\", \"X-FB-Remote-Session\": \"$CLAUDE_CODE_BRIDGE_SESSION_ID\"}, \"allowedEnvVars\": [\"FB_HOOK_TOKEN\", \"CLAUDE_CODE_BRIDGE_SESSION_ID\"]}]}], \"Notification\": [{\"hooks\": [{\"type\": \"http\", \"url\": \"http://127.0.0.1:19435/hooks/remote/notification\", \"timeout\": 10, \"headers\": {\"Authorization\": \"Bearer $FB_HOOK_TOKEN\", \"X-FB-Remote-Session\": \"$CLAUDE_CODE_BRIDGE_SESSION_ID\"}, \"allowedEnvVars\": [\"FB_HOOK_TOKEN\", \"CLAUDE_CODE_BRIDGE_SESSION_ID\"]}]}], \"SessionEnd\": [{\"hooks\": [{\"type\": \"http\", \"url\": \"http://127.0.0.1:19435/hooks/remote/session-end\", \"timeout\": 10, \"headers\": {\"Authorization\": \"Bearer $FB_HOOK_TOKEN\", \"X-FB-Remote-Session\": \"$CLAUDE_CODE_BRIDGE_SESSION_ID\"}, \"allowedEnvVars\": [\"FB_HOOK_TOKEN\", \"CLAUDE_CODE_BRIDGE_SESSION_ID\"]}]}], \"SessionStart\": [{\"hooks\": [{\"type\": \"command\", \"command\": \"<python> -I -c 'import os, sys, urllib.request as u\\nu.build_opener(u.ProxyHandler({})).open(u.Request(sys.argv[1], sys.stdin.buffer.read(), {'\\\"'\\\"'content-type'\\\"'\\\"': '\\\"'\\\"'application/json'\\\"'\\\"', '\\\"'\\\"'authorization'\\\"'\\\"': '\\\"'\\\"'Bearer '\\\"'\\\"' + os.environ.get('\\\"'\\\"'FB_HOOK_TOKEN'\\\"'\\\"', '\\\"'\\\"''\\\"'\\\"')}), timeout=5).read()\\n' http://127.0.0.1:19435/hooks/remote/session-start\", \"timeout\": 10}]}]}, \"permissions\": {\"ask\": [\"Edit(CLAUDE.md)\", \"Edit(CLAUDE.local.md)\", \"Edit(AGENTS.md)\", \"Edit(opencode.json)\", \"Edit(opencode.jsonc)\", \"Edit(.opencode/**)\", \"Edit(~/.config/opencode/**)\", \"Bash(*CLAUDE.md*)\", \"Bash(*CLAUDE.local.md*)\", \"Bash(*AGENTS.md*)\", \"Bash(*opencode.json*)\", \"Bash(*.opencode*)\", \"Bash(*.config/opencode*)\"], \"allow\": [\"Bash(make test)\"]}, \"cleanupPeriodDays\": 45}",
+   "--allowedTools",
+   "mcp__flipper__*"
+  ],
+  "launcher": [
+   "<python>",
+   "-I",
+   "-c",
+   "import os, sys\nos.setsid()\nfd = os.open(sys.argv[1], os.O_RDWR)\nfor n in (0, 1, 2):\n    os.dup2(fd, n)\nif fd > 2:\n    os.close(fd)\nos.execv(sys.argv[2], sys.argv[2:])\n"
+  ],
+  "cwd": "<tmp>/agent",
+  "env": {
+   "PATH": "/usr/bin:/bin",
+   "HOME": "<tmp>/home",
+   "LANG": "en_US.UTF-8",
+   "BASH_MAX_TIMEOUT_MS": "1200000",
+   "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+   "DISABLE_AUTOUPDATER": "1",
+   "FB_HOOK_TOKEN": "<remote-token>",
+   "ZEFFIN_MCP_TOKEN": "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+   "TERM": "xterm-256color"
+  },
+  "stale_s": 1500.0
+ }
+}

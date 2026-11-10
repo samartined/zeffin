@@ -1,0 +1,9 @@
+{
+  "type": "error",
+  "error": "busy",
+  "data": {
+    "conversation": "8a6d4f2e-1b3c-4d5e-8f9a-0b1c2d3e4f5a"
+  },
+  "request": "chat.send",
+  "message": "chat.send failed: busy"
+}

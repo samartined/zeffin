@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/diag.json",
+  "title": "diag",
+  "description": "Diagnostics figures for the last 24 h (reply to diag). Never tokens.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "diag"
+    },
+    "hours": {
+      "type": "number"
+    },
+    "session": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "frames": {
+              "type": "integer"
+            },
+            "bytes_in": {
+              "type": "integer"
+            },
+            "bytes_out": {
+              "type": "integer"
+            },
+            "uptime_s": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "frames",
+            "bytes_in",
+            "bytes_out",
+            "uptime_s"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "connections": {
+      "type": "integer"
+    },
+    "reached_ready": {
+      "type": "integer"
+    },
+    "reconnect_median_s": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "rejected": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer"
+      }
+    },
+    "last_rejected": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "reason": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "ts": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "reason",
+            "ts"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "pings": {
+      "type": "integer"
+    },
+    "pings_ok": {
+      "type": "integer"
+    },
+    "rtt_median_ms": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "stream_failures": {
+      "type": "integer"
+    },
+    "agent_actions": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "type",
+    "hours",
+    "session",
+    "connections",
+    "reached_ready",
+    "reconnect_median_s",
+    "rejected",
+    "last_rejected",
+    "pings",
+    "pings_ok",
+    "rtt_median_ms",
+    "stream_failures",
+    "agent_actions"
+  ],
+  "additionalProperties": false
+}

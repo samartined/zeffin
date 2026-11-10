@@ -1,0 +1,26 @@
+{
+  "type": "audit.history",
+  "items": [
+    {
+      "ts": 1792999940.0,
+      "tool": "flipper_press",
+      "args": {
+        "keys": [
+          "ok"
+        ]
+      },
+      "writes": true,
+      "result": "ok",
+      "seq_before": 410,
+      "seq_after": 412,
+      "ms": 640
+    },
+    {
+      "ts": 1792999970.0,
+      "tool": "operator",
+      "action": "pause",
+      "by": "app",
+      "result": "ok"
+    }
+  ]
+}

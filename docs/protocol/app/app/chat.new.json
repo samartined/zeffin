@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/app/chat.new.json",
+  "title": "chat.new",
+  "description": "Create an empty conversation with an agent (answered with chat.conversation). Without agent, the default one; without mode, model or effort, the agent's defaults",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.new"
+    },
+    "agent": {
+      "$ref": "../defs.json#/$defs/agentId"
+    },
+    "mode": {
+      "$ref": "../defs.json#/$defs/mode"
+    },
+    "model": {
+      "type": "string"
+    },
+    "effort": {
+      "$ref": "../defs.json#/$defs/effort"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false
+}

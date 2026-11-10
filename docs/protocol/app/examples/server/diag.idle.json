@@ -1,0 +1,15 @@
+{
+  "type": "diag",
+  "hours": 24,
+  "session": null,
+  "connections": 0,
+  "reached_ready": 0,
+  "reconnect_median_s": null,
+  "rejected": {},
+  "last_rejected": null,
+  "pings": 0,
+  "pings_ok": 0,
+  "rtt_median_ms": null,
+  "stream_failures": 0,
+  "agent_actions": 0
+}

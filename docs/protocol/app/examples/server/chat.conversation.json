@@ -1,0 +1,25 @@
+{
+  "type": "chat.conversation",
+  "item": {
+    "id": "3f2b8c1e-5d4a-4e6f-9b7c-2a1d0e9f8c7b",
+    "created": 1793000000.0,
+    "updated": 1793000120.5,
+    "title": "Read the Flipper's battery",
+    "last": "The battery is at 87 %.",
+    "pinned": false,
+    "favorite": true,
+    "flipper": true,
+    "agent": "claude-code",
+    "mode": "default",
+    "model": "opus",
+    "effort": "medium",
+    "rules": [
+      "Bash(touch fb-test.txt)"
+    ],
+    "state": "ready",
+    "turns": 3,
+    "events": 14,
+    "attachments": 1,
+    "remote": false
+  }
+}

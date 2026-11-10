@@ -1,0 +1,14 @@
+{
+  "n": 31,
+  "at": 1793000090.0,
+  "kind": "turn.end",
+  "turn": 2,
+  "outcome": "error",
+  "error": "image_limit",
+  "data": {
+    "images": 14,
+    "limit": 13,
+    "compacted": true
+  },
+  "duration_ms": 71000
+}

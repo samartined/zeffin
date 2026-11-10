@@ -1,0 +1,47 @@
+{
+  "type": "chat.conversations",
+  "items": [
+    {
+      "id": "3f2b8c1e-5d4a-4e6f-9b7c-2a1d0e9f8c7b",
+      "created": 1793000000.0,
+      "updated": 1793000120.5,
+      "title": "Read the Flipper's battery",
+      "last": "The battery is at 87 %.",
+      "pinned": false,
+      "favorite": true,
+      "flipper": true,
+      "agent": "claude-code",
+      "mode": "default",
+      "model": "opus",
+      "effort": "medium",
+      "rules": [
+        "Bash(touch fb-test.txt)"
+      ],
+      "state": "ready",
+      "turns": 3,
+      "events": 14,
+      "attachments": 1,
+      "remote": false
+    },
+    {
+      "id": "8a6d4f2e-1b3c-4d5e-8f9a-0b1c2d3e4f5a",
+      "created": 1793000000.0,
+      "updated": 1793000120.5,
+      "title": "",
+      "last": "",
+      "pinned": false,
+      "favorite": false,
+      "flipper": false,
+      "agent": "opencode",
+      "mode": "default",
+      "model": "opencode/nemotron-3.5-super-vl-free",
+      "effort": null,
+      "rules": [],
+      "state": "new",
+      "turns": 0,
+      "events": 0,
+      "attachments": 0,
+      "remote": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "n": 3,
+  "at": 1793000002.4,
+  "kind": "turn.info",
+  "mode": "default",
+  "model": "claude-opus-example",
+  "effort": "medium",
+  "version": "2.1.308",
+  "flipper_mcp": "connected"
+}

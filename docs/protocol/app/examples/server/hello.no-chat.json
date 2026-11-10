@@ -1,0 +1,9 @@
+{
+  "type": "hello",
+  "protocol": 1,
+  "server": {
+    "version": "0.10.0",
+    "name": "my-server"
+  },
+  "features": []
+}

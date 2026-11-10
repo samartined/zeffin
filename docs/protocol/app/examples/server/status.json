@@ -1,0 +1,25 @@
+{
+  "type": "status",
+  "connected": true,
+  "phone_attached": true,
+  "transport": "BLE",
+  "relay": {
+    "app": "0.4.0",
+    "device": "Demo",
+    "mtu": 414
+  },
+  "gate": "active",
+  "gate_changed_at": 1792996400.0,
+  "gate_by": "startup",
+  "busy": true,
+  "screen": {
+    "seq": 412,
+    "stale": false,
+    "age_s": 0.42
+  },
+  "session_uptime_s": 845.3,
+  "last_ping_ms": 38.5,
+  "session_frames": 2210,
+  "session_bytes_in": 1830211,
+  "session_bytes_out": 40422
+}

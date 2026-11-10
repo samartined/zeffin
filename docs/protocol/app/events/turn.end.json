@@ -1,0 +1,277 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/events/turn.end.json",
+  "title": "chat.event: turn.end",
+  "description": "A turn ended. The last four errors happen only with Remote Control. In chat.event it also carries type and conversation; in chat.history it does not.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.event"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "n": {
+      "type": "integer"
+    },
+    "at": {
+      "type": "number"
+    },
+    "kind": {
+      "const": "turn.end"
+    },
+    "turn": {
+      "type": "integer"
+    },
+    "outcome": {
+      "enum": [
+        "done",
+        "interrupted",
+        "error"
+      ]
+    },
+    "error": {
+      "anyOf": [
+        {
+          "enum": [
+            "agent_failed",
+            "billing_guard",
+            "expired",
+            "api_error",
+            "max_turns",
+            "server_restarted",
+            "stopping",
+            "image_limit",
+            "permission_stale",
+            "no_news",
+            "remote_ended",
+            "idle"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "agent_failed: the agent's process failed (servers before 0.14.0 sent claude_failed), with its exit code and its result's subtype in data; agent_failed for a turn refused before it started (the agent's settings or version found unsafe when it started) also has in data the agent's problem (unsafe_agent_settings, agent_version: the codes of not_ready's problem) and the reason the log has; image_limit (1.0.0): the conversation passed the images its model takes in one request (NVIDIA's free models: 13), and the server had the agent summarize it to drop them, with images (what the conversation held), limit and compacted (whether the summary worked) in data"
+    },
+    "data": {
+      "type": "object"
+    },
+    "duration_ms": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "via": {
+      "const": "remote",
+      "description": "It came from the other device (Remote Control)"
+    }
+  },
+  "required": [
+    "n",
+    "at",
+    "kind",
+    "turn",
+    "outcome",
+    "error",
+    "data",
+    "duration_ms"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "error": {
+            "const": "billing_guard"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "why": {
+                "enum": [
+                  "usage_exhausted",
+                  "api_key_source",
+                  "model"
+                ]
+              }
+            },
+            "required": [
+              "why"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "error": {
+            "const": "api_error"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "reason": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "reason"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "error": {
+            "enum": [
+              "agent_failed"
+            ]
+          }
+        },
+        "required": [
+          "error"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "exit": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "subtype": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "problem": {
+                "enum": [
+                  "unsafe_agent_settings",
+                  "agent_version"
+                ],
+                "description": "Only for a turn refused before it started: the agent's problem, as not_ready's problem names it"
+              },
+              "reason": {
+                "type": "string",
+                "description": "With problem: what the server found, as its log says it"
+              }
+            },
+            "required": [
+              "exit",
+              "subtype"
+            ],
+            "additionalProperties": false,
+            "description": "The agent's exit code and its result's subtype; what it wrote to stderr stays in the server log; for a turn refused before it started, also the problem and its reason"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "error": {
+            "const": "image_limit"
+          }
+        },
+        "required": [
+          "error"
+        ]
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "images": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "limit": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "compacted": {
+                "type": "boolean",
+                "description": "The agent's summary dropped the images: the next message goes on. False: only a new conversation does"
+              }
+            },
+            "required": [
+              "images",
+              "limit",
+              "compacted"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "error": {
+            "not": {
+              "enum": [
+                "billing_guard",
+                "api_error",
+                "agent_failed",
+                "image_limit"
+              ]
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "const": {}
+          }
+        }
+      }
+    }
+  ]
+}

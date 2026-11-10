@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/events/permission.json",
+  "title": "chat.event: permission",
+  "description": "The agent asks for permission (held until answered or the deadline). In chat.event it also carries type and conversation; in chat.history it does not.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.event"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "n": {
+      "type": "integer"
+    },
+    "at": {
+      "type": "number"
+    },
+    "kind": {
+      "const": "permission"
+    },
+    "id": {
+      "type": "string"
+    },
+    "tool": {
+      "type": "string"
+    },
+    "input": {},
+    "deadline": {
+      "type": "number"
+    },
+    "always": {
+      "type": "boolean"
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "whole": {
+      "const": false,
+      "description": "Only when the input was too long to show whole (past 64 KiB of JSON, the bound of the agent's own text): it is cut as a tool event's, \"always\" is false and no rules are offered, and the server takes only deny. Absent: the input is whole"
+    }
+  },
+  "required": [
+    "n",
+    "at",
+    "kind",
+    "id",
+    "tool",
+    "input",
+    "deadline",
+    "always",
+    "rules"
+  ],
+  "additionalProperties": false
+}

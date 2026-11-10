@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/phone.history.json",
+  "title": "phone.history",
+  "description": "The relay's last 15 connection events, on connect.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "phone.history"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ts",
+          "ev"
+        ],
+        "properties": {
+          "ts": {
+            "type": "number"
+          },
+          "ev": {
+            "enum": [
+              "close",
+              "first_frame",
+              "paired",
+              "ready",
+              "stream",
+              "ws_open",
+              "ws_rejected"
+            ]
+          }
+        },
+        "description": "One metrics log record of the relay's connections: open, its fields depend on ev"
+      }
+    }
+  },
+  "required": [
+    "type",
+    "items"
+  ],
+  "additionalProperties": false
+}

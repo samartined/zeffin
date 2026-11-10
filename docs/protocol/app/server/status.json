@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/status.json",
+  "title": "status",
+  "description": "Hub.status(): sent on every change and every 10 s.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "status"
+    },
+    "connected": {
+      "type": "boolean"
+    },
+    "phone_attached": {
+      "type": "boolean"
+    },
+    "transport": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "relay": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "app": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "device": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "mtu": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 23,
+                  "maximum": 517
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "app",
+            "device",
+            "mtu"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "gate": {
+      "enum": [
+        "active",
+        "paused",
+        "stopped"
+      ]
+    },
+    "gate_changed_at": {
+      "type": "number"
+    },
+    "gate_by": {
+      "type": "string",
+      "description": "Who changed the gate last, the first word of its \"by\": startup, view, app, or remote (the phone's remote for the Flipper, gate's \"via\")"
+    },
+    "busy": {
+      "type": "boolean",
+      "description": "A Flipper call holds the Flipper (ops_lock): the relay's keys wait behind it. Sent at once when it changes"
+    },
+    "screen": {
+      "type": "object",
+      "properties": {
+        "seq": {
+          "type": "integer"
+        },
+        "stale": {
+          "type": "boolean"
+        },
+        "age_s": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "seq",
+        "stale",
+        "age_s"
+      ],
+      "additionalProperties": false
+    },
+    "session_uptime_s": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "last_ping_ms": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "session_frames": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "session_bytes_in": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "session_bytes_out": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "type",
+    "connected",
+    "phone_attached",
+    "transport",
+    "relay",
+    "gate",
+    "gate_changed_at",
+    "gate_by",
+    "busy",
+    "screen",
+    "session_uptime_s",
+    "last_ping_ms",
+    "session_frames",
+    "session_bytes_in",
+    "session_bytes_out"
+  ],
+  "additionalProperties": false
+}

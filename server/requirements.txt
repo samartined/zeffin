@@ -1,0 +1,10 @@
+# Runtime dependencies (pinned). Regenerate with hashes for production:
+#   pip-compile --generate-hashes requirements.in
+cryptography==50.0.2  # the server's TLS key and certificate (bridge/tlskey.py)
+mcp==2.3.0
+pillow==13.0.0
+protobuf==7.36.2
+qrcode==8.2
+starlette==1.9.0
+uvicorn[standard]==0.54.0
+websockets==17.3

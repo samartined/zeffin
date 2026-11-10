@@ -1,0 +1,26 @@
+{
+  "n": 1,
+  "at": 1793000000.0,
+  "kind": "user",
+  "text": "Which button is power?",
+  "attachments": [
+    {
+      "id": "a1b2c3d4e5f6",
+      "name": "remote.jpg",
+      "kind": "image",
+      "media_type": "image/jpeg",
+      "bytes": 182044,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "id": "f6e5d4c3b2a1",
+      "name": "notes.txt",
+      "kind": "file",
+      "media_type": "text/plain",
+      "bytes": 512,
+      "width": null,
+      "height": null
+    }
+  ]
+}

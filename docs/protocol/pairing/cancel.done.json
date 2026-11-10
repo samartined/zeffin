@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/pairing/cancel.done.json",
+  "title": "POST /app/pair/cancel, 200",
+  "description": "The request is cancelled; the server says so to the owner.",
+  "type": "object",
+  "properties": {
+    "state": {
+      "const": "cancelled"
+    }
+  },
+  "required": [
+    "state"
+  ],
+  "additionalProperties": false
+}

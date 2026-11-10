@@ -1,0 +1,13 @@
+{
+  "type": "error",
+  "error": "bad_effort",
+  "data": {
+    "efforts": [
+      "low",
+      "medium",
+      "high"
+    ]
+  },
+  "request": "chat.set",
+  "message": "chat.set failed: bad_effort"
+}

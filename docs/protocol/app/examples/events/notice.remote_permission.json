@@ -1,0 +1,10 @@
+{
+  "n": 19,
+  "at": 1793000320.0,
+  "kind": "notice",
+  "code": "remote_permission",
+  "data": {
+    "tool": "Bash"
+  },
+  "via": "remote"
+}

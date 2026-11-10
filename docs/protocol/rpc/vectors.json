@@ -1,0 +1,450 @@
+{
+  "format": 1,
+  "about": "docs/protocol/rpc/README.md. Each hex is one varint-delimited PB.Main as on the wire.",
+  "ranges": {
+    "unsolicited": [
+      0,
+      0
+    ],
+    "server": [
+      1,
+      268435455
+    ],
+    "settle": [
+      268435456,
+      536870911
+    ],
+    "relay": [
+      536870912,
+      1073741823
+    ],
+    "reserved": [
+      1073741824,
+      4294967295
+    ]
+  },
+  "requests": [
+    {
+      "name": "input.up.press",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870912,
+      "fields": {
+        "key": "UP",
+        "key_value": 0,
+        "type": "PRESS",
+        "type_value": 0
+      },
+      "hex": "09088080808002ba0100"
+    },
+    {
+      "name": "input.up.short",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870913,
+      "fields": {
+        "key": "UP",
+        "key_value": 0,
+        "type": "SHORT",
+        "type_value": 2
+      },
+      "hex": "0b088180808002ba01021002"
+    },
+    {
+      "name": "input.up.long",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870914,
+      "fields": {
+        "key": "UP",
+        "key_value": 0,
+        "type": "LONG",
+        "type_value": 3
+      },
+      "hex": "0b088280808002ba01021003"
+    },
+    {
+      "name": "input.up.release",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870915,
+      "fields": {
+        "key": "UP",
+        "key_value": 0,
+        "type": "RELEASE",
+        "type_value": 1
+      },
+      "hex": "0b088380808002ba01021001"
+    },
+    {
+      "name": "input.down.press",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870916,
+      "fields": {
+        "key": "DOWN",
+        "key_value": 1,
+        "type": "PRESS",
+        "type_value": 0
+      },
+      "hex": "0b088480808002ba01020801"
+    },
+    {
+      "name": "input.down.short",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870917,
+      "fields": {
+        "key": "DOWN",
+        "key_value": 1,
+        "type": "SHORT",
+        "type_value": 2
+      },
+      "hex": "0d088580808002ba010408011002"
+    },
+    {
+      "name": "input.down.long",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870918,
+      "fields": {
+        "key": "DOWN",
+        "key_value": 1,
+        "type": "LONG",
+        "type_value": 3
+      },
+      "hex": "0d088680808002ba010408011003"
+    },
+    {
+      "name": "input.down.release",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870919,
+      "fields": {
+        "key": "DOWN",
+        "key_value": 1,
+        "type": "RELEASE",
+        "type_value": 1
+      },
+      "hex": "0d088780808002ba010408011001"
+    },
+    {
+      "name": "input.right.press",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870920,
+      "fields": {
+        "key": "RIGHT",
+        "key_value": 2,
+        "type": "PRESS",
+        "type_value": 0
+      },
+      "hex": "0b088880808002ba01020802"
+    },
+    {
+      "name": "input.right.short",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870921,
+      "fields": {
+        "key": "RIGHT",
+        "key_value": 2,
+        "type": "SHORT",
+        "type_value": 2
+      },
+      "hex": "0d088980808002ba010408021002"
+    },
+    {
+      "name": "input.right.long",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870922,
+      "fields": {
+        "key": "RIGHT",
+        "key_value": 2,
+        "type": "LONG",
+        "type_value": 3
+      },
+      "hex": "0d088a80808002ba010408021003"
+    },
+    {
+      "name": "input.right.release",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870923,
+      "fields": {
+        "key": "RIGHT",
+        "key_value": 2,
+        "type": "RELEASE",
+        "type_value": 1
+      },
+      "hex": "0d088b80808002ba010408021001"
+    },
+    {
+      "name": "input.left.press",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870924,
+      "fields": {
+        "key": "LEFT",
+        "key_value": 3,
+        "type": "PRESS",
+        "type_value": 0
+      },
+      "hex": "0b088c80808002ba01020803"
+    },
+    {
+      "name": "input.left.short",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870925,
+      "fields": {
+        "key": "LEFT",
+        "key_value": 3,
+        "type": "SHORT",
+        "type_value": 2
+      },
+      "hex": "0d088d80808002ba010408031002"
+    },
+    {
+      "name": "input.left.long",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870926,
+      "fields": {
+        "key": "LEFT",
+        "key_value": 3,
+        "type": "LONG",
+        "type_value": 3
+      },
+      "hex": "0d088e80808002ba010408031003"
+    },
+    {
+      "name": "input.left.release",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870927,
+      "fields": {
+        "key": "LEFT",
+        "key_value": 3,
+        "type": "RELEASE",
+        "type_value": 1
+      },
+      "hex": "0d088f80808002ba010408031001"
+    },
+    {
+      "name": "input.ok.press",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870928,
+      "fields": {
+        "key": "OK",
+        "key_value": 4,
+        "type": "PRESS",
+        "type_value": 0
+      },
+      "hex": "0b089080808002ba01020804"
+    },
+    {
+      "name": "input.ok.short",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870929,
+      "fields": {
+        "key": "OK",
+        "key_value": 4,
+        "type": "SHORT",
+        "type_value": 2
+      },
+      "hex": "0d089180808002ba010408041002"
+    },
+    {
+      "name": "input.ok.long",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870930,
+      "fields": {
+        "key": "OK",
+        "key_value": 4,
+        "type": "LONG",
+        "type_value": 3
+      },
+      "hex": "0d089280808002ba010408041003"
+    },
+    {
+      "name": "input.ok.release",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870931,
+      "fields": {
+        "key": "OK",
+        "key_value": 4,
+        "type": "RELEASE",
+        "type_value": 1
+      },
+      "hex": "0d089380808002ba010408041001"
+    },
+    {
+      "name": "input.back.press",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870932,
+      "fields": {
+        "key": "BACK",
+        "key_value": 5,
+        "type": "PRESS",
+        "type_value": 0
+      },
+      "hex": "0b089480808002ba01020805"
+    },
+    {
+      "name": "input.back.short",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870933,
+      "fields": {
+        "key": "BACK",
+        "key_value": 5,
+        "type": "SHORT",
+        "type_value": 2
+      },
+      "hex": "0d089580808002ba010408051002"
+    },
+    {
+      "name": "input.back.long",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 536870934,
+      "fields": {
+        "key": "BACK",
+        "key_value": 5,
+        "type": "LONG",
+        "type_value": 3
+      },
+      "hex": "0d089680808002ba010408051003"
+    },
+    {
+      "name": "input.back.release",
+      "sender": "relay",
+      "message": "gui_send_input_event_request",
+      "command_id": 1073741823,
+      "fields": {
+        "key": "BACK",
+        "key_value": 5,
+        "type": "RELEASE",
+        "type_value": 1
+      },
+      "hex": "0d08ffffffff03ba010408051001"
+    },
+    {
+      "name": "screen_stream.start",
+      "sender": "relay",
+      "message": "gui_start_screen_stream_request",
+      "command_id": 536870936,
+      "fields": {},
+      "hex": "09089880808002a20100"
+    },
+    {
+      "name": "screen_stream.stop",
+      "sender": "relay",
+      "message": "gui_stop_screen_stream_request",
+      "command_id": 536870937,
+      "fields": {},
+      "hex": "09089980808002aa0100"
+    },
+    {
+      "name": "settle.stop",
+      "sender": "server",
+      "message": "gui_stop_screen_stream_request",
+      "command_id": 268439698,
+      "fields": {},
+      "hex": "090892a1808001aa0100"
+    }
+  ],
+  "replies": [
+    {
+      "name": "ok",
+      "command_id": 536870912,
+      "command_status": "OK",
+      "command_status_value": 0,
+      "has_next": false,
+      "content": "empty",
+      "fields": {},
+      "hex": "080880808080022200"
+    },
+    {
+      "name": "error",
+      "command_id": 536870913,
+      "command_status": "ERROR_INVALID_PARAMETERS",
+      "command_status_value": 15,
+      "has_next": false,
+      "content": "empty",
+      "fields": {},
+      "hex": "0a088180808002100f2200"
+    },
+    {
+      "name": "multipart",
+      "command_id": 536870914,
+      "command_status": "OK",
+      "command_status_value": 0,
+      "has_next": true,
+      "content": "empty",
+      "fields": {},
+      "hex": "0a08828080800218012200"
+    },
+    {
+      "name": "unknown_fields",
+      "command_id": 536870915,
+      "command_status": "OK",
+      "command_status_value": 0,
+      "has_next": false,
+      "content": "empty",
+      "fields": {},
+      "hex": "220883808080022200c03eac02c93e0102030405060708d23e03010203dd3e09080706",
+      "note": "after its known fields, unknown fields 1000 to 1003 of wire types 0, 1, 2 and 5: skipped"
+    },
+    {
+      "name": "settle.stop.ok",
+      "command_id": 268439698,
+      "command_status": "OK",
+      "command_status_value": 0,
+      "has_next": false,
+      "content": "empty",
+      "fields": {},
+      "hex": "080892a18080012200",
+      "note": "the reply to settle.stop: the stream starts after it"
+    },
+    {
+      "name": "screen_frame",
+      "command_id": 0,
+      "command_status": "OK",
+      "command_status_value": 0,
+      "has_next": false,
+      "content": "gui_screen_frame",
+      "fields": {
+        "data_pattern": "(i * 7 + 3) % 256",
+        "data_hex": "030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc",
+        "orientation": "VERTICAL",
+        "orientation_value": 2
+      },
+      "hex": "8908b20185080a8008030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc1002"
+    },
+    {
+      "name": "screen_frame.settle_lookalike",
+      "command_id": 0,
+      "command_status": "OK",
+      "command_status_value": 0,
+      "has_next": false,
+      "content": "gui_screen_frame",
+      "fields": {
+        "data_pattern": "(i * 7 + 3) % 256, then lookalikes at offsets 100 and 300",
+        "data_hex": "030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8080892a18080011801fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930080892a1808001ffff767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc",
+        "orientation": "VERTICAL",
+        "orientation_value": 2,
+        "lookalike_for": 268439698
+      },
+      "hex": "8908b20185080a8008030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8080892a18080011801fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930080892a1808001ffff767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc030a11181f262d343b424950575e656c737a81888f969da4abb2b9c0c7ced5dce3eaf1f8ff060d141b222930373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9f0f7fe050c131a21282f363d444b525960676e757c838a91989fa6adb4bbc2c9d0d7dee5ecf3fa01080f161d242b323940474e555c636a71787f868d949ba2a9b0b7bec5ccd3dae1e8eff6fd040b121920272e353c434a51585f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e151c232a31383f464d545b626970777e858c939aa1a8afb6bdc4cbd2d9e0e7eef5fc1002",
+      "note": "data holds settle.stop's marker (08 and its id) at offsets 101 and 301: a one-byte length, the marker, then has_next or bytes that do not parse. Never taken for settle.stop.ok"
+    }
+  ]
+}

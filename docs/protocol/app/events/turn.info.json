@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/events/turn.info.json",
+  "title": "chat.event: turn.info",
+  "description": "What Claude Code reports at the turn's start. In chat.event it also carries type and conversation; in chat.history it does not.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.event"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "n": {
+      "type": "integer"
+    },
+    "at": {
+      "type": "number"
+    },
+    "kind": {
+      "const": "turn.info"
+    },
+    "mode": {
+      "anyOf": [
+        {
+          "type": "string",
+          "description": "The effective mode"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "model": {
+      "type": "string",
+      "description": "The full model name"
+    },
+    "effort": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "version": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "flipper_mcp": {
+      "anyOf": [
+        {
+          "type": "string",
+          "description": "connected, or another status"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "n",
+    "at",
+    "kind",
+    "mode",
+    "model",
+    "effort",
+    "version",
+    "flipper_mcp"
+  ],
+  "additionalProperties": false
+}

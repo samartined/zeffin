@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/events/text.json",
+  "title": "chat.event: text",
+  "description": "One complete block of the agent's text (up to 64 KiB; untrusted). In chat.event it also carries type and conversation; in chat.history it does not.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.event"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "n": {
+      "type": "integer"
+    },
+    "at": {
+      "type": "number"
+    },
+    "kind": {
+      "const": "text"
+    },
+    "id": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "via": {
+      "const": "remote",
+      "description": "It came from the other device (Remote Control)"
+    }
+  },
+  "required": [
+    "n",
+    "at",
+    "kind",
+    "id",
+    "text"
+  ],
+  "additionalProperties": false
+}

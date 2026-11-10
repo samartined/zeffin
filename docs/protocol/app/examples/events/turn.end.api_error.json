@@ -1,0 +1,12 @@
+{
+  "n": 8,
+  "at": 1793000030.0,
+  "kind": "turn.end",
+  "turn": 2,
+  "outcome": "error",
+  "error": "api_error",
+  "data": {
+    "reason": "overloaded"
+  },
+  "duration_ms": 30000
+}

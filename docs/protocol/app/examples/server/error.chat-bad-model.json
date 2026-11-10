@@ -1,0 +1,13 @@
+{
+  "type": "error",
+  "error": "bad_model",
+  "data": {
+    "models": [
+      "opus",
+      "sonnet",
+      "haiku"
+    ]
+  },
+  "request": "chat.set",
+  "message": "chat.set failed: bad_model"
+}

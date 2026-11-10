@@ -1,0 +1,72 @@
+[project]
+name = "zeffin"
+version = "1.0.0"
+description = "Generic Flipper Zero control from Claude Code through an Android phone relay and Tailscale"
+requires-python = ">=3.11"
+license = "AGPL-3.0-or-later"
+dependencies = [
+    "cryptography==50.0.2",
+    "mcp==2.3.0",
+    "pillow==13.0.0",
+    "protobuf==7.36.2",
+    "qrcode==8.2",
+    "starlette==1.9.0",
+    "uvicorn[standard]==0.54.0",
+    "websockets==17.3",
+]
+
+[project.scripts]
+zeffin = "bridge.cli:main"
+zf = "bridge.cli:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["bridge", "bridge.chat", "bridge.pb"]
+
+[tool.setuptools.package-data]
+"bridge" = ["profile_data/*.md", "profile_data/*.json", "profile_data/apps/*.json"]
+"bridge.pb" = ["proto/*.proto"]
+"bridge.chat" = ["free_models.json"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+# Four workers (pytest-xdist): most tests wait on a subprocess or a socket, so this pays even on two cores.
+addopts = "-n 4"
+
+# Static analysis, check-only (CI and "Checks before pushing" in CLAUDE.md). The rule set passes on today's code
+# without rewriting it; `ruff format` is not used.
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+extend-exclude = ["bridge/pb"]  # generated protobuf modules
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "ASYNC"]
+ignore = [
+    "E501",      # long lines: the code wraps at its own width
+    "E741",      # short loop names such as `l`
+    "B017",      # pytest.raises(Exception) in tests that only expect a failure
+    "B904",      # `raise ... from` inside except
+    "B905",      # zip() without strict=
+    "ASYNC109",  # async functions that take a timeout parameter
+]
+
+# Permissive on purpose: the agent port and seven chat modules, imports followed silently, and the error codes that
+# today's annotations (`object` for checked JSON values, Optional left implicit) would raise switched off.
+[tool.mypy]
+python_version = "3.11"
+files = ["bridge/chat/command.py", "bridge/chat/stream.py", "bridge/chat/index.py", "bridge/chat/remote.py",
+         "bridge/agent.py", "bridge/chat/claude_code.py", "bridge/chat/acp.py", "bridge/chat/opencode.py",
+         "bridge/catalog.py", "bridge/notes.py", "scripts/build_app_catalog.py"]
+ignore_missing_imports = true
+follow_imports = "silent"
+strict_optional = false
+disable_error_code = ["arg-type", "assignment", "call-overload"]
+
+[[tool.mypy.overrides]]
+module = "bridge.chat.remote"
+disable_error_code = ["attr-defined", "union-attr"]  # `conversation: object` and a JSON value iterated after a check

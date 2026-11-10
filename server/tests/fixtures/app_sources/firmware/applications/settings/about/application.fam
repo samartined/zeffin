@@ -1,0 +1,6 @@
+App(
+    appid="about",
+    name="About",
+    apptype=FlipperAppType.SETTINGS,
+    fap_category="assets",
+)

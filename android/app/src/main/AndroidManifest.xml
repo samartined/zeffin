@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <!-- Notifications when a turn ends or the agent asks, while the app is off screen (NotifyService). -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
+
+    <!--
+      Backups off: the tokens never leave the phone. No cleartext anywhere: the server is
+      reached only over TLS 1.3 with its pinned key (core/ServerHttp), so Android refuses
+      http:// and ws:// too.
+    -->
+    <application
+        android:name=".ZeffinApp"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${appLabel}"
+        android:localeConfig="@xml/locales_config"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.Zeffin"
+        android:usesCleartextTraffic="false">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Keeps /app open while the agent works with the app off screen; it carries the agent's messages to the phone. -->
+        <service
+            android:name=".notify.NotifyService"
+            android:exported="false"
+            android:foregroundServiceType="remoteMessaging" />
+        <!-- Allow once and Deny from a permission's notification. -->
+        <receiver
+            android:name=".notify.NotifyReceiver"
+            android:exported="false" />
+        <!-- Photos taken with the phone's camera app for the chat: written to the app's cache, read back once. -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.files"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+</manifest>

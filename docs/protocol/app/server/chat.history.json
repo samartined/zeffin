@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/chat.history.json",
+  "title": "chat.history",
+  "description": "Reply to chat.open: at most 200 events or 512 KiB.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.history"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "../defs.json#/$defs/event"
+      }
+    },
+    "more": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "type",
+    "conversation",
+    "events",
+    "more"
+  ],
+  "additionalProperties": false
+}

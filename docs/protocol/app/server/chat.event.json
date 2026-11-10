@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/chat.event.json",
+  "title": "chat.event",
+  "description": "One new history event, numbered per conversation; its fields by kind are in events/.",
+  "type": "object",
+  "required": [
+    "type",
+    "conversation",
+    "n",
+    "at",
+    "kind"
+  ],
+  "properties": {
+    "type": {
+      "const": "chat.event"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "../defs.json#/$defs/event"
+    }
+  ]
+}

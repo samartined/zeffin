@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/app/chat.settings.json",
+  "title": "chat.settings",
+  "description": "Defaults for new conversations, and the permission timeout. default_mode, default_model and default_effort are the defaults of agent (without it, of the default agent, after default_agent if given)",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.settings"
+    },
+    "agent": {
+      "$ref": "../defs.json#/$defs/agentId"
+    },
+    "default_agent": {
+      "$ref": "../defs.json#/$defs/agentId"
+    },
+    "default_mode": {
+      "$ref": "../defs.json#/$defs/mode"
+    },
+    "default_model": {
+      "type": "string"
+    },
+    "default_effort": {
+      "$ref": "../defs.json#/$defs/effort"
+    },
+    "permission_timeout_s": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false
+}

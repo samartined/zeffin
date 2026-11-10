@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/app/chat.interrupt.json",
+  "title": "chat.interrupt",
+  "description": "Stop the conversation's running turn.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.interrupt"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    }
+  },
+  "required": [
+    "type",
+    "conversation"
+  ],
+  "additionalProperties": false
+}

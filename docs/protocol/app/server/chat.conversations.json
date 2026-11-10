@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/chat.conversations.json",
+  "title": "chat.conversations",
+  "description": "The whole index, newest first (reply to chat.list).",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.conversations"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "../defs.json#/$defs/conversation"
+      }
+    }
+  },
+  "required": [
+    "type",
+    "items"
+  ],
+  "additionalProperties": false
+}

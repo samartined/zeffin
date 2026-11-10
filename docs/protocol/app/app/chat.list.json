@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/app/chat.list.json",
+  "title": "chat.list",
+  "description": "Subscribe to the chat; answered with chat.status and chat.conversations.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.list"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false
+}

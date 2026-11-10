@@ -1,0 +1,8 @@
+App(
+    appid="tiny",
+    name="Tiny",
+    apptype=FlipperAppType.EXTERNAL,
+    fap_category="Games",
+    fap_description="Game",
+    fap_version="0.1",
+)

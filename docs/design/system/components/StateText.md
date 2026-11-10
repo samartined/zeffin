@@ -1,0 +1,1 @@
+State is written as colored text, never as a chip or pill. `success` running or correct, `warning` connecting or paused, `danger` error or rejected, `action` connected or in use, no kind for neutral ("Waiting"). Always a word that makes sense without the color.

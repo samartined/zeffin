@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/app/chat.remote.json",
+  "title": "chat.remote",
+  "description": "Remote Control on or off for a conversation (feature remote).",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.remote"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "on": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "type",
+    "conversation",
+    "on"
+  ],
+  "additionalProperties": false
+}

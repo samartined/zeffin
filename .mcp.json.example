@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "flipper": {
+      "type": "http",
+      "url": "http://127.0.0.1:9435/mcp",
+      "headers": {
+        "Authorization": "Bearer ${ZEFFIN_MCP_TOKEN}"
+      }
+    }
+  }
+}

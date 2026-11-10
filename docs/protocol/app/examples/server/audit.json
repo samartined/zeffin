@@ -1,0 +1,9 @@
+{
+  "type": "audit",
+  "item": {
+    "ts": 1793000000.0,
+    "tool": "flipper_status",
+    "writes": false,
+    "result": "ok"
+  }
+}

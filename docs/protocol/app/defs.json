@@ -1,0 +1,696 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/defs.json",
+  "title": "Shared definitions",
+  "description": "Pieces several /app messages share.",
+  "$defs": {
+    "mode": {
+      "type": "string",
+      "description": "A permission mode, one of chat.status's mode_options values (a plain string, so a future agent's modes validate; the server refuses one the agent does not offer with bad_mode)"
+    },
+    "effort": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    "agentId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{0,39}$",
+      "description": "An agent the server knows, by its id (hello's and chat.status's agents): claude-code, opencode. A plain string, so a future agent validates"
+    },
+    "problem": {
+      "enum": [
+        "not_configured",
+        "agent_missing",
+        "unsafe_agent_settings",
+        "checking",
+        "not_logged_in",
+        "not_subscription",
+        "stopping",
+        "agent_folder_untrusted",
+        "remote_starting",
+        "remote_ending",
+        "agent_version"
+      ],
+      "description": "Why an agent cannot take a turn. agent_missing: its program is gone or does not answer. not_logged_in: it has no login (login.method is null). not_subscription: its login is not the owner's subscription (login.subscription is false), for an agent that needs one. agent_version: its version is outside the range this server supports. stopping, remote_starting and remote_ending come only in not_ready's data."
+    },
+    "login": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "How the agent is signed in, shown as is: for Claude Code its own words (claude.ai); for an agent on providers, the providers' names it can use, those signed in first, each by a readable name (OpenCode Zen, NVIDIA NIM, OpenRouter…) or its id; null when it is not signed in or not checked yet"
+        },
+        "subscription": {
+          "type": "boolean",
+          "description": "Signed in with a subscription, as the server decides it; false for an agent on providers (OpenCode)"
+        }
+      },
+      "required": [
+        "method",
+        "subscription"
+      ],
+      "additionalProperties": false,
+      "description": "How the agent is signed in"
+    },
+    "model": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "What chat.new, chat.set and chat.settings take for this agent"
+        },
+        "label": {
+          "type": "string",
+          "description": "The agent's own name for the model, at most 40 characters"
+        },
+        "efforts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/effort"
+          }
+        },
+        "auto": {
+          "type": "boolean"
+        },
+        "available": {
+          "type": "boolean",
+          "description": "The server takes it. With free only on: covered by the owner's subscription, or free and on a provider the agent is signed in to; off: any model on a login or provider the agent has. An unavailable model gets model_unavailable"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "enum": [
+                "usage_credits",
+                "unchecked",
+                "not_signed_in"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Why it is not available, null when it is: usage_credits (the agent says it bills usage credits), unchecked (the agent's list cannot prove the subscription covers it), not_signed_in (it is free, on a provider the agent is not signed in to). With free only off, none: every listed model is available"
+        },
+        "images": {
+          "type": "boolean",
+          "description": "The model takes images: an image attachment, and the Flipper's screen in a tool result"
+        },
+        "paid": {
+          "type": "boolean",
+          "description": "It may bill per use: the agent says it bills usage credits or cannot prove the subscription covers it, the login is not a subscription (an API key), or its provider prices it above 0. The app says so on its row. With free only on, no available model is paid"
+        }
+      },
+      "required": [
+        "value",
+        "label",
+        "efforts",
+        "auto",
+        "images",
+        "available",
+        "reason",
+        "paid"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "available": {
+                "const": true
+              }
+            },
+            "required": [
+              "available"
+            ]
+          },
+          "then": {
+            "properties": {
+              "reason": {
+                "type": "null"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "reason": {
+                "enum": [
+                  "usage_credits",
+                  "unchecked",
+                  "not_signed_in"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "description": "A model the agent lists, in its order, with its availability"
+    },
+    "modeOption": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "What chat.set and chat.new take"
+        },
+        "label": {
+          "type": "string",
+          "description": "The agent's own English name for the mode"
+        }
+      },
+      "required": [
+        "value",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "remoteCapability": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "keeper": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "answers": {
+          "enum": [
+            "elsewhere"
+          ]
+        },
+        "attachments": {
+          "type": "boolean",
+          "description": "Messages sent with Remote Control on may carry attachments. false when this server cannot type its attachment paths; older servers lack it and refuse them"
+        }
+      },
+      "required": [
+        "name",
+        "keeper",
+        "answers"
+      ],
+      "additionalProperties": false,
+      "description": "The agent's remote access (names and codes; the app words them)"
+    },
+    "agent": {
+      "type": "object",
+      "description": "An agent the server knows, with what it offers now. A conversation's models, modes and efforts are its agent's.",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/agentId"
+        },
+        "name": {
+          "type": "string",
+          "description": "The agent's name, as the app shows it"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "null while the agent is still being checked, or when it is missing"
+        },
+        "configured": {
+          "type": "boolean",
+          "description": "It is set up on this server (zf agent setup): chat.new takes it. An agent that is not still has an entry, with its problem"
+        },
+        "ready": {
+          "type": "boolean",
+          "description": "It can take a turn now"
+        },
+        "problem": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/problem"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Why it cannot take a turn, or null when ready"
+        },
+        "login": {
+          "$ref": "#/$defs/login"
+        },
+        "models": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/model"
+          }
+        },
+        "mode_options": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/modeOption"
+          },
+          "description": "The modes it offers, in its order"
+        },
+        "remote": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/remoteCapability"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Its remote access (Remote Control), or null when it has none: chat.remote gets remote_unsupported"
+        },
+        "attachments": {
+          "type": "boolean",
+          "description": "Messages to it may carry attachments: images to a model that takes images, other files by path"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "version",
+        "configured",
+        "ready",
+        "problem",
+        "login",
+        "models",
+        "mode_options",
+        "remote",
+        "attachments"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "ready": {
+                "const": true
+              }
+            },
+            "required": [
+              "ready"
+            ]
+          },
+          "then": {
+            "properties": {
+              "problem": {
+                "type": "null"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "problem": {
+                "$ref": "#/$defs/problem"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "agents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/agent"
+      },
+      "minItems": 1,
+      "description": "Every agent the server knows, in its order, Claude Code first"
+    },
+    "agentDefaults": {
+      "type": "object",
+      "description": "Where a new conversation with this agent starts: what was last chosen in one",
+      "properties": {
+        "default_mode": {
+          "$ref": "#/$defs/mode"
+        },
+        "default_model": {
+          "type": "string"
+        },
+        "default_effort": {
+          "$ref": "#/$defs/effort"
+        }
+      },
+      "required": [
+        "default_mode",
+        "default_model",
+        "default_effort"
+      ],
+      "additionalProperties": false
+    },
+    "conversationId": {
+      "type": "string",
+      "description": "A conversation, by the UUID the server gave it"
+    },
+    "attachment": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "image",
+            "file"
+          ]
+        },
+        "media_type": {
+          "type": "string"
+        },
+        "bytes": {
+          "type": "integer"
+        },
+        "width": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "height": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "kind",
+        "media_type",
+        "bytes",
+        "width",
+        "height"
+      ],
+      "additionalProperties": false
+    },
+    "frame64": {
+      "type": "string",
+      "description": "Base64 of the 1024-byte framebuffer (128x64, 1 bit per pixel)",
+      "minLength": 1368,
+      "maxLength": 1368
+    },
+    "screen": {
+      "type": "object",
+      "properties": {
+        "seq": {
+          "type": "integer"
+        },
+        "orientation": {
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/$defs/frame64"
+        }
+      },
+      "required": [
+        "seq",
+        "orientation",
+        "data"
+      ],
+      "additionalProperties": false
+    },
+    "conversation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/conversationId"
+        },
+        "created": {
+          "type": "number"
+        },
+        "updated": {
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        },
+        "last": {
+          "type": "string"
+        },
+        "pinned": {
+          "type": "boolean"
+        },
+        "favorite": {
+          "type": "boolean"
+        },
+        "flipper": {
+          "type": "boolean"
+        },
+        "agent": {
+          "$ref": "#/$defs/agentId"
+        },
+        "mode": {
+          "$ref": "#/$defs/mode"
+        },
+        "model": {
+          "type": "string"
+        },
+        "effort": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/effort"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "state": {
+          "enum": [
+            "new",
+            "ready",
+            "expired"
+          ]
+        },
+        "turns": {
+          "type": "integer"
+        },
+        "events": {
+          "type": "integer"
+        },
+        "attachments": {
+          "type": "integer"
+        },
+        "remote": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "created",
+        "updated",
+        "title",
+        "last",
+        "pinned",
+        "favorite",
+        "flipper",
+        "agent",
+        "mode",
+        "model",
+        "effort",
+        "rules",
+        "state",
+        "turns",
+        "events",
+        "attachments",
+        "remote"
+      ],
+      "additionalProperties": false,
+      "description": "One conversation of the index (chat.conversation, chat.conversations)"
+    },
+    "event": {
+      "description": "One history event: what chat.history carries and chat.event sends, keyed by kind",
+      "type": "object",
+      "required": [
+        "n",
+        "at",
+        "kind"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "user",
+            "turn.start",
+            "turn.info",
+            "text",
+            "tool",
+            "tool.result",
+            "permission",
+            "permission.end",
+            "denied",
+            "notice",
+            "turn.end"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "user"
+              }
+            }
+          },
+          "then": {
+            "$ref": "events/user.json"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "turn.start"
+              }
+            }
+          },
+          "then": {
+            "$ref": "events/turn.start.json"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "turn.info"
+              }
+            }
+          },
+          "then": {
+            "$ref": "events/turn.info.json"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "text"
+              }
+            }
+          },
+          "then": {
+            "$ref": "events/text.json"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "tool"
+              }
+            }
+          },
+          "then": {
+            "$ref": "events/tool.json"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "tool.result"
+              }
+            }
+          },
+          "then": {
+            "$ref": "events/tool.result.json"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "permission"
+              }
+            }
+          },
+          "then": {
+            "$ref": "events/permission.json"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "permission.end"
+              }
+            }
+          },
+          "then": {
+            "$ref": "events/permission.end.json"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "denied"
+              }
+            }
+          },
+          "then": {
+            "$ref": "events/denied.json"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "notice"
+              }
+            }
+          },
+          "then": {
+            "$ref": "events/notice.json"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "turn.end"
+              }
+            }
+          },
+          "then": {
+            "$ref": "events/turn.end.json"
+          }
+        }
+      ]
+    }
+  }
+}

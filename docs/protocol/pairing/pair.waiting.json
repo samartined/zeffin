@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/pairing/pair.waiting.json",
+  "title": "POST /app/pair, 202",
+  "description": "The code was right: the request waits for the owner, who sees the same number on the server.",
+  "type": "object",
+  "properties": {
+    "pairing": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{22}$",
+      "description": "The request's ticket: 128 random bits, base64url without padding. Only the phone that made the request has it"
+    },
+    "number": {
+      "type": "string",
+      "pattern": "^[0-9]{6}$",
+      "description": "Six random digits for this request only, shown as 482 913"
+    },
+    "expires_in": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Whole seconds left to confirm (at most 120)"
+    }
+  },
+  "required": [
+    "pairing",
+    "number",
+    "expires_in"
+  ],
+  "additionalProperties": false
+}

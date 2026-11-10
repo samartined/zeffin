@@ -1,0 +1,1 @@
+The tab switch: it always sits on the orange app bar, with a white background at 50% and radius 10; the active tab in `accent` with radius 8 and black text, the others in black at 72%. Used to switch views inside a screen (Relay and Server in the log). It is not used to pick a setting value (BLE or USB): that is a `SettingRow` with its value.

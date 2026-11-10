@@ -1,0 +1,46 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 samartined
+name: Bug report
+description: Something in the server, the app or the relay does not work as described.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A security problem? Do not open an issue: report it privately as SECURITY.md explains.
+        Never paste tokens, keys, real IP addresses or other personal data; use fake values.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where
+      options: ["Server", "App", "Relay (phone and Flipper)", "Docs", "Not sure"]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: The server's (`zf status`), the app's (Settings, About), the agent's, and the Flipper's firmware.
+      placeholder: "server 1.0.0, app 1.0.0, firmware ..."
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: The relevant lines of `zf logs` or the app's log, with tokens, addresses and names removed.
+      render: text

@@ -1,0 +1,10 @@
+{
+  "n": 30,
+  "at": 1793000900.0,
+  "kind": "notice",
+  "code": "remote_off",
+  "data": {
+    "reason": "exited",
+    "exit": 1
+  }
+}

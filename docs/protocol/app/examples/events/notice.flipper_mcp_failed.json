@@ -1,0 +1,9 @@
+{
+  "n": 4,
+  "at": 1793000002.5,
+  "kind": "notice",
+  "code": "flipper_mcp_failed",
+  "data": {
+    "status": "failed"
+  }
+}

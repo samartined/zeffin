@@ -1,0 +1,13 @@
+sourcecode:
+  type: git
+  location:
+    origin: https://example.invalid/cat_tool.git # a comment
+    commit_sha: 0123456789abcdef0123456789abcdef01234567
+short_description: |
+  Counts things on the screen
+  and shows the total.
+name: "Cat \"Tool\""
+version: '1.0'
+description: "@README.md"
+screenshots:
+  - screenshots/one.png

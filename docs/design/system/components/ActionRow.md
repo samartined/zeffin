@@ -1,0 +1,1 @@
+An action inside a card, such as "Retry" or "Forget Flipper": icon and text in `action` (blue) on a 48px row, separated from the previous row by `line`. With `danger` the icon and text turn `danger`: that is the shape of destructive actions such as Stop relay or Remove. It replaces outlined buttons, which the design does not use.

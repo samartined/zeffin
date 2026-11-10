@@ -1,0 +1,119 @@
+[
+ {
+  "appid": "about",
+  "name": "About",
+  "summary": "Shows the firmware version, the hardware and the regulatory information.",
+  "capabilities": [],
+  "builtin": true,
+  "where": "Settings"
+ },
+ {
+  "appid": "archive",
+  "name": "Archive",
+  "summary": "Browses the files saved by each app, by tab, and opens, renames or deletes them.",
+  "capabilities": [
+   "writes_files"
+  ],
+  "builtin": true,
+  "where": "desktop, DOWN"
+ },
+ {
+  "appid": "bt_settings",
+  "name": "Bluetooth",
+  "summary": "Turns Bluetooth on or off and forgets paired devices.",
+  "capabilities": [],
+  "builtin": true,
+  "where": "Settings"
+ },
+ {
+  "appid": "clock_settings",
+  "name": "Clock & Alarm",
+  "summary": "Sets the alarm and how the clock is shown.",
+  "capabilities": [],
+  "builtin": true,
+  "where": "Settings"
+ },
+ {
+  "appid": "desktop_settings",
+  "name": "Desktop",
+  "summary": "Sets the PIN lock, the auto-lock delay and the desktop's quick access apps.",
+  "capabilities": [],
+  "builtin": true,
+  "where": "Settings"
+ },
+ {
+  "appid": "expansion_settings",
+  "name": "Expansion Modules",
+  "summary": "Chooses which port an expansion module on the GPIO header may connect through.",
+  "capabilities": [],
+  "builtin": true,
+  "where": "Settings"
+ },
+ {
+  "appid": "input_settings",
+  "name": "Input",
+  "summary": "Sets how the buttons react, such as vibration on each press.",
+  "capabilities": [],
+  "builtin": true,
+  "where": "Settings"
+ },
+ {
+  "appid": "js_app",
+  "name": "JS Runner",
+  "summary": "Runs JavaScript (.js) scripts opened from the Archive or the file browser.",
+  "capabilities": [],
+  "builtin": true,
+  "where": "opened with a .js file"
+ },
+ {
+  "appid": "notification_settings",
+  "name": "LCD and Notifications",
+  "summary": "Sets the screen backlight, contrast, LED brightness, volume and vibration.",
+  "capabilities": [],
+  "builtin": true,
+  "where": "Settings"
+ },
+ {
+  "appid": "passport",
+  "name": "Passport",
+  "summary": "Shows the dolphin's name, level, mood and experience.",
+  "capabilities": [],
+  "builtin": true,
+  "where": "Settings"
+ },
+ {
+  "appid": "power_settings",
+  "name": "Power",
+  "summary": "Shows the battery, and reboots or powers off the Flipper.",
+  "capabilities": [],
+  "builtin": true,
+  "where": "Settings"
+ },
+ {
+  "appid": "storage_settings",
+  "name": "Storage",
+  "summary": "Shows the SD card's space, and mounts, unmounts, formats or benchmarks it.",
+  "capabilities": [],
+  "builtin": true,
+  "where": "Settings"
+ },
+ {
+  "appid": "subghz",
+  "name": "Sub-GHz",
+  "summary": "Reads, saves and sends Sub-GHz remote signals, and analyzes the frequency in use.",
+  "capabilities": [
+   "subghz_tx",
+   "writes_files"
+  ],
+  "builtin": true,
+  "where": "main menu"
+ },
+ {
+  "appid": "system_settings",
+  "name": "System",
+  "summary": "Sets the hand orientation, units, time and date format, log level and debug mode.",
+  "capabilities": [],
+  "builtin": true,
+  "where": "Settings"
+ }
+]

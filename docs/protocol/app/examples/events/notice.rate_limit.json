@@ -1,0 +1,11 @@
+{
+  "n": 5,
+  "at": 1793000009.0,
+  "kind": "notice",
+  "code": "rate_limit",
+  "data": {
+    "status": "allowed_warning",
+    "resetsAt": 1793003600.0,
+    "rateLimitType": "five_hour"
+  }
+}

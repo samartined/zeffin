@@ -1,0 +1,13 @@
+{
+  "n": 14,
+  "at": 1793000003.0,
+  "kind": "turn.end",
+  "turn": 1,
+  "outcome": "error",
+  "error": "agent_failed",
+  "data": {
+    "exit": 1,
+    "subtype": null
+  },
+  "duration_ms": 2900
+}

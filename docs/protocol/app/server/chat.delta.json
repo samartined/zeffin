@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/chat.delta.json",
+  "title": "chat.delta",
+  "description": "Text being written, at most every 100 ms. Not kept and may be dropped.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.delta"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "turn": {
+      "type": "integer"
+    },
+    "id": {
+      "type": "string"
+    },
+    "offset": {
+      "type": "integer"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "conversation",
+    "turn",
+    "id",
+    "offset",
+    "text"
+  ],
+  "additionalProperties": false
+}

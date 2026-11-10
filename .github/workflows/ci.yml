@@ -1,0 +1,207 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 samartined
+# Runs the five checks in CLAUDE.md ("Checks before pushing") on what a change touches: the server tests and static
+# analysis (pytest, ruff, mypy), the Android unit and screenshot tests, lint and detekt, the comparison of the app's
+# screens with the approved design captures, and the end-to-end test, within a time budget per run.
+#
+# When it runs:
+# - on pull requests to dev and to main, when opened, pushed to, reopened or marked ready; never on a draft, never
+#   with pull_request_target. A pull_request run tests the merge of the branch with its base;
+# - by hand (Actions, Tests, Run workflow) on any branch: everything, the release build included;
+# - not when a change touches only docs no test or build reads: the Markdown at the root and in docs/, the mockups, the README's images (docs/design/images) and the release notes (docs/release-notes).
+#   docs/design/system and captures, docs/protocol, CLAUDE.md.example and android/licenses are read, so they still
+#   run it;
+# - a new push to the same pull request cancels the run still going.
+#
+# What it runs, in one job (each job's minutes are rounded up, so one job is the cheapest):
+# - server/ only: pytest (four workers), ruff and mypy, and the end-to-end test;
+# - android/ only: the Android unit and screenshot tests, detekt, the captures comparison and the end-to-end test;
+# - anything else (docs/protocol, the workflows, docs/design/system or captures, both sides, or a file not listed):
+#   all of it;
+# - only on pull requests to main and by hand (to keep a pull request to dev near 5 minutes):
+#   lintDebug, the Spanish screenshots (they have no captures to compare) and the release build (:app:assembleRelease,
+#   R8). Contributors run lint locally before each push; Release APK builds the release with its lint vital.
+# The server checks run in the background while Gradle works (they wait on subprocesses and sockets much of the time);
+# a step at the end waits for them. The job summary gives each check's own time.
+#
+# Caches (pip, Gradle's dependencies, wrapper and build cache, and Robolectric's Android jars): pull requests only
+# restore them. They are written only by the "warm" job, on pushes to dev and main that change the Android build or
+# the server's requirements, so a pull request never changes what a later build starts from.
+#
+# When Actions cannot run (no minutes left), the run fails without spending any, and the local checks are what
+# proves a change.
+name: Tests
+
+on:
+  pull_request:
+    branches: [dev, main]
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths-ignore: ["*.md", "docs/*.md", "docs/design/mockups/**", "docs/design/images/**", "docs/release-notes/**"]
+  push:
+    branches: [dev, main]
+    paths: ["android/**", "server/requirements*.txt", ".github/workflows/ci.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  GRADLE_WRAPPER_SHA256: 3b8a25775a69158b5ad2b1d17a80a88dc7b40a352a73eb27d06c612a7ce68e98
+  # One entry (~1.4 GB) holds pip's downloads, the Gradle user home and Robolectric's Android jars (~430 MB).
+  CACHE_PATHS: |
+    ~/.cache/pip
+    ~/.gradle/caches
+    ~/.gradle/wrapper
+    ~/.m2/repository/org/robolectric
+
+jobs:
+  tests:
+    if: github.event_name != 'push' && !github.event.pull_request.draft
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+          fetch-depth: 2  # the merge commit and its first parent, the base
+      - name: What the change touches
+        id: scope
+        env:
+          EVENT: ${{ github.event_name }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          server=false; android=false
+          if [ "$EVENT" = pull_request ]; then
+            while IFS= read -r path; do
+              case "$path" in
+                server/*) server=true ;;
+                android/scripts/release-notes.py) server=true ;;  # its test is server/tests/test_release_notes.py
+                android/*) android=true ;;
+                *) server=true; android=true ;;  # docs/protocol, the workflows, docs/design/system|captures, others
+              esac
+            done < <(git diff --name-only HEAD^1 HEAD)
+          else
+            server=true; android=true
+          fi
+          to_main=false  # a pull request to main, or a run by hand
+          if [ "$EVENT" != pull_request ] || [ "$BASE_REF" = main ]; then to_main=true; fi
+          echo "server=$server android=$android to_main=$to_main (cores: $(nproc))"
+          { echo "server=$server"; echo "android=$android"; echo "to_main=$to_main"; } >> "$GITHUB_OUTPUT"
+      - name: Restore the caches (read only)
+        uses: actions/cache/restore@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        with:
+          path: ${{ env.CACHE_PATHS }}
+          key: tests-v1-${{ github.sha }}
+          restore-keys: tests-v1-
+      - name: Python 3.13, the version the MCP tools' snapshot was taken with (docstrings are dedented from 3.13)
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: "3.13"
+      - name: Python for the server (its checks, the captures comparison and the end-to-end test)
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install -q -r server/requirements-dev.txt -e ./server
+      - name: Server checks (pytest in four workers, ruff, mypy), started in the background
+        # They wait on subprocesses and sockets for much of their time, so they run while Gradle works; the step
+        # "Server checks: result" waits for them and fails if they did.
+        if: steps.scope.outputs.server == 'true'
+        working-directory: server
+        run: |
+          nohup bash -c 'set -o pipefail; s=$SECONDS
+            ../.venv/bin/python -m pytest -q --durations=10 && echo "pytest: $((SECONDS - s)) s" \
+            && s=$SECONDS && ../.venv/bin/ruff check . && echo "ruff: $((SECONDS - s)) s" \
+            && s=$SECONDS && ../.venv/bin/mypy && echo "mypy: $((SECONDS - s)) s"
+            echo $? > ../server-checks.code' > ../server-checks.log 2>&1 &
+      - name: Verify Gradle wrapper
+        run: echo "$GRADLE_WRAPPER_SHA256  android/gradle/wrapper/gradle-wrapper.jar" | sha256sum -c -
+      - name: Accept Android SDK licenses
+        # AGP downloads the platform it compiles against (API 37) by itself once licenses are accepted.
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+      - name: Android unit and screenshot tests and detekt (to main also lint, the Spanish screenshots and the release build)
+        if: steps.scope.outputs.android == 'true'
+        working-directory: android
+        env:
+          TO_MAIN: ${{ steps.scope.outputs.to_main }}
+        # lintDebug runs the full lint; the release build's lint vital would repeat part of it (Release APK keeps it).
+        run: |
+          export JAVA_HOME="$JAVA_HOME_21_X64"
+          tasks=(testDebugUnitTest detekt)
+          if [ "$TO_MAIN" = true ]; then
+            tasks+=(lintDebug :app:assembleRelease -x lintVitalRelease)
+          else
+            tasks+=(-Pfb.skipSpanishScreenshots)
+          fi
+          ./gradlew --profile "${tasks[@]}"
+      - name: Time of each Android check
+        # Before the end-to-end test, which runs :app:testDebugUnitTest again and so clears its test results.
+        if: always() && steps.scope.outputs.android == 'true'
+        run: .venv/bin/python -I android/scripts/ci-check-times.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Screens against the approved design captures
+        if: steps.scope.outputs.android == 'true'
+        run: .venv/bin/python -I android/scripts/compare-design-captures.py
+      - name: End-to-end relay test against the Python server and the Flipper simulator
+        run: |
+          export JAVA_HOME="$JAVA_HOME_21_X64"
+          PYTHON="$PWD/.venv/bin/python" android/scripts/e2e.sh
+      - name: "Server checks: result"
+        if: always() && steps.scope.outputs.server == 'true'
+        run: |
+          for _ in $(seq 600); do [ -f server-checks.code ] && break; sleep 1; done
+          cat server-checks.log
+          grep -E "^(pytest|ruff|mypy): " server-checks.log >> "$GITHUB_STEP_SUMMARY" || true
+          [ "$(cat server-checks.code 2>/dev/null)" = 0 ]
+
+  # Writes the caches the pull requests restore: pip's downloads, and the Gradle user home with the build cache of
+  # the tasks a pull request to that branch runs. Only pushes to dev and main run it (a pull request never writes a
+  # cache). Each push that changes the Android build writes a new entry (~1.4 GB, keyed by its commit, since the build
+  # cache changes with the code): the repository's 10 GB hold about seven, and GitHub evicts the least recently used
+  # beyond that, and any entry unused for 7 days.
+  warm:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - name: Restore the caches
+        uses: actions/cache/restore@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        with:
+          path: ${{ env.CACHE_PATHS }}
+          key: tests-v1-${{ github.sha }}
+          restore-keys: tests-v1-
+      - name: Python 3.13, the version the MCP tools' snapshot was taken with (docstrings are dedented from 3.13)
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: "3.13"
+      - name: pip's downloads
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install -q -r server/requirements-dev.txt -e ./server
+      - name: Verify Gradle wrapper
+        run: echo "$GRADLE_WRAPPER_SHA256  android/gradle/wrapper/gradle-wrapper.jar" | sha256sum -c -
+      - name: Accept Android SDK licenses
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+      - name: The Android tasks a pull request to this branch runs, into Gradle's build cache
+        working-directory: android
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          export JAVA_HOME="$JAVA_HOME_21_X64"
+          tasks=(testDebugUnitTest detekt)
+          if [ "$BRANCH" = main ]; then
+            tasks+=(lintDebug :app:assembleRelease -x lintVitalRelease)
+          else
+            tasks+=(-Pfb.skipSpanishScreenshots)
+          fi
+          ./gradlew "${tasks[@]}"
+          ./gradlew --stop
+      - name: Save the caches
+        uses: actions/cache/save@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        with:
+          path: ${{ env.CACHE_PATHS }}
+          key: tests-v1-${{ github.sha }}

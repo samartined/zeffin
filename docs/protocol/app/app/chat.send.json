@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/app/chat.send.json",
+  "title": "chat.send",
+  "description": "A message: text up to 16,000 characters (may be empty with attachments), and ids from /app/upload.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.send"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "text": {
+      "type": "string",
+      "maxLength": 16000
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 10
+    }
+  },
+  "required": [
+    "type",
+    "conversation",
+    "text"
+  ],
+  "additionalProperties": false
+}

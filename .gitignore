@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.hypothesis/
+*.egg-info/
+build/
+config.json
+state/
+
+# Android
+**/.gradle/
+**/.kotlin/
+**/build/
+**/local.properties
+*.keystore
+*.jks
+
+# Claude Code: personal instructions, never committed
+CLAUDE.local.md

@@ -1,0 +1,222 @@
+{
+ "claude": "2.1.311",
+ "files": [
+  {
+   "exit": 0,
+   "file": "01-new_and_resume.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Reply with only the probe word from your instructions, and remember the number 4817 for later.",
+   "resume": false,
+   "step": "new_and_resume"
+  },
+  {
+   "exit": 0,
+   "file": "02-new_and_resume-2.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "What number did I ask you to remember? Reply with only the number.",
+   "resume": true,
+   "step": "new_and_resume"
+  },
+  {
+   "exit": 0,
+   "file": "03-allow.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Use the Write tool to create probe-a.txt containing the word alpha. Then use the Write tool again to overwrite probe-a.txt with the word beta. Use no other tool.",
+   "resume": false,
+   "step": "allow"
+  },
+  {
+   "exit": 0,
+   "file": "04-deny.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Use the Write tool to create probe-b.txt containing the word gamma. If it is denied, reply with only the word DENIED.",
+   "resume": false,
+   "step": "deny"
+  },
+  {
+   "exit": 0,
+   "file": "05-hold.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Use the Write tool to create probe-c.txt containing the word delta. Use no other tool.",
+   "resume": false,
+   "step": "hold"
+  },
+  {
+   "exit": 0,
+   "file": "06-hook_timeout.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Use the Write tool to create probe-d.txt containing the word echo. If it is denied, reply with only the word DENIED.",
+   "resume": false,
+   "step": "hook_timeout"
+  },
+  {
+   "exit": 0,
+   "file": "07-sigint.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Count from 1 to 400, one number per line, with no other text.",
+   "resume": false,
+   "step": "sigint"
+  },
+  {
+   "exit": 0,
+   "file": "08-sigint-2.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Reply with only the word back.",
+   "resume": true,
+   "step": "sigint"
+  },
+  {
+   "exit": 0,
+   "file": "09-auto.jsonl",
+   "images": 0,
+   "mode": "auto",
+   "prompt": "Reply with only the word ok.",
+   "resume": false,
+   "step": "auto"
+  },
+  {
+   "exit": 0,
+   "file": "10-mcp.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Call the flipper_status tool once, then reply with only the word done.",
+   "resume": false,
+   "step": "mcp"
+  },
+  {
+   "exit": 0,
+   "file": "11-mcp-2.jsonl",
+   "images": 0,
+   "mode": "auto",
+   "prompt": "Call the flipper_status tool once, then reply with only the word done.",
+   "resume": false,
+   "step": "mcp"
+  },
+  {
+   "exit": 0,
+   "file": "12-mcp-3.jsonl",
+   "images": 0,
+   "mode": "plan",
+   "prompt": "Call the flipper_status tool once, then reply with only the word done.",
+   "resume": false,
+   "step": "mcp"
+  },
+  {
+   "exit": 1,
+   "file": "13-unknown_resume.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Reply with only the word ok.",
+   "resume": true,
+   "step": "unknown_resume"
+  },
+  {
+   "exit": 0,
+   "file": "14-effort.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Reply with only the word ok.",
+   "resume": false,
+   "step": "effort"
+  },
+  {
+   "exit": 0,
+   "file": "15-effort-2.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Reply with only the word ok.",
+   "resume": false,
+   "step": "effort"
+  },
+  {
+   "exit": 0,
+   "file": "16-plan.jsonl",
+   "images": 0,
+   "mode": "plan",
+   "prompt": "Use the Write tool to create plan-allow.txt containing the word november. Plan it first if your mode asks for a plan.",
+   "resume": false,
+   "step": "plan"
+  },
+  {
+   "exit": 0,
+   "file": "17-plan-2.jsonl",
+   "images": 0,
+   "mode": "plan",
+   "prompt": "Use the Write tool to create plan-deny.txt containing the word november. Plan it first if your mode asks for a plan.",
+   "resume": false,
+   "step": "plan"
+  },
+  {
+   "exit": 0,
+   "file": "18-accept_edits.jsonl",
+   "images": 0,
+   "mode": "acceptEdits",
+   "prompt": "Use the Write tool to create ae-1.txt containing the word oscar. Then use the Bash tool to run exactly: echo papa > ae-2.txt",
+   "resume": false,
+   "step": "accept_edits"
+  },
+  {
+   "exit": 0,
+   "file": "19-bash_suggestions.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Use the Bash tool to run exactly: touch probe-f.txt",
+   "resume": false,
+   "step": "bash_suggestions"
+  },
+  {
+   "exit": 0,
+   "file": "20-bash_suggestions-2.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Use the Bash tool to run exactly: echo golf > probe-g.txt",
+   "resume": false,
+   "step": "bash_suggestions"
+  },
+  {
+   "exit": 0,
+   "file": "21-image.jsonl",
+   "images": 1,
+   "mode": "default",
+   "prompt": null,
+   "resume": false,
+   "step": "image"
+  },
+  {
+   "exit": 0,
+   "file": "22-add_dir.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Use the Read tool to read <state>/probe-files-7mvzs7_5/note.txt and reply with its content only.",
+   "resume": false,
+   "step": "add_dir"
+  },
+  {
+   "exit": 0,
+   "file": "23-rc_start.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "Please remember the number 5023 for later. Reply with only the word ok.",
+   "resume": false,
+   "step": "rc_start"
+  },
+  {
+   "exit": 0,
+   "file": "24-rc_resume_print.jsonl",
+   "images": 0,
+   "mode": "default",
+   "prompt": "What number did I ask you to remember last? Reply with only the number.",
+   "resume": true,
+   "step": "rc_resume_print"
+  }
+ ],
+ "v": 1
+}

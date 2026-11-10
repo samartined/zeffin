@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/pairing/qr.json",
+  "title": "The pairing QR code (version 3)",
+  "description": "What the QR code of zf pair and of the web view's Pair the app holds, as compact JSON. No token and no lasting secret.",
+  "type": "object",
+  "properties": {
+    "fb": {
+      "const": 3
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^https://",
+      "description": "The server's base URL on the public listener"
+    },
+    "code": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{22}$",
+      "description": "The current pairing code: 128 random bits, base64url without padding. It changes every 30 s"
+    },
+    "key": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{43}$",
+      "description": "The pin: SHA-256 of the server key's SubjectPublicKeyInfo (DER), base64url without padding"
+    }
+  },
+  "required": [
+    "fb",
+    "url",
+    "code",
+    "key"
+  ],
+  "additionalProperties": false
+}

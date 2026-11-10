@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/events/tool.json",
+  "title": "chat.event: tool",
+  "description": "A tool call (strings in input cut at 2,000 characters; untrusted). In chat.event it also carries type and conversation; in chat.history it does not.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.event"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "n": {
+      "type": "integer"
+    },
+    "at": {
+      "type": "number"
+    },
+    "kind": {
+      "const": "tool"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "input": {},
+    "via": {
+      "const": "remote",
+      "description": "It came from the other device (Remote Control)"
+    }
+  },
+  "required": [
+    "n",
+    "at",
+    "kind",
+    "id",
+    "name",
+    "input"
+  ],
+  "additionalProperties": false
+}

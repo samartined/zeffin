@@ -1,0 +1,222 @@
+{
+  "type": "chat.status",
+  "agents": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "version": "2.1.308",
+      "configured": true,
+      "ready": true,
+      "problem": null,
+      "login": {
+        "method": "claude.ai",
+        "subscription": true
+      },
+      "models": [
+        {
+          "value": "opus",
+          "label": "Opus 5.5",
+          "efforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "auto": true,
+          "images": true,
+          "available": true,
+          "reason": null,
+          "paid": false
+        },
+        {
+          "value": "sonnet",
+          "label": "Sonnet 5.5",
+          "efforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "auto": true,
+          "images": true,
+          "available": true,
+          "reason": null,
+          "paid": false
+        },
+        {
+          "value": "fable",
+          "label": "Fable 5.1",
+          "efforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "auto": true,
+          "images": true,
+          "available": true,
+          "reason": null,
+          "paid": true
+        },
+        {
+          "value": "haiku",
+          "label": "Haiku 5.5",
+          "efforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "auto": true,
+          "images": true,
+          "available": true,
+          "reason": null,
+          "paid": false
+        },
+        {
+          "value": "claude-haiku-4-5-20251001",
+          "label": "Haiku 4.5",
+          "efforts": [],
+          "auto": false,
+          "images": true,
+          "available": true,
+          "reason": null,
+          "paid": false
+        },
+        {
+          "value": "claude-opus-4-6",
+          "label": "Opus 4.6",
+          "efforts": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "auto": true,
+          "images": true,
+          "available": true,
+          "reason": null,
+          "paid": false
+        },
+        {
+          "value": "claude-opus-4-6[1m]",
+          "label": "Opus 4.6 (1M context)",
+          "efforts": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "auto": true,
+          "images": true,
+          "available": true,
+          "reason": null,
+          "paid": true
+        }
+      ],
+      "mode_options": [
+        {
+          "value": "default",
+          "label": "Manual"
+        },
+        {
+          "value": "acceptEdits",
+          "label": "Accept edits"
+        },
+        {
+          "value": "plan",
+          "label": "Plan"
+        },
+        {
+          "value": "auto",
+          "label": "Auto"
+        }
+      ],
+      "remote": {
+        "name": "Remote Control",
+        "keeper": "Anthropic",
+        "answers": "elsewhere",
+        "attachments": true
+      },
+      "attachments": true
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "version": "1.19.5",
+      "configured": true,
+      "ready": true,
+      "problem": null,
+      "login": {
+        "method": "OpenRouter, OpenCode Zen",
+        "subscription": false
+      },
+      "models": [
+        {
+          "value": "openrouter/example/coder-large",
+          "label": "Coder Large",
+          "efforts": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "auto": false,
+          "images": false,
+          "available": true,
+          "reason": null,
+          "paid": true
+        },
+        {
+          "value": "opencode/nemotron-3.5-super-vl-free",
+          "label": "Nemotron 3.5 Super VL Free",
+          "efforts": [],
+          "auto": false,
+          "images": true,
+          "available": true,
+          "reason": null,
+          "paid": false
+        }
+      ],
+      "mode_options": [
+        {
+          "value": "default",
+          "label": "Manual"
+        },
+        {
+          "value": "acceptEdits",
+          "label": "Accept edits"
+        },
+        {
+          "value": "plan",
+          "label": "Plan"
+        }
+      ],
+      "remote": null,
+      "attachments": true
+    }
+  ],
+  "settings": {
+    "default_agent": "claude-code",
+    "permission_timeout_s": 120,
+    "agents": {
+      "claude-code": {
+        "default_mode": "default",
+        "default_model": "opus",
+        "default_effort": "medium"
+      },
+      "opencode": {
+        "default_mode": "default",
+        "default_model": "openrouter/example/coder-large",
+        "default_effort": "medium"
+      }
+    }
+  },
+  "turn": null,
+  "pending": [],
+  "remote": null,
+  "free_only": false
+}

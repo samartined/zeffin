@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/app/screen.fresh.json",
+  "title": "screen.fresh",
+  "description": "Ask the Flipper to redraw (restarts the screen stream).",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "screen.fresh"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false
+}

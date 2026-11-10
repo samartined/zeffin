@@ -1,0 +1,1 @@
+A settings row: title in `heading`, optional description in gray `caption` and, at the end, a gray value with a chevron (opens a sheet or a screen) or an orange switch. 12px padding, separated by `line` inside a card with its title.

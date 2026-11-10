@@ -1,0 +1,24 @@
+{
+  "default": "official",
+  "base": "base.md",
+  "profiles": {
+    "official": {
+      "file": "official.md",
+      "origins": ["official"],
+      "app_categories": ["Bluetooth", "Examples", "GPIO", "Games", "Infrared", "iButton", "Media", "NFC", "RFID", "Sub-GHz", "Tools", "USB"],
+      "catalog": "official.json"
+    },
+    "momentum": {
+      "file": "momentum.md",
+      "origins": ["momentum"],
+      "app_categories": ["Bluetooth", "Examples", "GPIO", "Games", "Infrared", "iButton", "Media", "NFC", "RFID", "Sub-GHz", "Tools", "USB", "assets"],
+      "catalog": "momentum.json"
+    },
+    "unleashed": {
+      "file": "unleashed.md",
+      "origins": ["unleashed"],
+      "app_categories": ["Bluetooth", "Examples", "GPIO", "Games", "Infrared", "iButton", "Media", "NFC", "RFID", "Sub-GHz", "Tools", "USB"],
+      "catalog": "unleashed.json"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/error.json",
+  "title": "error",
+  "description": "A request could not be served: a code, data for the chat's, and an English message for logs.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "error"
+    },
+    "error": {
+      "enum": [
+        "bad_json",
+        "bad_message",
+        "bad_action",
+        "not_connected",
+        "flipper",
+        "unknown_type",
+        "busy",
+        "not_found",
+        "expired",
+        "too_long",
+        "not_ready",
+        "bad_mode",
+        "bad_model",
+        "bad_effort",
+        "model_unavailable",
+        "bad_agent",
+        "bad_request",
+        "permission_gone",
+        "bad_attachment",
+        "too_large",
+        "remote_settings",
+        "remote_busy",
+        "remote_attachments",
+        "remote_command",
+        "remote_unsupported"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object"
+    },
+    "request": {
+      "type": "string",
+      "description": "The chat request's type (chat.* only)"
+    }
+  },
+  "required": [
+    "type",
+    "error",
+    "message"
+  ],
+  "additionalProperties": false
+}

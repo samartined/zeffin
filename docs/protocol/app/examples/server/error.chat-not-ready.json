@@ -1,0 +1,9 @@
+{
+  "type": "error",
+  "error": "not_ready",
+  "data": {
+    "problem": "not_logged_in"
+  },
+  "request": "chat.send",
+  "message": "chat.send failed: not_ready"
+}

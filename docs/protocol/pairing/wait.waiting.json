@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/pairing/wait.waiting.json",
+  "title": "POST /app/pair/wait, 202",
+  "description": "Nobody answered yet: call again.",
+  "type": "object",
+  "properties": {
+    "state": {
+      "const": "waiting"
+    },
+    "expires_in": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Whole seconds left to confirm (at most 120)"
+    }
+  },
+  "required": [
+    "state",
+    "expires_in"
+  ],
+  "additionalProperties": false
+}

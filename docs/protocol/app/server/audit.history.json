@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/audit.history.json",
+  "title": "audit.history",
+  "description": "The agent's last 50 actions on the Flipper, on connect.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "audit.history"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ts",
+          "tool"
+        ],
+        "properties": {
+          "ts": {
+            "type": "number"
+          },
+          "tool": {
+            "type": "string"
+          }
+        },
+        "description": "One audit log record: open, its fields depend on the tool"
+      }
+    }
+  },
+  "required": [
+    "type",
+    "items"
+  ],
+  "additionalProperties": false
+}

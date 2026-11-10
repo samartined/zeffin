@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 samartined
+name: Ask for a private channel
+description: To report a conduct problem (CODE_OF_CONDUCT.md) without details in public; the maintainer answers with a private channel.
+title: "Private channel, please"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Write no details here: this issue is public. The maintainer answers with a private way to talk.
+        For a security problem, report it privately as SECURITY.md explains, not here.
+  - type: textarea
+    id: how
+    attributes:
+      label: How to reach you (optional)
+      description: Only if your GitHub account is not enough. Nothing about what happened.
+    validations:
+      required: false

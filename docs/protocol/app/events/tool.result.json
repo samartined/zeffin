@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/events/tool.result.json",
+  "title": "chat.event: tool.result",
+  "description": "A tool's result (text up to 4 KiB; untrusted). In chat.event it also carries type and conversation; in chat.history it does not.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.event"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "n": {
+      "type": "integer"
+    },
+    "at": {
+      "type": "number"
+    },
+    "kind": {
+      "const": "tool.result"
+    },
+    "id": {
+      "type": "string"
+    },
+    "error": {
+      "type": "boolean"
+    },
+    "text": {
+      "type": "string"
+    },
+    "ms": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "images": {
+      "type": "integer"
+    },
+    "screen": {
+      "anyOf": [
+        {
+          "$ref": "../defs.json#/$defs/screen"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "via": {
+      "const": "remote",
+      "description": "It came from the other device (Remote Control)"
+    }
+  },
+  "required": [
+    "n",
+    "at",
+    "kind",
+    "id",
+    "error",
+    "text",
+    "ms"
+  ],
+  "additionalProperties": false
+}

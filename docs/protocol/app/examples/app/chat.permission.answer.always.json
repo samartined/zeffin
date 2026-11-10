@@ -1,0 +1,8 @@
+{
+  "type": "chat.permission.answer",
+  "id": "4c1f9a7e2b3d",
+  "answer": "always",
+  "rules": [
+    "Bash(touch fb-test.txt)"
+  ]
+}

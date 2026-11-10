@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/events/permission.end.json",
+  "title": "chat.event: permission.end",
+  "description": "How a permission ended. In chat.event it also carries type and conversation; in chat.history it does not.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.event"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "n": {
+      "type": "integer"
+    },
+    "at": {
+      "type": "number"
+    },
+    "kind": {
+      "const": "permission.end"
+    },
+    "id": {
+      "type": "string"
+    },
+    "answer": {
+      "enum": [
+        "once",
+        "always",
+        "deny",
+        "timeout",
+        "interrupted",
+        "stopping"
+      ]
+    }
+  },
+  "required": [
+    "n",
+    "at",
+    "kind",
+    "id",
+    "answer"
+  ],
+  "additionalProperties": false
+}

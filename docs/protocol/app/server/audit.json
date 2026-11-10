@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/audit.json",
+  "title": "audit",
+  "description": "One new action.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "audit"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "ts",
+        "tool"
+      ],
+      "properties": {
+        "ts": {
+          "type": "number"
+        },
+        "tool": {
+          "type": "string"
+        }
+      },
+      "description": "One audit log record: open, its fields depend on the tool"
+    }
+  },
+  "required": [
+    "type",
+    "item"
+  ],
+  "additionalProperties": false
+}

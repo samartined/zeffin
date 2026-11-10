@@ -1,0 +1,13 @@
+{
+  "n": 5,
+  "at": 1793000006.0,
+  "kind": "tool",
+  "id": "toolu_01",
+  "name": "mcp__flipper__flipper_press",
+  "input": {
+    "keys": [
+      "down",
+      "ok"
+    ]
+  }
+}

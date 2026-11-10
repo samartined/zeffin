@@ -1,0 +1,10 @@
+{
+  "n": 14,
+  "at": 1793000060.0,
+  "kind": "turn.end",
+  "turn": 1,
+  "outcome": "interrupted",
+  "error": null,
+  "data": {},
+  "duration_ms": 59900
+}

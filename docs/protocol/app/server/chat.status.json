@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/chat.status.json",
+  "title": "chat.status",
+  "description": "The chat's state (reply to chat.list, then on every change).",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.status"
+    },
+    "agents": {
+      "$ref": "../defs.json#/$defs/agents",
+      "description": "Every agent the server knows, with its state now"
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "default_agent": {
+          "$ref": "../defs.json#/$defs/agentId",
+          "description": "The agent of a new conversation when chat.new names none"
+        },
+        "permission_timeout_s": {
+          "type": "number"
+        },
+        "agents": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "../defs.json#/$defs/agentDefaults"
+          },
+          "description": "By agent id: where its new conversations start. Every agent the server knows has one"
+        }
+      },
+      "required": [
+        "default_agent",
+        "permission_timeout_s",
+        "agents"
+      ],
+      "additionalProperties": false
+    },
+    "turn": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "conversation": {
+              "$ref": "../defs.json#/$defs/conversationId"
+            },
+            "agent": {
+              "$ref": "../defs.json#/$defs/agentId"
+            },
+            "turn": {
+              "type": "integer"
+            },
+            "mode": {
+              "$ref": "../defs.json#/$defs/mode"
+            },
+            "model": {
+              "type": "string"
+            },
+            "effort": {
+              "anyOf": [
+                {
+                  "$ref": "../defs.json#/$defs/effort"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "started_at": {
+              "type": "number"
+            },
+            "waiting": {
+              "type": "boolean"
+            },
+            "remote": {
+              "type": "boolean"
+            },
+            "remote_waiting": {
+              "type": "boolean"
+            },
+            "via": {
+              "const": "remote"
+            }
+          },
+          "required": [
+            "conversation",
+            "agent",
+            "turn",
+            "mode",
+            "model",
+            "effort",
+            "started_at",
+            "waiting"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "pending": {
+      "type": "array",
+      "items": {
+        "$ref": "../events/permission.json"
+      },
+      "description": "Open permission events; never without a turn"
+    },
+    "remote": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "conversation": {
+              "$ref": "../defs.json#/$defs/conversationId"
+            },
+            "agent": {
+              "$ref": "../defs.json#/$defs/agentId"
+            },
+            "state": {
+              "enum": [
+                "starting",
+                "on"
+              ]
+            },
+            "connected": {
+              "type": "boolean"
+            },
+            "since": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "conversation",
+            "agent",
+            "state",
+            "connected",
+            "since"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "free_only": {
+      "type": "boolean",
+      "description": "The owner's \"free only\" switch (zf set-free-only), on: the agents run only on a subscription or free providers and models. The app words what it promises by it"
+    }
+  },
+  "required": [
+    "type",
+    "agents",
+    "settings",
+    "turn",
+    "pending",
+    "remote",
+    "free_only"
+  ],
+  "additionalProperties": false
+}

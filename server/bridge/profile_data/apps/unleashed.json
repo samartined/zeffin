@@ -1,0 +1,6144 @@
+{
+ "apps": {
+  "24cxxprog": {
+   "author": "@Dr.Mosfet",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "24Cxx Programmer",
+   "path": "/ext/apps/GPIO/24cxxprog.fap",
+   "source_dir": "non_catalog_apps/24cxxprog",
+   "source_url": null,
+   "summary": "EEPROM 24Cxx programmer via I2C with read, write, erase and dump/restore options.",
+   "summary_source": "manifest",
+   "version": "2.1"
+  },
+  "4inrow": {
+   "author": "leo-need-more-coffee",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "4 in row",
+   "path": "/ext/apps/Games/4inrow.fap",
+   "source_dir": "apps_source_code/4inrow_game",
+   "source_url": "https://github.com/leo-need-more-coffee/flipperzero-4inrow",
+   "summary": "Four in a Row: drop discs to line up four before the other player.",
+   "summary_source": "ours",
+   "version": "1.3"
+  },
+  "ac_detector": {
+   "author": "xMasterX",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "AC Detector",
+   "path": "/ext/apps/Infrared/ac_detector.fap",
+   "source_dir": "non_catalog_apps/ac_detector",
+   "source_url": null,
+   "summary": "Identify the IR protocol an air conditioner remote speaks",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "air_arkanoid": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Air Arkanoid",
+   "path": "/ext/apps/Games/air_arkanoid.fap",
+   "source_dir": "base_pack/air_arkanoid",
+   "source_url": null,
+   "summary": "Arkanoid game that supports the Video Game Module motion sensor",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "air_labyrinth": {
+   "author": "@CodeAllNight (MrDerekJamison)",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Air Labyrinth",
+   "path": "/ext/apps/Games/air_labyrinth.fap",
+   "source_dir": "non_catalog_apps/air_labyrinth",
+   "source_url": "https://github.com/jamisonderek/flipper-zero-tutorials/tree/main/vgm/apps/air_labyrinth",
+   "summary": "Labyrinth game v0.1 that supports the Video Game Module motion sensor. Written by @CodeAllNight (https://youtube.com/MrDerekJamison/about)",
+   "summary_source": "manifest",
+   "version": "0.1"
+  },
+  "air_mouse": {
+   "author": null,
+   "capabilities": [
+    "hid",
+    "ble_adv",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[BMI/LSM] Air Mouse",
+   "path": "/ext/apps/GPIO/air_mouse.fap",
+   "source_dir": "non_catalog_apps/airmouse",
+   "source_url": null,
+   "summary": "Uses the Flipper with a BMI160 or LSM6DS3 motion sensor as an air mouse over USB or Bluetooth.",
+   "summary_source": "ours",
+   "version": "1.4"
+  },
+  "airmon": {
+   "author": "3cky",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[PMSx003] Airmon",
+   "path": "/ext/apps/GPIO/airmon.fap",
+   "source_dir": "apps_source_code/airmon",
+   "source_url": "https://github.com/3cky/flipperzero-airmon",
+   "summary": "Plantower PMSx003 sensor reader",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "alcohol_sensor": {
+   "author": "Serjantlk",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "MQ-3 Alcometer",
+   "path": "/ext/apps/GPIO/alcohol_sensor.fap",
+   "source_dir": "non_catalog_apps/mq3_alcometer",
+   "source_url": "https://github.com/serjantlk/MQ-3-Alcometer",
+   "summary": "Breathalyzer using MQ-3 sensor with dynamic zero calibration and intoxication level scale",
+   "summary_source": "manifest",
+   "version": "1.0.0"
+  },
+  "allstar_firefly": {
+   "author": "jlaughter",
+   "capabilities": [
+    "subghz_tx",
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Allstar Firefly",
+   "path": "/ext/apps/Sub-GHz/allstar_firefly.fap",
+   "source_dir": "non_catalog_apps/allstar_firefly",
+   "source_url": null,
+   "summary": "Allstar Firefly 318ALD31K gate remote - 9-bit trinary OOK decoder/emulator",
+   "summary_source": "manifest",
+   "version": "0.1"
+  },
+  "ami_tool": {
+   "author": "Firefox2100",
+   "capabilities": [
+    "nfc_emulate_write",
+    "ble_adv",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "AmiTool",
+   "path": "/ext/apps/NFC/ami_tool.fap",
+   "source_dir": "non_catalog_apps/ami_tool",
+   "source_url": "https://github.com/Firefox2100/ami-tool",
+   "summary": "An NTAG215 toolkit for Flipper Zero to work with tags used with gaming consoles.",
+   "summary_source": "manifest",
+   "version": "0.3.0"
+  },
+  "analog_clock": {
+   "author": "@scrolltex",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Analog Clock",
+   "path": "/ext/apps/Tools/analog_clock.fap",
+   "source_dir": "apps_source_code/flipper_analog_clock",
+   "source_url": "https://github.com/scrolltex/flipper_analog_clock",
+   "summary": "Shows analog clock on Flipper screen",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "arddrivin": {
+   "author": "@apfxtech",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Ardudrivin",
+   "path": "/ext/apps/Games/arddrivin.fap",
+   "source_dir": "non_catalog_apps/FlipperDrivin",
+   "source_url": "https://github.com/apfxtech/FlipperDrivin",
+   "summary": "Race game ported to Flipper Zero.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "ardugolf": {
+   "author": "@apfxtech",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "ArduGolf",
+   "path": "/ext/apps/Games/ardugolf.fap",
+   "source_dir": "non_catalog_apps/FlipperGolf",
+   "source_url": "https://github.com/apfxtech/FlipperGolf.git",
+   "summary": "Play the port of Wolfenduino game on your Flipper Zero.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "arduventure": {
+   "author": "@apfxtech",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Arduventure",
+   "path": "/ext/apps/Games/arduventure.fap",
+   "source_dir": "non_catalog_apps/FlipperArduventure",
+   "source_url": "https://github.com/apfxtech/FlipperArduventure.git",
+   "summary": "A retro RPG adventure on your Flipper Zero!",
+   "summary_source": "manifest",
+   "version": "2.0"
+  },
+  "arkanoid": {
+   "author": "@xMasterX & @gotnull",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Arkanoid",
+   "path": "/ext/apps/Games/arkanoid.fap",
+   "source_dir": "base_pack/arkanoid",
+   "source_url": null,
+   "summary": "The brick-breaking game Arkanoid.",
+   "summary_source": "ours",
+   "version": "1.3"
+  },
+  "asteroids": {
+   "author": "@antirez & @SimplyMinimal",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Asteroids",
+   "path": "/ext/apps/Games/asteroids.fap",
+   "source_dir": "apps_source_code/flipper-asteroids",
+   "source_url": "https://github.com/antirez/flipper-asteroids",
+   "summary": "The classic Asteroids game: steer a ship and shoot the rocks.",
+   "summary_source": "ours",
+   "version": "1.3"
+  },
+  "atm": {
+   "author": "@apfxtech",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "ATM player",
+   "path": "/ext/apps/Media/atm.fap",
+   "source_dir": "non_catalog_apps/FlipperATM",
+   "source_url": "https://github.com/apfxtech/FlipperATM",
+   "summary": "ATM music player from Arduventure.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "avr_isp": {
+   "author": null,
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "AVR Flasher",
+   "path": "/ext/apps/GPIO/avr_isp.fap",
+   "source_dir": "base_pack/avr_isp_programmer",
+   "source_url": null,
+   "summary": "Application for flashing AVR microcontrollers",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "bad_usb": {
+   "author": null,
+   "capabilities": [
+    "hid",
+    "ble_adv",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "USB",
+   "menu": true,
+   "name": "Bad USB",
+   "path": "/ext/apps/USB/bad_usb.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Runs keyboard scripts (Bad USB, Ducky syntax) over USB.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "ballu_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Ballu",
+   "path": "/ext/apps/Infrared/ballu_ac_remote.fap",
+   "source_dir": "non_catalog_apps/ballu_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Ballu-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "barcode_app": {
+   "author": "@Kingal1337",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Barcode App",
+   "path": "/ext/apps/Tools/barcode_app.fap",
+   "source_dir": "base_pack/barcode_gen",
+   "source_url": "https://github.com/Kingal1337/flipper-barcode-generator",
+   "summary": "App allows you to display various barcodes on flipper screen",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "battery_reader": {
+   "author": "gazirov",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "I2C BMS Reader",
+   "path": "/ext/apps/GPIO/battery_reader.fap",
+   "source_dir": "non_catalog_apps/battery_reader",
+   "source_url": "https://github.com/gazirov/battery_reader",
+   "summary": "SBS battery reader and service tool for TI BQ30/BQ40 controllers",
+   "summary_source": "manifest",
+   "version": "0.4.0"
+  },
+  "bc_scanner": {
+   "author": "Igor Danilov",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "BarCode ScannerE",
+   "path": "/ext/apps/GPIO/bc_scanner.fap",
+   "source_dir": "non_catalog_apps/bc_scanner_emulator",
+   "source_url": "https://github.com/polarikus/flipper-zero_bc_scanner_emulator",
+   "summary": "Bar Code Emulator app for Evotor",
+   "summary_source": "manifest",
+   "version": "0.5"
+  },
+  "bettermouse": {
+   "author": "timon",
+   "capabilities": [
+    "hid"
+   ],
+   "capabilities_searched": true,
+   "category": "USB",
+   "name": "Better Mouse",
+   "path": "/ext/apps/USB/bettermouse.fap",
+   "source_dir": "non_catalog_apps/bettermouse",
+   "source_url": null,
+   "summary": "USB mouse remote with a real motion engine: smooth acceleration, true diagonals, scroll mode and optional momentum",
+   "summary_source": "manifest",
+   "version": "1.2"
+  },
+  "blackjack": {
+   "author": "@teeebor",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Blackjack",
+   "path": "/ext/apps/Games/blackjack.fap",
+   "source_dir": "base_pack/blackjack",
+   "source_url": null,
+   "summary": "The card game Blackjack against the dealer.",
+   "summary_source": "ours",
+   "version": "1.1"
+  },
+  "ble_spam": {
+   "author": "@WillyJL @ECTO-1A @Spooks4576",
+   "capabilities": [
+    "ble_adv",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Bluetooth",
+   "name": "BLE Spam",
+   "path": "/ext/apps/Bluetooth/ble_spam.fap",
+   "source_dir": "base_pack/ble_spam",
+   "source_url": "https://github.com/Next-Flip/Momentum-Apps/tree/dev/ble_spam",
+   "summary": "Flood BLE advertisements to cause spammy and annoying popups/notifications",
+   "summary_source": "manifest",
+   "version": "6.6"
+  },
+  "bomberduck": {
+   "author": "@leo-need-more-coffee & @xMasterX",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Bomberduck",
+   "path": "/ext/apps/Games/bomberduck.fap",
+   "source_dir": "base_pack/bomberduck",
+   "source_url": null,
+   "summary": "Bomberduck(Bomberman) Game",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "bounce": {
+   "author": "Tom Varghese",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Bounce",
+   "path": "/ext/apps/Games/bounce.fap",
+   "source_dir": "non_catalog_apps/bounce",
+   "source_url": "https://github.com/tomxposed/flipper-bounce",
+   "summary": "Nokia-style Bounce: roll, jump, collect every ring and reach the exit.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "bpm_tapper": {
+   "author": "@panki27",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "BPM Tapper",
+   "path": "/ext/apps/Media/bpm_tapper.fap",
+   "source_dir": "apps_source_code/bpmtapper",
+   "source_url": "https://github.com/panki27/bpm-tapper",
+   "summary": "Tap center button to measure BPM",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "brainfuck": {
+   "author": "@nymda",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Brainfuck",
+   "path": "/ext/apps/Tools/brainfuck.fap",
+   "source_dir": "apps_source_code/brainfuck",
+   "source_url": "https://github.com/nymda/FlipperZeroBrainfuck",
+   "summary": "Brainfuck language interpreter",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "bt_trigger": {
+   "author": "@Nem0oo",
+   "capabilities": [
+    "hid",
+    "ble_adv"
+   ],
+   "capabilities_searched": true,
+   "category": "Bluetooth",
+   "name": "BT Trigger",
+   "path": "/ext/apps/Bluetooth/bt_trigger.fap",
+   "source_dir": "apps_source_code/bluetooth-trigger",
+   "source_url": "https://github.com/Nem0oo/flipper-zero-bluetooth-trigger",
+   "summary": "Control your smartphone camera via your Flipper Zero",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "btremote_kodi": {
+   "author": "coded-with-claws",
+   "capabilities": [
+    "hid",
+    "ble_adv"
+   ],
+   "capabilities_searched": true,
+   "category": "Bluetooth",
+   "name": "BT Remote for Kodi",
+   "path": "/ext/apps/Bluetooth/btremote_kodi.fap",
+   "source_dir": "non_catalog_apps/bt_hid_kodi",
+   "source_url": "https://github.com/coded-with-claws/flipperzero-tools/tree/main/applications_user/bt_hid_kodi",
+   "summary": "Application Bluetooth remote Keynote for Kodi (original app + feature: long press on OK to switch between Space and Return (useful for Kodi to navigate the menus))",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "c_book": {
+   "author": "@armixz",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "The C Prog. Language",
+   "path": "/ext/apps/Media/c_book.fap",
+   "source_dir": "non_catalog_apps/the_c_programming_language_book",
+   "source_url": "https://github.com/armixz/Flipper-Zero-The-C-Programming-Language",
+   "summary": "The C Programming Language, Flipper Zero Edition (by Brian W. Kernighan, Dennis M. Ritchie)",
+   "summary_source": "manifest",
+   "version": "0.2"
+  },
+  "caesar_cipher": {
+   "author": "@panki27",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Caesar Cipher",
+   "path": "/ext/apps/Tools/caesar_cipher.fap",
+   "source_dir": "apps_source_code/caesarcipher",
+   "source_url": "https://github.com/panki27/caesar-cipher",
+   "summary": "Encrypt and decrypt text using Caesar Cipher",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "calculator": {
+   "author": "@n-o-T-I-n-s-a-n-e",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Calculator",
+   "path": "/ext/apps/Tools/calculator.fap",
+   "source_dir": "apps_source_code/calculator",
+   "source_url": "https://github.com/n-o-T-I-n-s-a-n-e",
+   "summary": "Calculator for simple expressions, powers and roots. Long-press X for ^ (power), / for sqrt(, ( for ).",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "calendar": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Calendar",
+   "path": "/ext/apps/Tools/calendar.fap",
+   "source_dir": "non_catalog_apps/calendar",
+   "source_url": null,
+   "summary": "A calendar browsed by month and year.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "camera": {
+   "author": "Z4urce",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Camera",
+   "path": "/ext/apps/GPIO/camera.fap",
+   "source_dir": "non_catalog_apps/flipperzero-camera",
+   "source_url": "https://github.com/Z4urce/flipper-camera",
+   "summary": "ESP32-CAM live feed and photo capture",
+   "summary_source": "manifest",
+   "version": null
+  },
+  "camera_suite": {
+   "author": "@CodyTolene @Z4urce @leedave @rnadyrshin",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[ESP32] Camera Suite",
+   "path": "/ext/apps/GPIO/camera_suite.fap",
+   "source_dir": "base_pack/camera_suite",
+   "source_url": "https://github.com/CodyTolene/Flipper-Zero-Cam",
+   "summary": "A camera suite application for the Flipper Zero ESP32-CAM module.",
+   "summary_source": "manifest",
+   "version": "1.9"
+  },
+  "can_commander": {
+   "author": null,
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "CAN Commander",
+   "path": "/ext/apps/GPIO/can_commander.fap",
+   "source_dir": "non_catalog_apps/can_commander",
+   "source_url": null,
+   "summary": "Reads and sends CAN bus messages through an external CAN board, with a dashboard.",
+   "summary_source": "ours",
+   "version": "2.3"
+  },
+  "can_tools": {
+   "author": "Matthew KuKanich",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "CAN Tools",
+   "path": "/ext/apps/Tools/can_tools.fap",
+   "source_dir": "non_catalog_apps/can_tools",
+   "source_url": "https://github.com/MatthewKuKanich/",
+   "summary": "CAN Tools, DBC management, Data decoding",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "carrier_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Carrier",
+   "path": "/ext/apps/Infrared/carrier_ac_remote.fap",
+   "source_dir": "non_catalog_apps/carrier_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Carrier-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "catacombs": {
+   "author": "@apfxtech",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Catacombs Of The Damned!",
+   "path": "/ext/apps/Games/catacombs.fap",
+   "source_dir": "non_catalog_apps/FlipperCatacombs",
+   "source_url": "https://github.com/apfxtech/FlipperCatacombs",
+   "summary": "A first-person dungeon shooter in the catacombs.",
+   "summary_source": "ours",
+   "version": "4.0"
+  },
+  "ccid_test": {
+   "author": "Filipe Rodrigues",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "USB",
+   "name": "CCID Emu",
+   "path": "/ext/apps/USB/ccid_test.fap",
+   "source_dir": "non_catalog_apps/flipper_ccid_app",
+   "source_url": null,
+   "summary": "Emulates a USB smart card reader (CCID) with an ISO7816 T=0 card",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "chess": {
+   "author": "Struan Clark (xtruan)",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Chess",
+   "path": "/ext/apps/Games/chess.fap",
+   "source_dir": "non_catalog_apps/chess",
+   "source_url": "https://github.com/xtruan/flipper-chess",
+   "summary": "Chess against the Flipper or another player.",
+   "summary_source": "ours",
+   "version": "1.10"
+  },
+  "chess_clock": {
+   "author": "@ihatecsv",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Chess Clock",
+   "path": "/ext/apps/Games/chess_clock.fap",
+   "source_dir": "non_catalog_apps/chess_clock",
+   "source_url": "https://github.com/ihatecsv",
+   "summary": "A simple chess clock",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "chief_cooker": {
+   "author": "Denr01",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Chief Cooker",
+   "path": "/ext/apps/Sub-GHz/chief_cooker.fap",
+   "source_dir": "non_catalog_apps/chief_cooker",
+   "source_url": "https://github.com/denr01/FZ-ChiefCooker",
+   "summary": "Receives, decodes, edits and sends restaurant pager signals on Sub-GHz.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "citybloxx": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "City Bloxx",
+   "path": "/ext/apps/Games/citybloxx.fap",
+   "source_dir": "non_catalog_apps/citybloxx",
+   "source_url": null,
+   "summary": "Stacks swinging blocks into the tallest tower you can.",
+   "summary_source": "ours",
+   "version": "1.0"
+  },
+  "claude_remote_ble": {
+   "author": "Kasen Sansonetti",
+   "capabilities": [
+    "hid",
+    "ble_adv",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Bluetooth",
+   "name": "Agentic Remote",
+   "path": "/ext/apps/Bluetooth/claude_remote_ble.fap",
+   "source_dir": "non_catalog_apps/claude_remote_ble",
+   "source_url": null,
+   "summary": "One-handed Bluetooth remote for AI coding agents (Claude Code). 5-button D-pad control, macros, offline manual + quiz.",
+   "summary_source": "manifest",
+   "version": "0.28"
+  },
+  "clock": {
+   "author": "@nymda & @Willy-JL & @mishamyte & @xMasterX",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "menu": true,
+   "name": "Clock",
+   "path": "/ext/apps/Tools/clock.fap",
+   "source_dir": null,
+   "source_url": "https://github.com/nymda/FlipperNightStand",
+   "summary": "Clock with screen brightness controls, alarm, and basic timer",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "cntdown_tim": {
+   "author": "@0w0mewo",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Count Down Timer",
+   "path": "/ext/apps/Tools/cntdown_tim.fap",
+   "source_dir": "apps_source_code/fpz_cntdown_timer-main",
+   "source_url": "https://github.com/0w0mewo/fpz_cntdown_timer",
+   "summary": "Simple count down timer",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "coffee_eeprom": {
+   "author": null,
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Coffee EEPROM",
+   "path": "/ext/apps/GPIO/coffee_eeprom.fap",
+   "source_dir": "non_catalog_apps/coffee_eeprom",
+   "source_url": null,
+   "summary": "Reads and writes the EEPROM of a coffee machine's payment key through the GPIO header.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "coleco": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "RC2014 ColecoVision",
+   "path": "/ext/apps/GPIO/coleco.fap",
+   "source_dir": "non_catalog_apps/rc2014_coleco",
+   "source_url": null,
+   "summary": "Turns the Flipper into a ColecoVision controller for an RC2014 computer module.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "color_guess": {
+   "author": "Leedave",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Color Guess",
+   "path": "/ext/apps/Games/color_guess.fap",
+   "source_dir": "apps_source_code/color_guess",
+   "source_url": "https://github.com/leedave/Flipper-Zero-Color-Guess",
+   "summary": "Shows a color on the LED and asks for its hex code, against the clock.",
+   "summary_source": "ours",
+   "version": "1.5"
+  },
+  "combo_cracker": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Combo Cracker",
+   "path": "/ext/apps/Tools/combo_cracker.fap",
+   "source_dir": "non_catalog_apps/combocracker",
+   "source_url": null,
+   "summary": "Crack combo locks in 8 attempts or less",
+   "summary_source": "manifest",
+   "version": "0.5"
+  },
+  "coolix_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Coolix",
+   "path": "/ext/apps/Infrared/coolix_ac_remote.fap",
+   "source_dir": "non_catalog_apps/coolix_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Coolix-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "counter": {
+   "author": "@Krulknul",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Counter",
+   "path": "/ext/apps/Tools/counter.fap",
+   "source_dir": "apps_source_code/counter",
+   "source_url": "https://github.com/Krulknul/dolphin-counter",
+   "summary": "A counter raised and lowered with the arrow keys.",
+   "summary_source": "ours",
+   "version": "1.5"
+  },
+  "crypto_dict": {
+   "author": "@armixz",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "Crypto Dictionary",
+   "path": "/ext/apps/Media/crypto_dict.fap",
+   "source_dir": "non_catalog_apps/crypto_dictionary_book",
+   "source_url": "https://github.com/armixz/Flipper-Zero-Crypto-Dictionary",
+   "summary": "Cryptography Dictionary (Flipper Zero Edition)",
+   "summary_source": "manifest",
+   "version": "0.1"
+  },
+  "daikin_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Daikin",
+   "path": "/ext/apps/Infrared/daikin_ac_remote.fap",
+   "source_dir": "non_catalog_apps/daikin_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Daikin-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "dap_link": {
+   "author": null,
+   "capabilities": [
+    "hid",
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "DAP Link",
+   "path": "/ext/apps/GPIO/dap_link.fap",
+   "source_dir": "base_pack/dap_link",
+   "source_url": null,
+   "summary": "Enables use of Flipper as a debug probe for ARM devices, implements the CMSIS-DAP protocol",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "dcf77": {
+   "author": "@arha",
+   "capabilities": [
+    "subghz_tx",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "DCF77 Transmitter",
+   "path": "/ext/apps/Tools/dcf77.fap",
+   "source_dir": "apps_source_code/flipper-dcf77",
+   "source_url": "https://github.com/arha/flipper-dcf77",
+   "summary": "Radio clock emulator lab with DCF77, MSF, WWVB, JJY and others, plus many debugging features",
+   "summary_source": "manifest",
+   "version": "2.0"
+  },
+  "dcf77_clock_spoof": {
+   "author": "mdaskalov & Molodos",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "DCF77 Clock Spoof",
+   "path": "/ext/apps/Tools/dcf77_clock_spoof.fap",
+   "source_dir": "non_catalog_apps/dcf77_clock_spoof",
+   "source_url": "https://github.com/molodos/dcf77-clock-spoof",
+   "summary": "Spoof a DCF77 time signal with a selectable time on the RFID antenna and the GPIO A4 pin",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "delonghi_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Delonghi",
+   "path": "/ext/apps/Infrared/delonghi_ac_remote.fap",
+   "source_dir": "non_catalog_apps/delonghi_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Delonghi-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "dice_app": {
+   "author": "@Ka3u6y6a",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Dice D&D",
+   "path": "/ext/apps/Games/dice_app.fap",
+   "source_dir": "apps_source_code/dice",
+   "source_url": "https://github.com/Ka3u6y6a/flipper-zero-dice",
+   "summary": "Dice rolling, types: Coin, d4, d6, d8, d10, d12, d20, d100",
+   "summary_source": "manifest",
+   "version": "1.2"
+  },
+  "doom": {
+   "author": "@xMasterX & @Svarich & @hedger (original code by @p4nic4ttack)",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "DOOM",
+   "path": "/ext/apps/Games/doom.fap",
+   "source_dir": "base_pack/doom",
+   "source_url": null,
+   "summary": "A small first-person shooter in the style of Doom.",
+   "summary_source": "ours",
+   "version": "1.6"
+  },
+  "doom2": {
+   "author": "@apfxtech",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Maze of doom",
+   "path": "/ext/apps/Games/doom2.fap",
+   "source_dir": "non_catalog_apps/mazeofdoom",
+   "source_url": "https://github.com/apfxtech/FlipperCatacombs",
+   "summary": "Play the port of the arduboy3d game on your Flipper Zero.",
+   "summary_source": "manifest",
+   "version": "2.2"
+  },
+  "drifter": {
+   "author": "Jed Lejosne",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Drifter",
+   "path": "/ext/apps/Games/drifter.fap",
+   "source_dir": "non_catalog_apps/drifter",
+   "source_url": "https://github.com/jean-edouard/drifter",
+   "summary": "A driving game scored by how long you drift, with a high score.",
+   "summary_source": "ours",
+   "version": "0.2"
+  },
+  "droidbeacon": {
+   "author": "Spandox",
+   "capabilities": [
+    "ble_adv"
+   ],
+   "capabilities_searched": true,
+   "category": "Bluetooth",
+   "name": "Droid Beacon",
+   "path": "/ext/apps/Bluetooth/droidbeacon.fap",
+   "source_dir": "non_catalog_apps/droidbeacon",
+   "source_url": null,
+   "summary": "Emulate Galaxy's Edge BLE park location beacons for Droid Depot droids",
+   "summary_source": "manifest",
+   "version": "0.1.0"
+  },
+  "dtmf_dolphin": {
+   "author": "@litui & @xMasterX",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "DTMF Dolphin",
+   "path": "/ext/apps/Tools/dtmf_dolphin.fap",
+   "source_dir": "base_pack/dtmf_dolphin",
+   "source_url": null,
+   "summary": "DTMF (Dual-Tone Multi-Frequency) dialer, Bluebox, and Redbox.",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "dvd_bounce": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "DVD Bouncer",
+   "path": "/ext/apps/Games/dvd_bounce.fap",
+   "source_dir": "non_catalog_apps/DVD-Bounce",
+   "source_url": null,
+   "summary": "The bouncing DVD logo screensaver.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "esp32_wifi_marauder": {
+   "author": null,
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[ESP32] WiFi Marauder",
+   "path": "/ext/apps/GPIO/esp32_wifi_marauder.fap",
+   "source_dir": "base_pack/wifi_marauder_companion",
+   "source_url": null,
+   "summary": "Drives an ESP32 board running Marauder firmware for Wi-Fi scans and attacks.",
+   "summary_source": "ours",
+   "version": "7.10"
+  },
+  "esp8266_deauther": {
+   "author": "@SequoiaSan & @xMasterX",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[ESP8266] Deauther",
+   "path": "/ext/apps/GPIO/esp8266_deauther.fap",
+   "source_dir": "base_pack/esp8266_deauth",
+   "source_url": null,
+   "summary": "DSTIKE Deauther module interface, based on ESP8266",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "esp8266_ifttt_virtual_button": {
+   "author": null,
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "IFTTT Btn",
+   "path": "/ext/apps/GPIO/esp8266_ifttt_virtual_button.fap",
+   "source_dir": "non_catalog_apps/ifttt",
+   "source_url": null,
+   "summary": "Triggers an IFTTT webhook through an ESP8266 board on the GPIO header.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "esp8266_wifi_deauther_v2": {
+   "author": "@Timmotools & @xMasterX",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Deauther v2",
+   "path": "/ext/apps/GPIO/esp8266_wifi_deauther_v2.fap",
+   "source_dir": "non_catalog_apps/wifi_deauther",
+   "source_url": "https://github.com/Timmotools/flipperzero_esp8266_deautherv2",
+   "summary": "Works with ESP8266 Deauther v2 by @SpacehuhnTech (github)",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "esp_flasher": {
+   "author": null,
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "ESP Flasher",
+   "path": "/ext/apps/GPIO/esp_flasher.fap",
+   "source_dir": "non_catalog_apps/esp_flasher",
+   "source_url": null,
+   "summary": "Flashes firmware to an ESP chip connected to the GPIO header's UART.",
+   "summary_source": "ours",
+   "version": "1.9"
+  },
+  "esubghz_chat": {
+   "author": "@twisted-pear & @xMasterX & more in ReadMe",
+   "capabilities": [
+    "nfc_emulate_write",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Enhanced Sub-Ghz Chat",
+   "path": "/ext/apps/Sub-GHz/esubghz_chat.fap",
+   "source_dir": "apps_source_code/esubghz_chat",
+   "source_url": "https://github.com/twisted-pear/esubghz_chat",
+   "summary": "Send text messages over Sub-GHz radio to another Flippers",
+   "summary_source": "manifest",
+   "version": "1.2"
+  },
+  "etch": {
+   "author": "@SimplyMinimal",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Etch A Sketch",
+   "path": "/ext/apps/Games/etch.fap",
+   "source_dir": "non_catalog_apps/etch-a-sketch",
+   "source_url": "https://github.com/SimplyMinimal/FlipperZero-Etch-A-Sketch",
+   "summary": "Turn the Flipper Zero into an Etch A Sketch",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "eth_troubleshooter": {
+   "author": "@karasevia & @arag0re & @xMasterX",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[W5500] Ethernet",
+   "path": "/ext/apps/GPIO/eth_troubleshooter.fap",
+   "source_dir": "apps_source_code/eth_troubleshooter",
+   "source_url": "https://github.com/xMasterX/all-the-plugins",
+   "summary": "Test your Ethernet connection with W5500 module and Flipper",
+   "summary_source": "manifest",
+   "version": "1.2"
+  },
+  "evil_portal": {
+   "author": "bigbrodude6119",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Evil Portal",
+   "path": "/ext/apps/GPIO/evil_portal.fap",
+   "source_dir": "non_catalog_apps/flipper_evil_portal",
+   "source_url": null,
+   "summary": "Create an evil captive portal Wi-Fi access point",
+   "summary_source": "manifest",
+   "version": null
+  },
+  "example_adc": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: ADC",
+   "path": "/ext/apps/Examples/example_adc.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example that reads analog voltages on the GPIO pins with the ADC.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_advanced_plugins": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: advanced plugins",
+   "path": "/ext/apps/Examples/example_advanced_plugins.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of an app that loads plugins which call back into the app.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_apps_assets": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: Apps Assets",
+   "path": "/ext/apps/Examples/example_apps_assets.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example that reads data files shipped with the app in its assets folder.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_apps_data": {
+   "author": null,
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: Apps Data",
+   "path": "/ext/apps/Examples/example_apps_data.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example that stores user data in the app's own data folder.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_ble_beacon": {
+   "author": null,
+   "capabilities": [
+    "ble_adv"
+   ],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: BLE Beacon",
+   "path": "/ext/apps/Examples/example_ble_beacon.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example that broadcasts a custom Bluetooth LE beacon.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_canvas_buffer": {
+   "author": "@apfxtech",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "[GUI] 3D cube",
+   "path": "/ext/apps/Examples/example_canvas_buffer.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example that draws a rotating 3D cube straight to the screen buffer.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_custom_font": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: custom font",
+   "path": "/ext/apps/Examples/example_custom_font.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example that draws text with a custom font.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_date_time_input": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: Date/Time Input",
+   "path": "/ext/apps/Examples/example_date_time_input.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of the view for entering a date and a time.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_event_loop_event_flags": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: Event Loop Event Flags",
+   "path": "/ext/apps/Examples/example_event_loop_event_flags.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of the event loop reacting to event flags, shown with key presses.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_event_loop_multi": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: Event Loop Multi",
+   "path": "/ext/apps/Examples/example_event_loop_multi.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of one event loop handling several event sources.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_event_loop_mutex": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: Event Loop Mutex",
+   "path": "/ext/apps/Examples/example_event_loop_mutex.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of the event loop waiting on a mutex.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_event_loop_stream_buffer": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: Event Loop Stream Buffer",
+   "path": "/ext/apps/Examples/example_event_loop_stream_buffer.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of the event loop reading a stream buffer.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_event_loop_timer": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: Event Loop Timer",
+   "path": "/ext/apps/Examples/example_event_loop_timer.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of timers driven by the event loop.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_gps_click": {
+   "author": "@apfxtech",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "[RPC] GPS Click",
+   "path": "/ext/apps/Examples/example_gps_click.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example that reads a GPS module over RPC on a button press.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_gps_stream": {
+   "author": "@apfxtech",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "[RPC] GPS Stream",
+   "path": "/ext/apps/Examples/example_gps_stream.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example that streams GPS module readings over RPC.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_images": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: Images",
+   "path": "/ext/apps/Examples/example_images.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example that draws the app's own icons and images.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_network": {
+   "author": "@apfxtech",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "[RPC] Network",
+   "path": "/ext/apps/Examples/example_network.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of network access through the RPC link to a computer.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_network_bad_apple": {
+   "author": "@apfxtech",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "[RPC] Bad Apple",
+   "path": "/ext/apps/Examples/example_network_bad_apple.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example that streams the Bad Apple video over the RPC network link.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_network_bad_apple_save": {
+   "author": "@apfxtech",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "[RPC] Bad Apple (save)",
+   "path": "/ext/apps/Examples/example_network_bad_apple_save.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example that downloads the Bad Apple video over the RPC network link and saves it.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_network_ping": {
+   "author": "@apfxtech",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "[RPC] Net Ping",
+   "path": "/ext/apps/Examples/example_network_ping.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example that pings a host through the RPC network link.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_network_websocket": {
+   "author": "@apfxtech",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "[RPC] WebSocket Echo",
+   "path": "/ext/apps/Examples/example_network_websocket.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of a WebSocket echo through the RPC network link.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_number_input": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: Number Input",
+   "path": "/ext/apps/Examples/example_number_input.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of the keyboard for entering a whole number within bounds.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_plugins": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: App w/plugin",
+   "path": "/ext/apps/Examples/example_plugins.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of an app that loads one plugin file.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_plugins_multi": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: App w/plugins",
+   "path": "/ext/apps/Examples/example_plugins_multi.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of an app that loads several plugin files.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_thermo": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: Thermometer",
+   "path": "/ext/apps/Examples/example_thermo.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example that reads a DS18B20 1-Wire thermometer on the GPIO header.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_view_dispatcher": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: ViewDispatcher",
+   "path": "/ext/apps/Examples/example_view_dispatcher.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of switching between views with the view dispatcher.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "example_view_holder": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Examples",
+   "name": "Example: ViewHolder",
+   "path": "/ext/apps/Examples/example_view_holder.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Developer example of showing a single view with a view holder.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "executor_keychain": {
+   "author": "Esteban Fuentealba",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "Flipper Keyller",
+   "path": "/ext/apps/Media/executor_keychain.fap",
+   "source_dir": "non_catalog_apps/flipper-keyller",
+   "source_url": "https://github.com/EstebanFuentealba/Flipper-Keyller.git",
+   "summary": "Echo Keyller/Executor Keychain",
+   "summary_source": "manifest",
+   "version": "0.1"
+  },
+  "fake_chip_detector": {
+   "author": "hleserg",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Fake Chip Detector",
+   "path": "/ext/apps/GPIO/fake_chip_detector.fap",
+   "source_dir": "non_catalog_apps/fake_chip_detector",
+   "source_url": null,
+   "summary": "Check whether an I2C sensor really is the chip it was sold as, before you solder it in.",
+   "summary_source": "manifest",
+   "version": "0.13"
+  },
+  "fdxb_maker": {
+   "author": "Skye Gibbs",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "RFID",
+   "name": "FDX-B Maker",
+   "path": "/ext/apps/RFID/fdxb_maker.fap",
+   "source_dir": "non_catalog_apps/fdxb-maker",
+   "source_url": null,
+   "summary": "FDX-B format file maker for animal microchips",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "fighterjet": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Fighter Jet",
+   "path": "/ext/apps/Games/fighterjet.fap",
+   "source_dir": "non_catalog_apps/flipper-fighter-jet",
+   "source_url": null,
+   "summary": "A fighter jet game played in rounds, with an autopilot.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "findmy": {
+   "author": "@MatthewKuKanich",
+   "capabilities": [
+    "ble_adv",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Bluetooth",
+   "name": "FindMy Flipper",
+   "path": "/ext/apps/Bluetooth/findmy.fap",
+   "source_dir": null,
+   "source_url": "https://github.com/MatthewKuKanich/FindMyFlipper",
+   "summary": "BLE FindMy Location Beacon",
+   "summary_source": "manifest",
+   "version": "3.5"
+  },
+  "flame_rng": {
+   "author": "OrionW06",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Flame RNG",
+   "path": "/ext/apps/Infrared/flame_rng.fap",
+   "source_dir": "non_catalog_apps/flame_rng",
+   "source_url": "https://github.com/OrionW06/Flame-RNG",
+   "summary": "An RNG intended for use with flames and other IR sources.",
+   "summary_source": "manifest",
+   "version": "0.3"
+  },
+  "flappy_bird": {
+   "author": "@DroomOne & @xMasterX",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Flappy Bird",
+   "path": "/ext/apps/Games/flappy_bird.fap",
+   "source_dir": "base_pack/flappy_bird",
+   "source_url": null,
+   "summary": "A Flappy Bird game.",
+   "summary_source": "ours",
+   "version": "1.3"
+  },
+  "flashlight": {
+   "author": "@xMasterX",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Flashlight",
+   "path": "/ext/apps/GPIO/flashlight.fap",
+   "source_dir": "apps_source_code/flipper-flashlight",
+   "source_url": "https://github.com/xMasterX/flipper-flashlight",
+   "summary": "Enables 3.3v on pin 7/C3 when you press Ok and leaves it on when you exit app",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "flip_crypt": {
+   "author": "@Tyl3rA",
+   "capabilities": [
+    "nfc_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "FlipCrypt",
+   "path": "/ext/apps/Tools/flip_crypt.fap",
+   "source_dir": "non_catalog_apps/flipcrypt",
+   "source_url": "https://github.com/Tyl3rA/FlipCrypt",
+   "summary": "Encrypt, decrypt, and hash text using a wide variety of classic and modern crypto tools.",
+   "summary_source": "manifest",
+   "version": "0.7"
+  },
+  "flip_rob": {
+   "author": "John Riney III",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "R.O.B. Control",
+   "path": "/ext/apps/Infrared/flip_rob.fap",
+   "source_dir": "non_catalog_apps/flip_rob",
+   "source_url": "https://github.com/riney/flip_rob",
+   "summary": "Control Nintendo R.O.B.",
+   "summary_source": "manifest",
+   "version": null
+  },
+  "flip_tdi": {
+   "author": "SkorP",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "FlipTDI",
+   "path": "/ext/apps/GPIO/flip_tdi.fap",
+   "source_dir": "base_pack/flip_tdi",
+   "source_url": null,
+   "summary": "Flipper FTDI232H emulator.",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "flipagotchi": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Flipagotchi",
+   "path": "/ext/apps/GPIO/flipagotchi.fap",
+   "source_dir": "non_catalog_apps/flipagotchi",
+   "source_url": null,
+   "summary": "A screen and controls for a Pwnagotchi connected over the GPIO header's UART.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "flipbip": {
+   "author": "Struan Clark (xtruan)",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "FlipBIP Crypto Wallet",
+   "path": "/ext/apps/Tools/flipbip.fap",
+   "source_dir": "non_catalog_apps/FlipBIP",
+   "source_url": "https://github.com/xtruan/FlipBIP",
+   "summary": "Crypto wallet for Flipper",
+   "summary_source": "manifest",
+   "version": "1.17"
+  },
+  "flipcraft": {
+   "author": "@apfxtech",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Flipcraft",
+   "path": "/ext/apps/Games/flipcraft.fap",
+   "source_dir": "non_catalog_apps/flipcraft",
+   "source_url": "https://github.com/apfxtech/Flipcraft.git",
+   "summary": "A block-building game in the style of Minecraft, with saved worlds.",
+   "summary_source": "ours",
+   "version": "2.8"
+  },
+  "flipirfreq": {
+   "author": null,
+   "capabilities": [
+    "ir_tx",
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "FlipIRFreq",
+   "path": "/ext/apps/Infrared/flipirfreq.fap",
+   "source_dir": "non_catalog_apps/flipIRFreq",
+   "source_url": null,
+   "summary": "Transmit IR in carrier or low-frequency pulse modes with burst or continuous output.",
+   "summary_source": "manifest",
+   "version": "0.2"
+  },
+  "flipnote": {
+   "author": "morty517",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "FlipNote",
+   "path": "/ext/apps/Tools/flipnote.fap",
+   "source_dir": "base_pack/flipnote",
+   "source_url": "https://github.com/morty517/flipnote",
+   "summary": "A real text editor for Flipper Zero. Open, edit and save files directly on device.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "flipp_pomodoro": {
+   "author": "@Th3Un1q3",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Flipp Pomodoro",
+   "path": "/ext/apps/Tools/flipp_pomodoro.fap",
+   "source_dir": "apps_source_code/flipp_pomodoro",
+   "source_url": "https://github.com/Th3Un1q3/flipp_pomodoro",
+   "summary": "Boost Your Productivity with the Pomodoro Timer",
+   "summary_source": "manifest",
+   "version": "1.7"
+  },
+  "flipper_atomicdiceroller": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[J305] Atomic Dice Roller",
+   "path": "/ext/apps/GPIO/flipper_atomicdiceroller.fap",
+   "source_dir": "non_catalog_apps/flipper_atomicdiceroller",
+   "source_url": null,
+   "summary": "Rolls dice from the randomness of a Geiger counter board on the GPIO header.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "flipper_chronometer": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Chronometer",
+   "path": "/ext/apps/Tools/flipper_chronometer.fap",
+   "source_dir": "non_catalog_apps/flipper_chronometer",
+   "source_url": null,
+   "summary": "A stopwatch.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "flipper_geiger": {
+   "author": "@nmrr",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[J305] Geiger Counter",
+   "path": "/ext/apps/GPIO/flipper_geiger.fap",
+   "source_dir": "apps_source_code/flipper_geiger",
+   "source_url": "https://github.com/nmrr/flipperzero-geigercounter",
+   "summary": "Works with J305 Geiger tube on external board",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "flipper_hero": {
+   "author": "Mentoster",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Flipper Hero",
+   "path": "/ext/apps/Games/flipper_hero.fap",
+   "source_dir": "non_catalog_apps/flipper_hero",
+   "source_url": "https://github.com/mentoster/Flipper-hero",
+   "summary": "Enter arrow sequences as fast as you can, in the style of a stratagem game.",
+   "summary_source": "ours",
+   "version": "1.4"
+  },
+  "flipper_letterbeacon": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Letter Beacon",
+   "path": "/ext/apps/Tools/flipper_letterbeacon.fap",
+   "source_dir": "non_catalog_apps/flipper_letterbeacon",
+   "source_url": null,
+   "summary": "Blinks a letter in Morse code by switching the RFID and NFC fields on and off.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "flipper_pong": {
+   "author": "@nmrr & @SimplyMinimal",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Pong",
+   "path": "/ext/apps/Games/flipper_pong.fap",
+   "source_dir": "apps_source_code/flipper_pong",
+   "source_url": "https://github.com/nmrr/flipperzero-pong",
+   "summary": "The classic Pong game.",
+   "summary_source": "ours",
+   "version": "1.4"
+  },
+  "flipper_share": {
+   "author": "@lomalkin",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Flipper Share",
+   "path": "/ext/apps/Sub-GHz/flipper_share.fap",
+   "source_dir": "base_pack/flipper_share",
+   "source_url": "https://github.com/lomalkin/flipper-zero-apps/blob/-/flipper_share",
+   "summary": "Direct file transfer between flippers via Sub-GHz",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "flipper_share_ir": {
+   "author": "@lomalkin",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Flipper Share IR",
+   "path": "/ext/apps/Infrared/flipper_share_ir.fap",
+   "source_dir": "base_pack/flipper_share_ir",
+   "source_url": "https://github.com/lomalkin/flipper-zero-apps/blob/-/flipper_share_ir",
+   "summary": "Direct file transfer between flippers via IR",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "flipper_share_nfc": {
+   "author": "@lomalkin",
+   "capabilities": [
+    "nfc_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "Flipper Share NFC",
+   "path": "/ext/apps/NFC/flipper_share_nfc.fap",
+   "source_dir": "base_pack/flipper_share_nfc",
+   "source_url": "https://github.com/lomalkin/flipper-zero-apps/blob/-/flipper_share_nfc",
+   "summary": "Direct file transfer between flippers via NFC",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "flipper_spi_terminal": {
+   "author": "Jan Wiesemann",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[SPI] Terminal",
+   "path": "/ext/apps/GPIO/flipper_spi_terminal.fap",
+   "source_dir": "non_catalog_apps/spi_terminal",
+   "source_url": "https://github.com/janwiesemann/flipper-spi-terminal",
+   "summary": "A Terminal Application for the SPI interface",
+   "summary_source": "manifest",
+   "version": "0.4"
+  },
+  "flipper_wedge": {
+   "author": "Dangerous Things",
+   "capabilities": [
+    "hid",
+    "ble_adv",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Flipper Wedge",
+   "path": "/ext/apps/Tools/flipper_wedge.fap",
+   "source_dir": "non_catalog_apps/flipper_wedge",
+   "source_url": "https://github.com/DangerousThings/flipper-wedge",
+   "summary": "Read RFID/NFC tags and type their UIDs as HID keyboard input via USB or Bluetooth. Supports 5 scan modes and NDEF text records.",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "flipper_xremote": {
+   "author": "@kala13x",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "XRemote",
+   "path": "/ext/apps/Infrared/flipper_xremote.fap",
+   "source_dir": "non_catalog_apps/xremote",
+   "source_url": "https://github.com/kala13x/flipper-xremote",
+   "summary": "Advanced infrared remote application",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "flipperscope": {
+   "author": "anfractuosity",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Scope",
+   "path": "/ext/apps/GPIO/flipperscope.fap",
+   "source_dir": "non_catalog_apps/flipperscope",
+   "source_url": null,
+   "summary": "Oscilloscope application - apply signal to pin 16/PC0, with a voltage ranging from 0V to 2.5V and ground to pin 18/GND",
+   "summary_source": "manifest",
+   "version": "0.4"
+  },
+  "flizzer_tracker": {
+   "author": "LTVA",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "Flizzer Tracker",
+   "path": "/ext/apps/Media/flizzer_tracker.fap",
+   "source_dir": "non_catalog_apps/flizzer_tracker",
+   "source_url": "https://github.com/LTVA1/flizzer_tracker",
+   "summary": "An advanced Flipper Zero chiptune tracker with 4 channels",
+   "summary_source": "manifest",
+   "version": "0.11"
+  },
+  "fmf_to_sub": {
+   "author": null,
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Music to Sub-GHz Radio",
+   "path": "/ext/apps/Sub-GHz/fmf_to_sub.fap",
+   "source_dir": "non_catalog_apps/fmf_to_sub",
+   "source_url": null,
+   "summary": "Converts Flipper music files (.FMF and .TXT) into Sub-GHz files (.SUB).",
+   "summary_source": "manifest",
+   "version": "1.2"
+  },
+  "fmradio_controller": {
+   "author": "coolshrimp",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[TEA5767] FM Radio",
+   "path": "/ext/apps/GPIO/fmradio_controller.fap",
+   "source_dir": "non_catalog_apps/fm_radio_controller",
+   "source_url": "https://coolshrimp/flipperzero-firmware-wPlugins/",
+   "summary": "Tunes an FM radio board (TEA5767) on the GPIO header, with presets and seek.",
+   "summary_source": "ours",
+   "version": "0.8"
+  },
+  "fmtx": {
+   "author": "@yo3gnd",
+   "capabilities": [
+    "subghz_tx",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "FM TX",
+   "path": "/ext/apps/Sub-GHz/fmtx.fap",
+   "source_dir": "non_catalog_apps/fmtx",
+   "source_url": null,
+   "summary": "Experimental MP3 audio over CC1101 FM.",
+   "summary_source": "manifest",
+   "version": "0.0.10"
+  },
+  "fordradiocode": {
+   "author": "DavidB",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Ford Radio Codes",
+   "path": "/ext/apps/Tools/fordradiocode.fap",
+   "source_dir": "non_catalog_apps/fz_fordradiocodes",
+   "source_url": null,
+   "summary": "Ford Radio 'M' & 'V' Unlock Code Generator!",
+   "summary_source": "manifest",
+   "version": "0.1"
+  },
+  "freq_analyzer_ext": {
+   "author": null,
+   "capabilities": [
+    "subghz_tx",
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Frequency Analyzer",
+   "path": "/ext/apps/Sub-GHz/freq_analyzer_ext.fap",
+   "source_dir": "non_catalog_apps/freq_analyzer_ext",
+   "source_url": null,
+   "summary": "Finds the frequency of a nearby Sub-GHz remote, with the internal or an external radio.",
+   "summary_source": "ours",
+   "version": "1.2"
+  },
+  "fujitsu_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Fujitsu",
+   "path": "/ext/apps/Infrared/fujitsu_ac_remote.fap",
+   "source_dir": "non_catalog_apps/fujitsu_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Fujitsu-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "furious_birds": {
+   "author": "Dmitry Ermashev",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Furious Birds",
+   "path": "/ext/apps/Games/furious_birds.fap",
+   "source_dir": "non_catalog_apps/furious-birds",
+   "source_url": "https://github.com/bmstr-ru/furious-birds",
+   "summary": "Launch birds at targets, level by level.",
+   "summary_source": "ours",
+   "version": "1.1"
+  },
+  "game15": {
+   "author": "@x27",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Game 15",
+   "path": "/ext/apps/Games/game15.fap",
+   "source_dir": "base_pack/game15",
+   "source_url": null,
+   "summary": "The sliding puzzle 15: put the numbered tiles in order.",
+   "summary_source": "ours",
+   "version": "1.3"
+  },
+  "game_2048": {
+   "author": "@eugene-kirzhanov",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "2048",
+   "path": "/ext/apps/Games/game_2048.fap",
+   "source_dir": "base_pack/game_2048",
+   "source_url": null,
+   "summary": "Play the port of the 2048 game on Flipper Zero.",
+   "summary_source": "manifest",
+   "version": "1.6"
+  },
+  "game_vexed": {
+   "author": "Dominik Dzienia",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Vexed",
+   "path": "/ext/apps/Games/game_vexed.fap",
+   "source_dir": "non_catalog_apps/vexed",
+   "source_url": null,
+   "summary": "Vexed - classic Palm.OS puzzle game",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "gameoflife": {
+   "author": "@tgxn (original by @itsyourbedtime)",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Game of Life",
+   "path": "/ext/apps/Games/gameoflife.fap",
+   "source_dir": "apps_source_code/game_of_life",
+   "source_url": "https://github.com/tgxn/flipperzero-firmware/blob/dev/applications/game_of_life/game_of_life.c",
+   "summary": "Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "genie_record": {
+   "author": null,
+   "capabilities": [
+    "subghz_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Genie Door Recorder",
+   "path": "/ext/apps/Sub-GHz/genie_record.fap",
+   "source_dir": "non_catalog_apps/genie-recorder",
+   "source_url": null,
+   "summary": "This application extracts the codes from a Genie garage door remote into a .GNE file. It also plays back a .GNE file to a Genie garage door opener.",
+   "summary_source": "manifest",
+   "version": "3.1"
+  },
+  "ghost_esp": {
+   "author": null,
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Ghost ESP",
+   "path": "/ext/apps/GPIO/ghost_esp.fap",
+   "source_dir": "non_catalog_apps/ghost_esp_app",
+   "source_url": null,
+   "summary": "Drives an ESP32 board running GhostESP firmware for Wi-Fi and Bluetooth scans.",
+   "summary_source": "ours",
+   "version": "1.8.0"
+  },
+  "goodweather_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Goodweather",
+   "path": "/ext/apps/Infrared/goodweather_ac_remote.fap",
+   "source_dir": "non_catalog_apps/goodweather_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Goodweather-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "gpio": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "menu": true,
+   "name": "GPIO",
+   "path": "/ext/apps/GPIO/gpio.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Controls the GPIO pins, the 5 V output and the USB-UART bridge.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "gpio_7segment_output": {
+   "author": "@jamisonderek",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "7-Segment Output",
+   "path": "/ext/apps/GPIO/gpio_7segment_output.fap",
+   "source_dir": "apps_source_code/gpio_7segment",
+   "source_url": "https://github.com/jamisonderek/flipper-zero-tutorials/tree/main/gpio",
+   "summary": "Control a 7-segment display with GPIO pins",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "gpio_controller": {
+   "author": "@Lokno",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "GPIO Controller",
+   "path": "/ext/apps/GPIO/gpio_controller.fap",
+   "source_dir": "apps_source_code/gpio_controller",
+   "source_url": "https://github.com/Lokno/gpio_controller",
+   "summary": "A visual tool to control the general purpose pins of the Flipper Zero",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "gpio_reader": {
+   "author": "@aureli1c",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[GPIO] Reader",
+   "path": "/ext/apps/GPIO/gpio_reader.fap",
+   "source_dir": "apps_source_code/gpio_pins_reader",
+   "source_url": "https://github.com/aureli1c/flipperzero_GPIO_read",
+   "summary": "Read GPIO pins states, and display them on the screen",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "gpio_sentry_safe": {
+   "author": "@H4ckd4ddy & @xMasterX (ported to latest firmware)",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[GPIO] Sentry Safe",
+   "path": "/ext/apps/GPIO/gpio_sentry_safe.fap",
+   "source_dir": "base_pack/sentry_safe",
+   "source_url": null,
+   "summary": "App exploiting vulnerability to open any Sentry Safe and Master Lock electronic safe without any pin code via UART pins.",
+   "summary_source": "manifest",
+   "version": "2.0"
+  },
+  "gpio_timelapse": {
+   "author": "Aurelius Rosenbaum",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[GPIO] Timelapse",
+   "path": "/ext/apps/GPIO/gpio_timelapse.fap",
+   "source_dir": "apps_source_code/timelapse",
+   "source_url": "https://github.com/theageoflove/flipperzero-zeitraffer",
+   "summary": "Simple intervalometer app, works via GPIO pins.",
+   "summary_source": "manifest",
+   "version": "1.2"
+  },
+  "gpioreader2": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Input Reader 2",
+   "path": "/ext/apps/GPIO/gpioreader2.fap",
+   "source_dir": "non_catalog_apps/flipperzero_gpioreader",
+   "source_url": null,
+   "summary": "Reads the GPIO pins as inputs and shows their levels.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "gps_nmea": {
+   "author": "@ezod & @xMasterX",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[NMEA] GPS",
+   "path": "/ext/apps/GPIO/gps_nmea.fap",
+   "source_dir": "base_pack/gps_nmea_uart",
+   "source_url": null,
+   "summary": "Works with GPS modules via UART, using NMEA protocol.",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "gps_rpc": {
+   "author": "@ezod & @xMasterX & @apfxtech",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "[RPC] GPS",
+   "path": "/ext/apps/Tools/gps_rpc.fap",
+   "source_dir": "non_catalog_apps/gps_rpc",
+   "source_url": null,
+   "summary": "Shows the companion device location over RPC",
+   "summary_source": "manifest",
+   "version": "3.0"
+  },
+  "gps_track": {
+   "author": "xumbax",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "GPS Track",
+   "path": "/ext/apps/GPIO/gps_track.fap",
+   "source_dir": "non_catalog_apps/gps_track",
+   "source_url": null,
+   "summary": "GPS NMEA tracker with breadcrumb navigation",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "gree_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Gree",
+   "path": "/ext/apps/Infrared/gree_ac_remote.fap",
+   "source_dir": "non_catalog_apps/gree_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Gree-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "haier_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Haier",
+   "path": "/ext/apps/Infrared/haier_ac_remote.fap",
+   "source_dir": "non_catalog_apps/haier_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Haier-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "hangman": {
+   "author": "Evgeny Stepanischev, Eva Stepanischeva",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Hangman",
+   "path": "/ext/apps/Games/hangman.fap",
+   "source_dir": "non_catalog_apps/hangman_game",
+   "source_url": "https://github.com/bolknote/Flipper-Zero-Hangman-Game",
+   "summary": "The word-guessing game Hangman.",
+   "summary_source": "ours",
+   "version": "1.5"
+  },
+  "hc_sr04": {
+   "author": "@xMasterX (first implementation by @Sanqui)",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[HC-SR] Dist. Sensor",
+   "path": "/ext/apps/GPIO/hc_sr04.fap",
+   "source_dir": "base_pack/hc_sr04",
+   "source_url": null,
+   "summary": "HC-SR(04) Distance sensor reader",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "heap_defence": {
+   "author": "@xMasterX (original implementation by @wquinoa & @Vedmein)",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Heap Defence",
+   "path": "/ext/apps/Games/heap_defence.fap",
+   "source_dir": "base_pack/heap_defence_game",
+   "source_url": null,
+   "summary": "Heap Defence game from hackathon (aka Stack Attack)",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "hex_editor": {
+   "author": "@dunaevai135",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "HEX Editor",
+   "path": "/ext/apps/Tools/hex_editor.fap",
+   "source_dir": "apps_source_code/hex_editor",
+   "source_url": "https://github.com/dunaevai135/flipper-zero-hex_editor",
+   "summary": "Read text files line by line and edit them without a computer or smartphone.",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "hex_viewer": {
+   "author": "@QtRoS",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "HEX Viewer",
+   "path": "/ext/apps/Tools/hex_viewer.fap",
+   "source_dir": "base_pack/hex_viewer",
+   "source_url": null,
+   "summary": "App allows to view various files as HEX",
+   "summary_source": "manifest",
+   "version": "2.0"
+  },
+  "hid_ble": {
+   "author": null,
+   "capabilities": [
+    "hid",
+    "ble_adv",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Bluetooth",
+   "name": "Bluetooth Remote",
+   "path": "/ext/apps/Bluetooth/hid_ble.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Use Flipper as a HID remote control over Bluetooth",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "hid_usb": {
+   "author": null,
+   "capabilities": [
+    "hid",
+    "ble_adv",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "USB",
+   "name": "USB Keyboard & Mouse",
+   "path": "/ext/apps/USB/hid_usb.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Use Flipper as a HID remote control over USB",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "hidtransfer": {
+   "author": null,
+   "capabilities": [
+    "hid",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "USB",
+   "name": "HID File Transfer",
+   "path": "/ext/apps/USB/hidtransfer.fap",
+   "source_dir": "non_catalog_apps/hid_file_transfer",
+   "source_url": null,
+   "summary": "Sends and receives files to a computer over USB HID.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "hitachi_ac_remote": {
+   "author": null,
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Hitachi",
+   "path": "/ext/apps/Infrared/hitachi_ac_remote.fap",
+   "source_dir": "non_catalog_apps/hitachi_ac_remote",
+   "source_url": null,
+   "summary": "Hitachi Air Conditioner remote controller",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "hotspot_arcade": {
+   "author": "Tarik Caramanico",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Hotspot Arcade",
+   "path": "/ext/apps/GPIO/hotspot_arcade.fap",
+   "source_dir": "non_catalog_apps/hotspot_arcade",
+   "source_url": null,
+   "summary": "Host an offline multiplayer game hotspot on an ESP32 WiFi board (official S2 dev board, WROOM, or C5). People nearby join your WiFi and play in their phone browser, no internet needed: twenty games,…",
+   "summary_source": "manifest",
+   "version": "1.9.0"
+  },
+  "htw_ac_remote": {
+   "author": "sokogen",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "HTW",
+   "path": "/ext/apps/Infrared/htw_ac_remote.fap",
+   "source_dir": "non_catalog_apps/htw_ac_remote",
+   "source_url": null,
+   "summary": "IR remote control for HTW air conditioner",
+   "summary_source": "manifest",
+   "version": "1.2"
+  },
+  "i2ctools": {
+   "author": "@NaejEL",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[GPIO] i2c Tools",
+   "path": "/ext/apps/GPIO/i2ctools.fap",
+   "source_dir": "base_pack/flipper_i2ctools",
+   "source_url": null,
+   "summary": "Scans, sniffs and sends commands on an I2C bus wired to the GPIO header.",
+   "summary_source": "ours",
+   "version": "1.1"
+  },
+  "ibutton": {
+   "author": null,
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "iButton",
+   "menu": true,
+   "name": "iButton",
+   "path": "/ext/apps/iButton/ibutton.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Reads, saves, writes and emulates iButton (1-Wire) keys.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "ibutton_converter": {
+   "author": "@leptopt1los",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "iButton",
+   "name": "iButton Converter",
+   "path": "/ext/apps/iButton/ibutton_converter.fap",
+   "source_dir": "base_pack/ibutton_converter",
+   "source_url": "https://github.com/Leptopt1los/ibutton_converter",
+   "summary": "Cyfral and Metakom to Dallas converter",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "iconedit": {
+   "author": "Roberto De Feo",
+   "capabilities": [
+    "hid",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "IconEdit",
+   "path": "/ext/apps/Tools/iconedit.fap",
+   "source_dir": "non_catalog_apps/iconedit",
+   "source_url": "https://github.com/rdefeo/iconedit",
+   "summary": "Draws icons and animations on the Flipper and sends them to a computer.",
+   "summary_source": "ours",
+   "version": "0.7.1"
+  },
+  "ina_meter": {
+   "author": "cepetr",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[INA2xx] INA Meter",
+   "path": "/ext/apps/GPIO/ina_meter.fap",
+   "source_dir": "non_catalog_apps/flipper-tina",
+   "source_url": "https://github.com/cepetr/flipper-tina",
+   "summary": "Application for reading TI INAxxx sensors.",
+   "summary_source": "manifest",
+   "version": "0.8"
+  },
+  "infrared": {
+   "author": null,
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "menu": true,
+   "name": "Infrared",
+   "path": "/ext/apps/Infrared/infrared.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Learns, saves and sends infrared remote signals, with universal remotes.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "ir_intervalometer": {
+   "author": "@Nitepone",
+   "capabilities": [
+    "ir_tx"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "IR Intervalometer",
+   "path": "/ext/apps/Infrared/ir_intervalometer.fap",
+   "source_dir": "apps_source_code/ir_intervalometer",
+   "source_url": "https://github.com/Nitepone/flipper-intervalometer",
+   "summary": "Intervalometer for Pentax, Canon, Nikon, and Sony cameras. Uses IR shutter release.",
+   "summary_source": "manifest",
+   "version": "2.2"
+  },
+  "ir_remote": {
+   "author": "@Hong5489 & @friebel & @d4ve10",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "IR Remote",
+   "path": "/ext/apps/Infrared/ir_remote.fap",
+   "source_dir": "non_catalog_apps/ir_remote",
+   "source_url": "https://github.com/Hong5489/ir_remote",
+   "summary": "Bind any IR remote button to each button on flipper d-pad, provides another way to use flipper as IR remote.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "ir_scope": {
+   "author": "@kallanreed",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "IR Scope",
+   "path": "/ext/apps/Infrared/ir_scope.fap",
+   "source_dir": "base_pack/ir_scope",
+   "source_url": null,
+   "summary": "App allows to see incoming IR signals.",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "iso15693_nfc_writer": {
+   "author": null,
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "ISO 15693-3 NFC Writer",
+   "path": "/ext/apps/NFC/iso15693_nfc_writer.fap",
+   "source_dir": "non_catalog_apps/iso15693_nfc_writer",
+   "source_url": null,
+   "summary": "Writes, formats, dumps and locks ISO 15693 NFC tags.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "jetpack_joyride": {
+   "author": null,
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Jetpack Joyride",
+   "path": "/ext/apps/Games/jetpack_joyride.fap",
+   "source_dir": "base_pack/jetpack_joyride",
+   "source_url": null,
+   "summary": "A side-scrolling jetpack game with obstacles and coins.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "kelon_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Kelon",
+   "path": "/ext/apps/Infrared/kelon_ac_remote.fap",
+   "source_dir": "non_catalog_apps/kelon_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Kelon-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "kelvinator_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Kelvinator",
+   "path": "/ext/apps/Infrared/kelvinator_ac_remote.fap",
+   "source_dir": "non_catalog_apps/kelvinator_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Kelvinator-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "key_copier": {
+   "author": "Torron",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Key Copier",
+   "path": "/ext/apps/Tools/key_copier.fap",
+   "source_dir": "non_catalog_apps/key_copier",
+   "source_url": null,
+   "summary": "Measures the bitting of a physical key laid on the screen.",
+   "summary_source": "ours",
+   "version": "1.5"
+  },
+  "key_generator": {
+   "author": "@Milk-Cool",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "RFID",
+   "name": "EM4100 Key generator",
+   "path": "/ext/apps/RFID/key_generator.fap",
+   "source_dir": "apps_source_code/fz-em4100-generator",
+   "source_url": "https://github.com/Milk-Cool/fz-em4100-generator",
+   "summary": "Generates EM4100 key lists from selected rfid key file for RFID fuzzer app",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "kyberwrite": {
+   "author": "Spandox",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "RFID",
+   "name": "KyberWrite",
+   "path": "/ext/apps/RFID/kyberwrite.fap",
+   "source_dir": "non_catalog_apps/kyberwrite",
+   "source_url": null,
+   "summary": "Program EM4x05 tubes as Disney Galaxy's Edge kyber crystals",
+   "summary_source": "manifest",
+   "version": "0.1.0"
+  },
+  "lan_tester": {
+   "author": "Dok2d",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[W5500] LAN Tester",
+   "path": "/ext/apps/GPIO/lan_tester.fap",
+   "source_dir": "non_catalog_apps/w5500_lan_analyse",
+   "source_url": "https://github.com/dok2d/fz-W5500-lan-analyse",
+   "summary": "Portable LAN tester & security analyzer: ARP, ping, TCP ping, DHCP, LLDP/CDP, port scan, SNMP, NTP sync, IPMI, TFTP, PXE boot/download, 802.1X, VLAN, rogue DHCP/RA detection via W5500",
+   "summary_source": "manifest",
+   "version": "2.10.0"
+  },
+  "laser_tag": {
+   "author": "@RocketGod-git & @jamisonderek",
+   "capabilities": [
+    "ir_tx",
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Laser Tag",
+   "path": "/ext/apps/Games/laser_tag.fap",
+   "source_dir": "non_catalog_apps/laser_tag_game",
+   "source_url": "https://github.com/RocketGod-Git/Flipper-Zero-Laser-Tag",
+   "summary": "Laser Tag game for Flipper Zero",
+   "summary_source": "manifest",
+   "version": "2.3"
+  },
+  "ldtoypad": {
+   "author": "Seger",
+   "capabilities": [
+    "hid",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "USB",
+   "name": "LEGO Dimensions Toy Pad",
+   "path": "/ext/apps/USB/ldtoypad.fap",
+   "source_dir": "non_catalog_apps/ld_toypad_emulator",
+   "source_url": "https://github.com/SegerEnd/Flipper-Zero-LD-Toypad-Emulator",
+   "summary": "USB Toy Pad emulator for Lego Dimensions",
+   "summary_source": "manifest",
+   "version": "0.5"
+  },
+  "lfrfid": {
+   "author": null,
+   "capabilities": [
+    "rfid_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "RFID",
+   "menu": true,
+   "name": "125 kHz RFID",
+   "path": "/ext/apps/RFID/lfrfid.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Reads, saves, writes and emulates 125 kHz RFID cards and tags.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "lg_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "LG",
+   "path": "/ext/apps/Infrared/lg_ac_remote.fap",
+   "source_dir": "non_catalog_apps/lg_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for LG-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "lidar_emulator": {
+   "author": "regaly",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "LIDAR Emulator",
+   "path": "/ext/apps/Infrared/lidar_emulator.fap",
+   "source_dir": "non_catalog_apps/lidar_emulator",
+   "source_url": "https://github.com/regaly/flipperzero-lidar_emulator",
+   "summary": "Sends the infrared signals of LIDAR speed guns, while OK is held.",
+   "summary_source": "ours",
+   "version": "0.2"
+  },
+  "lightmeter": {
+   "author": "Oleksii Kutuzov",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Lightmeter",
+   "path": "/ext/apps/GPIO/lightmeter.fap",
+   "source_dir": "base_pack/lightmeter",
+   "source_url": "https://github.com/oleksiikutuzov/flipperzero-lightmeter",
+   "summary": "Lightmeter app for photography",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "logic_analyzer": {
+   "author": "@g3gg0",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Logic Analyzer",
+   "path": "/ext/apps/GPIO/logic_analyzer.fap",
+   "source_dir": "apps_source_code/logic_analyzer",
+   "source_url": "https://github.com/g3gg0/flipper-logic_analyzer",
+   "summary": "Use flipper as Openbench Logic Sniffer (ols) logic analyzer in PulseView",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "longwave_clock": {
+   "author": "@m7i-org",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Longwave Clock",
+   "path": "/ext/apps/GPIO/longwave_clock.fap",
+   "source_dir": "non_catalog_apps/flipper_longwave_clock",
+   "source_url": "https://github.com/flipper_longwave_clock",
+   "summary": "Decode or demonstrate long wave time signals",
+   "summary_source": "manifest",
+   "version": "0.1"
+  },
+  "lora_terminal": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "LoRA_Terminal",
+   "path": "/ext/apps/GPIO/lora_terminal.fap",
+   "source_dir": "non_catalog_apps/LORA_term",
+   "source_url": null,
+   "summary": "A terminal for a LoRa radio module on the GPIO header's UART, with quick commands.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "magspoof": {
+   "author": "Zachary Weiss",
+   "capabilities": [
+    "subghz_tx",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "MagSpoof",
+   "path": "/ext/apps/GPIO/magspoof.fap",
+   "source_dir": "non_catalog_apps/magspoof_flipper",
+   "source_url": "https://github.com/zacharyweiss/magspoof_flipper",
+   "summary": "Enables wireless transmission of magstripe data",
+   "summary_source": "manifest",
+   "version": "0.10"
+  },
+  "mandelbrotset": {
+   "author": "@Possibly-Matt",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Mandelbrot Set",
+   "path": "/ext/apps/Games/mandelbrotset.fap",
+   "source_dir": "apps_source_code/mandelbrot",
+   "source_url": "https://github.com/xMasterX/all-the-plugins",
+   "summary": "The Mandelbrot set is the set of all so-called (complex) numbers that meet Mandelbrots simple arithmetic criterion.",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "marauder_gui": {
+   "author": "mel4mi",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Marauder GUI",
+   "path": "/ext/apps/GPIO/marauder_gui.fap",
+   "source_dir": "non_catalog_apps/marauder_gui",
+   "source_url": null,
+   "summary": "ESP32 Marauder companion app - WiFi/BT attacks, detectors and network tools over UART",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "mass_storage": {
+   "author": null,
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "USB",
+   "name": "Mass Storage",
+   "path": "/ext/apps/USB/mass_storage.fap",
+   "source_dir": "base_pack/mass_storage",
+   "source_url": null,
+   "summary": "Implements a mass storage device over USB for disk images",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "matagotchi": {
+   "author": "MrModd",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Matagotchi",
+   "path": "/ext/apps/Games/matagotchi.fap",
+   "source_dir": "non_catalog_apps/Matagotchi",
+   "source_url": "https://github.com/MrModd/Matagotchi",
+   "summary": "Tamagotchi like game",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "meal_pager": {
+   "author": "leedave",
+   "capabilities": [
+    "subghz_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Restaurant Pager Trigger",
+   "path": "/ext/apps/Sub-GHz/meal_pager.fap",
+   "source_dir": "non_catalog_apps/meal_pager",
+   "source_url": "https://github.com/leedave/flipper-zero-meal-pager",
+   "summary": "This app triggers restaurant pagers in a brute force manner, useful to test if devices are still functional.",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "memsic_2125": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[Mx2125] Accelerometer",
+   "path": "/ext/apps/GPIO/memsic_2125.fap",
+   "source_dir": "non_catalog_apps/memsic_2125",
+   "source_url": null,
+   "summary": "Shows the tilt read from a Memsic 2125 accelerometer on the GPIO header.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "metroflip": {
+   "author": "luu176",
+   "capabilities": [
+    "nfc_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "Metroflip",
+   "path": "/ext/apps/NFC/metroflip.fap",
+   "source_dir": "non_catalog_apps/metroflip",
+   "source_url": null,
+   "summary": "Read public transport cards from around the world",
+   "summary_source": "manifest",
+   "version": "2.0"
+  },
+  "metronome": {
+   "author": "@panki27 & @xMasterX",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "Metronome",
+   "path": "/ext/apps/Media/metronome.fap",
+   "source_dir": "base_pack/metronome",
+   "source_url": null,
+   "summary": "A metronome with a set tempo, beats per bar and note length.",
+   "summary_source": "ours",
+   "version": "1.4"
+  },
+  "mfc_editor": {
+   "author": "TollyH",
+   "capabilities": [
+    "nfc_emulate_write"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "MIFARE Classic Editor",
+   "path": "/ext/apps/NFC/mfc_editor.fap",
+   "source_dir": "base_pack/mfc_editor",
+   "source_url": "https://github.com/TollyH/flipper-apps/tree/main/mfc-editor",
+   "summary": "Application for viewing and editing MIFARE Classic .nfc files",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "mfkey": {
+   "author": "@noproto",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "MFKey",
+   "path": "/ext/apps/NFC/mfkey.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "MIFARE Classic key recovery tool",
+   "summary_source": "manifest",
+   "version": "4.1"
+  },
+  "mfp_reader": {
+   "author": "Defensor7",
+   "capabilities": [
+    "nfc_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "MFP Reader",
+   "path": "/ext/apps/NFC/mfp_reader.fap",
+   "source_dir": "non_catalog_apps/nfc_mfp_reader",
+   "source_url": "https://github.com/Defensor7/flipperzero-mfp-reader",
+   "summary": "MIFARE Plus SL3 reader, dumper and emulator",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "mh_z19": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[MH-Z19] CO2 sensor",
+   "path": "/ext/apps/GPIO/mh_z19.fap",
+   "source_dir": "non_catalog_apps/mh_z19",
+   "source_url": null,
+   "summary": "Shows the CO2 level read from an MH-Z19 sensor on the GPIO header.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "microcity": {
+   "author": "@apfxtech",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "MicroCity",
+   "path": "/ext/apps/Games/microcity.fap",
+   "source_dir": "non_catalog_apps/microcity",
+   "source_url": "https://github.com/apfxtech/FlipperMicroCity.git",
+   "summary": "City building simulation ported from Arduboy.",
+   "summary_source": "manifest",
+   "version": "2.0"
+  },
+  "microtd": {
+   "author": "@apfxtech",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Tower Defense",
+   "path": "/ext/apps/Games/microtd.fap",
+   "source_dir": "non_catalog_apps/microtd",
+   "source_url": "https://github.com/apfxtech/FlipperTowerDefense.git",
+   "summary": "Tower defense game ported from Arduboy.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "midea_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Midea",
+   "path": "/ext/apps/Infrared/midea_ac_remote.fap",
+   "source_dir": "non_catalog_apps/midea_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Midea-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "mifare_fuzzer": {
+   "author": "@spheeere98 @Sil333033",
+   "capabilities": [
+    "nfc_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "Mifare Fuzzer",
+   "path": "/ext/apps/NFC/mifare_fuzzer.fap",
+   "source_dir": "apps_source_code/mifare_fuzzer",
+   "source_url": "https://github.com/spheeere98/mifare_fuzzer",
+   "summary": "App emulates Mifare Classic cards with various UIDs to check how reader reacts on them",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "minesweeper_redux": {
+   "author": "Alexander Rodriguez",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Mine Sweeper",
+   "path": "/ext/apps/Games/minesweeper_redux.fap",
+   "source_dir": "base_pack/minesweeper",
+   "source_url": "https://github.com/squee72564/F0_Minesweeper_Fap",
+   "summary": "Flipper Zero Minesweeper Implementation",
+   "summary_source": "manifest",
+   "version": "1.6"
+  },
+  "mitsubishi_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Mitsubishi (Full)",
+   "path": "/ext/apps/Infrared/mitsubishi_ac_remote.fap",
+   "source_dir": "non_catalog_apps/mitsubishi_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Mitsubishi (Full)-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "mitsubishi_ac_remote_new_protocol": {
+   "author": null,
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Mitsubishi (New)",
+   "path": "/ext/apps/Infrared/mitsubishi_ac_remote_new_protocol.fap",
+   "source_dir": "non_catalog_apps/mitsubishi_ac_remote_new_protocol",
+   "source_url": null,
+   "summary": "Mitsubishi Air Conditioner remote control(New)",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "mitsubishi_ac_remote_old": {
+   "author": null,
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Mitsubishi (Old)",
+   "path": "/ext/apps/Infrared/mitsubishi_ac_remote_old.fap",
+   "source_dir": "non_catalog_apps/mitsubishi_ac_remote_old",
+   "source_url": null,
+   "summary": "Mitsubishi Electric Air Conditioner remote control",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "mitsubishi_heavy_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "MitsuHeavy",
+   "path": "/ext/apps/Infrared/mitsubishi_heavy_ac_remote.fap",
+   "source_dir": "non_catalog_apps/mitsubishi_heavy_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for MitsuHeavy-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "montyhall": {
+   "author": "@DevMilanIan",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Monty Hall",
+   "path": "/ext/apps/Games/montyhall.fap",
+   "source_dir": "apps_source_code/montyhall",
+   "source_url": null,
+   "summary": "Monty Hall asks you to guess which closed door a prize is behind.",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "morse_code": {
+   "author": "@wh00hw & @xMasterX",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "Morse Code",
+   "path": "/ext/apps/Media/morse_code.fap",
+   "source_dir": "base_pack/morse_code",
+   "source_url": null,
+   "summary": "Simple Morse Code parser",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "morse_flipper": {
+   "author": "@yo3gnd",
+   "capabilities": [
+    "subghz_tx",
+    "hid",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Morse Flipper",
+   "path": "/ext/apps/Tools/morse_flipper.fap",
+   "source_dir": "non_catalog_apps/morse_flipper",
+   "source_url": "https://github.com/yo3gnd/morse-flipper/",
+   "summary": "Learn, practise, send, and experiment with Morse code on Flipper Zero.",
+   "summary_source": "manifest",
+   "version": "0.1.76"
+  },
+  "morse_master": {
+   "author": "P1X",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "Morse Master",
+   "path": "/ext/apps/Media/morse_master.fap",
+   "source_dir": "non_catalog_apps/morse_master",
+   "source_url": "https://github.com/w84death/morse-master",
+   "summary": "Learn Morse code using this toolkit.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "morse_trainer": {
+   "author": "Baris Mert",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Morse Trainer",
+   "path": "/ext/apps/Games/morse_trainer.fap",
+   "source_dir": "non_catalog_apps/morse_trainer",
+   "source_url": null,
+   "summary": "Learn Morse code from zero through progressive levels",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "mp3_player": {
+   "author": "Coolshrimp",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "MP3 Player",
+   "path": "/ext/apps/Media/mp3_player.fap",
+   "source_dir": "non_catalog_apps/flipperzero_mp3_player",
+   "source_url": "https://github.com/coolshrimp/flipperzero-mp3-player",
+   "summary": "Play any MP3 through the internal speaker, a MAX98357A I2S amplifier, or a filtered PAM8403.",
+   "summary_source": "manifest",
+   "version": "3.5"
+  },
+  "multi_converter": {
+   "author": "@theisolinearchip",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Multi Converter",
+   "path": "/ext/apps/Tools/multi_converter.fap",
+   "source_dir": "base_pack/multi_converter",
+   "source_url": null,
+   "summary": "A multi-unit converter written with an easy and expandable system for adding new units and conversion methods",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "multi_counter": {
+   "author": "@JadePossible & Roro",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Multi Counter",
+   "path": "/ext/apps/Tools/multi_counter.fap",
+   "source_dir": "non_catalog_apps/multi_counter",
+   "source_url": "https://github.com/JadePossible/Flipper-Multi-Counter",
+   "summary": "Counter App with 4 counter for tabletop games",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "music_beeper": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "Music Beeper",
+   "path": "/ext/apps/Media/music_beeper.fap",
+   "source_dir": "non_catalog_apps/music_beeper",
+   "source_url": null,
+   "summary": "Plays music files on the speaker as beeps.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "music_player": {
+   "author": null,
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "Music Player",
+   "path": "/ext/apps/Media/music_player.fap",
+   "source_dir": "base_pack/music_player",
+   "source_url": null,
+   "summary": "Plays music files (.fmf) on the speaker, with a set tempo.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "myblab": {
+   "author": "@apfxtech",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Mystic Balloon",
+   "path": "/ext/apps/Games/myblab.fap",
+   "source_dir": "non_catalog_apps/FlipperMysticBalloon",
+   "source_url": "https://github.com/apfxtech/FlipperMysticBalloon.git",
+   "summary": "Mystic Balloon game ported from Arduboy.",
+   "summary_source": "manifest",
+   "version": "2.0"
+  },
+  "nearby_files": {
+   "author": "Stichoza",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Nearby Files",
+   "path": "/ext/apps/GPIO/nearby_files.fap",
+   "source_dir": "base_pack/nearby_files",
+   "source_url": null,
+   "summary": "A GPS-enabled file browser that displays files sorted by distance from your current location.",
+   "summary_source": "manifest",
+   "version": "1.8"
+  },
+  "neoclima_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Neoclima",
+   "path": "/ext/apps/Infrared/neoclima_ac_remote.fap",
+   "source_dir": "non_catalog_apps/neoclima_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Neoclima-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "net_calculator": {
+   "author": "WolfRor",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Net Calculator",
+   "path": "/ext/apps/Tools/net_calculator.fap",
+   "source_dir": "non_catalog_apps/net_calculator",
+   "source_url": "https://www.wolfror.com/products/netcalculator-for-flipper-zero",
+   "summary": "Offline IPv4 VLSM subnet calculator",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "nfc": {
+   "author": null,
+   "capabilities": [
+    "nfc_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "menu": true,
+   "name": "NFC",
+   "path": "/ext/apps/NFC/nfc.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Reads, saves, writes and emulates NFC cards and tags.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "nfc_apdu_runner": {
+   "author": "SpenserCai",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "NFC APDU Runner",
+   "path": "/ext/apps/NFC/nfc_apdu_runner.fap",
+   "source_dir": "apps_source_code/nfc_apdu_runner",
+   "source_url": "https://github.com/SpenserCai/nfc_apdu_runner",
+   "summary": "Run APDU commands from script files",
+   "summary_source": "manifest",
+   "version": "0.3"
+  },
+  "nfc_canary": {
+   "author": "antitree",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "NFC Canary",
+   "path": "/ext/apps/NFC/nfc_canary.fap",
+   "source_dir": "non_catalog_apps/nfc_canary",
+   "source_url": "https://github.com/antitree/nfc_canary",
+   "summary": "Passive NFC skim detector: alarms when a reader interrogates the device.",
+   "summary_source": "manifest",
+   "version": "0.2"
+  },
+  "nfc_comparator": {
+   "author": "acegoal07",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "NFC Comparator",
+   "path": "/ext/apps/NFC/nfc_comparator.fap",
+   "source_dir": "non_catalog_apps/nfc_comparator",
+   "source_url": "https://github.com/acegoal07/FlipperZero_NFC_Comparator",
+   "summary": "A tool to check if a physical NFC card is the same as a saved digital one",
+   "summary_source": "manifest",
+   "version": "2.3"
+  },
+  "nfc_eink": {
+   "author": null,
+   "capabilities": [
+    "nfc_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "NFC Eink Tags",
+   "path": "/ext/apps/NFC/nfc_eink.fap",
+   "source_dir": "base_pack/nfc_eink",
+   "source_url": null,
+   "summary": "Application for emulation and writing to NFC Eink tags",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "nfc_login": {
+   "author": "Play2BReal",
+   "capabilities": [
+    "hid",
+    "ble_adv",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "NFC Login",
+   "path": "/ext/apps/NFC/nfc_login.fap",
+   "source_dir": "non_catalog_apps/nfc_login",
+   "source_url": null,
+   "summary": "NFC based desktop login using USB HID or BLE HID",
+   "summary_source": "manifest",
+   "version": "1.1.3"
+  },
+  "nfc_magic": {
+   "author": null,
+   "capabilities": [
+    "nfc_emulate_write"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "NFC Magic",
+   "path": "/ext/apps/NFC/nfc_magic.fap",
+   "source_dir": "base_pack/nfc_magic",
+   "source_url": null,
+   "summary": "Application for writing to NFC tags with modifiable sector 0",
+   "summary_source": "manifest",
+   "version": "2.2"
+  },
+  "nfc_maker": {
+   "author": "@WillyJL",
+   "capabilities": [
+    "nfc_emulate_write"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "NFC Maker",
+   "path": "/ext/apps/NFC/nfc_maker.fap",
+   "source_dir": "base_pack/nfc_maker",
+   "source_url": "https://github.com/Next-Flip/Momentum-Apps/tree/dev/nfc_maker",
+   "summary": "Create NFC files for BT MACs, Contacts, Links, Emails, Phones, Text and WiFis",
+   "summary_source": "manifest",
+   "version": "2.1"
+  },
+  "nfc_playlist": {
+   "author": "@acegoal07",
+   "capabilities": [
+    "nfc_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "NFC Playlist",
+   "path": "/ext/apps/NFC/nfc_playlist.fap",
+   "source_dir": "non_catalog_apps/nfc_playlist",
+   "source_url": "https://github.com/acegoal07/FlipperZero_NFC_Playlist/tree/main",
+   "summary": "A Tool used to running through a list of NFC cards",
+   "summary_source": "manifest",
+   "version": "3.4"
+  },
+  "nfc_rfid_detector": {
+   "author": "SkorP",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "RFID detector",
+   "path": "/ext/apps/Tools/nfc_rfid_detector.fap",
+   "source_dir": "base_pack/nfc_rfid_detector",
+   "source_url": null,
+   "summary": "Identify the reader type: NFC (13 MHz) and/or RFID (125 KHz).",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "nfc_stock_manager": {
+   "author": "Endika",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "NFC Stock Manager Alpha",
+   "path": "/ext/apps/NFC/nfc_stock_manager.fap",
+   "source_dir": "non_catalog_apps/nfc_stock",
+   "source_url": null,
+   "summary": "Alpha build: manage inventory items via NFC tags",
+   "summary_source": "manifest",
+   "version": "0.1.5"
+  },
+  "nice_o_code": {
+   "author": "xMasterX (MMX)",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Nice O-Code",
+   "path": "/ext/apps/Sub-GHz/nice_o_code.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Recover the installer code of a Nice O-Code remote and save it into a .sub",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "nickname_generator": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "NickName Generator",
+   "path": "/ext/apps/Tools/nickname_generator.fap",
+   "source_dir": "non_catalog_apps/name-gen",
+   "source_url": null,
+   "summary": "Makes up random nicknames.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "nrf24_batch": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "NRF24 Batch",
+   "path": "/ext/apps/GPIO/nrf24_batch.fap",
+   "source_dir": "non_catalog_apps/nrf24-batch",
+   "source_url": null,
+   "summary": "Sends batches of commands to devices through an nRF24L01 board.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "nrf24_mouse_jacker": {
+   "author": "@mothball187 & @xMasterX",
+   "capabilities": [
+    "hid",
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[NRF24] Mouse Jacker",
+   "path": "/ext/apps/GPIO/nrf24_mouse_jacker.fap",
+   "source_dir": "base_pack/mousejacker",
+   "source_url": null,
+   "summary": "App works with NRF24 Sniffer app to perform mousejack attacks",
+   "summary_source": "manifest",
+   "version": "1.2"
+  },
+  "nrf24_mouse_jacker_ms": {
+   "author": null,
+   "capabilities": [
+    "hid",
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Mouse Jacker MS",
+   "path": "/ext/apps/GPIO/nrf24_mouse_jacker_ms.fap",
+   "source_dir": "non_catalog_apps/mousejacker_ms",
+   "source_url": null,
+   "summary": "Sends keystrokes from a script to wireless mice and keyboards found with an nRF24L01 board.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "nrf24_scanner": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "NRF24 Scanner",
+   "path": "/ext/apps/GPIO/nrf24_scanner.fap",
+   "source_dir": "non_catalog_apps/nrf24scan",
+   "source_url": null,
+   "summary": "Scans, logs and resends nRF24L01 packets with an external board.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "nrf24_sniffer": {
+   "author": "@mothball187 & @xMasterX",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[NRF24] Sniffer",
+   "path": "/ext/apps/GPIO/nrf24_sniffer.fap",
+   "source_dir": "base_pack/nrfsniff",
+   "source_url": null,
+   "summary": "App captures addresses to use with NRF24 Mouse Jacker app to perform mousejack attacks",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "nrf24_sniffer_ms": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Sniffer MS",
+   "path": "/ext/apps/GPIO/nrf24_sniffer_ms.fap",
+   "source_dir": "non_catalog_apps/nrfsniff_ms",
+   "source_url": null,
+   "summary": "Finds the addresses of wireless mice and keyboards with an nRF24L01 board, and saves them.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "nrf24channelscanner": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Channel Scanner",
+   "path": "/ext/apps/GPIO/nrf24channelscanner.fap",
+   "source_dir": "non_catalog_apps/nrf24channelscanner",
+   "source_url": null,
+   "summary": "Scans 2.4Ghz frequency for usage data.",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "nrf24tool": {
+   "author": "S. Terrier",
+   "capabilities": [
+    "hid",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "NRF24 Tool",
+   "path": "/ext/apps/GPIO/nrf24tool.fap",
+   "source_dir": "non_catalog_apps/nrf24tool",
+   "source_url": "https://github.com/OuinOuin74/nrf24tool",
+   "summary": "Utility app for NRF24L01",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "nupogodi": {
+   "author": "@sionyx",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Nu pogodi",
+   "path": "/ext/apps/Games/nupogodi.fap",
+   "source_dir": "apps_source_code/nupogodi_game",
+   "source_url": "https://github.com/sionyx/flipper_nupogodi",
+   "summary": "Elektronika IM-02 - Nu, Pogodi! / (Game & Watch - Egg) - Soviet retro game",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "ocarina": {
+   "author": "@invalidna-me",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "Ocarina",
+   "path": "/ext/apps/Media/ocarina.fap",
+   "source_dir": "apps_source_code/ocarina",
+   "source_url": "https://github.com/invalidna-me/flipperzero-ocarina",
+   "summary": "A basic Ocarina (of Time), Controls are the same as the N64 version of the Ocarina of Time",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "oregon_trail": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Oregon Trail",
+   "path": "/ext/apps/Games/oregon_trail.fap",
+   "source_dir": "non_catalog_apps/oregon_trail",
+   "source_url": null,
+   "summary": "The trail survival game Oregon Trail.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "paint": {
+   "author": "@n-o-T-I-n-s-a-n-e",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Paint",
+   "path": "/ext/apps/Games/paint.fap",
+   "source_dir": "apps_source_code/paint",
+   "source_url": "https://github.com/n-o-T-I-n-s-a-n-e",
+   "summary": "A basic Paint app. Ok: toggle dot or lift the pen, hold Ok: cycle Move/Draw/Erase mode, hold Back: clear, Back: save and exit. The canvas is restored on the next start",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "panasonic_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Panasonic",
+   "path": "/ext/apps/Infrared/panasonic_ac_remote.fap",
+   "source_dir": "non_catalog_apps/panasonic_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Panasonic-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "paper_plane": {
+   "author": "@Larry-the-Pig",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Paper Plane",
+   "path": "/ext/apps/Games/paper_plane.fap",
+   "source_dir": "non_catalog_apps/flipper_plane",
+   "source_url": "https://github.com/Larry-the-Pig/flipper-plane",
+   "summary": "Guide a paper plane through obstacles to get the highest score.",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "passgen": {
+   "author": "@anakod & @henrygab",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Password Generator",
+   "path": "/ext/apps/Tools/passgen.fap",
+   "source_dir": "apps_source_code/flipper_passgen",
+   "source_url": null,
+   "summary": "Simple password generator",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "passy": {
+   "author": "bettse",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "Passport Reader",
+   "path": "/ext/apps/NFC/passy.fap",
+   "source_dir": "non_catalog_apps/passy",
+   "source_url": "https://github.com/bettse/passy",
+   "summary": "Reads electronic passports (eMRTD) over NFC with the holder's document data.",
+   "summary_source": "ours",
+   "version": "1.6"
+  },
+  "pause_timer": {
+   "author": null,
+   "capabilities": [
+    "ir_tx"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Pause Timer",
+   "path": "/ext/apps/Infrared/pause_timer.fap",
+   "source_dir": "non_catalog_apps/pause_timer",
+   "source_url": null,
+   "summary": "Pause your show when the ad break ends",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "pc_monitor": {
+   "author": "Olejka",
+   "capabilities": [
+    "ble_adv"
+   ],
+   "capabilities_searched": true,
+   "category": "Bluetooth",
+   "name": "PC monitor",
+   "path": "/ext/apps/Bluetooth/pc_monitor.fap",
+   "source_dir": "non_catalog_apps/pc_monitor",
+   "source_url": null,
+   "summary": "Application for monitoring PC resources",
+   "summary_source": "manifest",
+   "version": "1.1.3"
+  },
+  "picopass": {
+   "author": null,
+   "capabilities": [
+    "nfc_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "HID iClass (PicoPass)",
+   "path": "/ext/apps/NFC/picopass.fap",
+   "source_dir": "base_pack/picopass",
+   "source_url": null,
+   "summary": "App to communicate with PicoPass(iClass) tags",
+   "summary_source": "manifest",
+   "version": "1.22"
+  },
+  "pinball0": {
+   "author": "Roberto De Feo",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Pinball0",
+   "path": "/ext/apps/Games/pinball0.fap",
+   "source_dir": "non_catalog_apps/pinball0",
+   "source_url": "https://github.com/rdefeo/pinball0",
+   "summary": "Pinball with tables defined in JSON files.",
+   "summary_source": "ours",
+   "version": "0.5.2"
+  },
+  "pocketlab": {
+   "author": "PerfectoWeb",
+   "capabilities": [
+    "hid",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "PocketLab",
+   "path": "/ext/apps/Tools/pocketlab.fap",
+   "source_dir": "base_pack/pocketlab",
+   "source_url": "https://github.com/PerfectoWeb/flipper-pocketlab",
+   "summary": "Learn your Flipper with short, gamified hands-on labs.",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "pocsag_pager": {
+   "author": "@xMasterX & @Shmuma",
+   "capabilities": [
+    "subghz_tx",
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "POCSAG Pager",
+   "path": "/ext/apps/Sub-GHz/pocsag_pager.fap",
+   "source_dir": "base_pack/pocsag_pager",
+   "source_url": null,
+   "summary": "App can capture POCSAG 1200 messages on CC1101 supported frequencies.",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "pokemon": {
+   "author": "Kris Bahnsen, Esteban Fuentealba, ProteanReverie, Darryn Cull",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Pokemon Trade Tool",
+   "path": "/ext/apps/GPIO/pokemon.fap",
+   "source_dir": "non_catalog_apps/gb-pokemon-trading",
+   "source_url": "https://github.com/kbembedded/Flipper-Zero-Game-Boy-Pokemon-Trading",
+   "summary": "Pokemon exchange from Flipper Zero to Game Boy, supports Generation I & II non-Japanese games",
+   "summary_source": "manifest",
+   "version": "2.3"
+  },
+  "pomodoro_timer": {
+   "author": "@sbrin",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Pomodoro Timer",
+   "path": "/ext/apps/Tools/pomodoro_timer.fap",
+   "source_dir": "apps_source_code/pomodoro",
+   "source_url": "https://github.com/sbrin/flipperzero_pomodoro",
+   "summary": "Use your Flipper Zero as a Pomodoro Timer.",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "princeofarabia": {
+   "author": "@apfxtech",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Prince Of Arabia",
+   "path": "/ext/apps/Games/princeofarabia.fap",
+   "source_dir": "non_catalog_apps/FlipperPrinceOfArabia",
+   "source_url": "https://github.com/apfxtech/FlipperPrinceOfArabia.git",
+   "summary": "Escape the dungeons and free the princess!",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "programmercalc": {
+   "author": "@armixz",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Programmer Calculator",
+   "path": "/ext/apps/Tools/programmercalc.fap",
+   "source_dir": "non_catalog_apps/prog_calculator",
+   "source_url": "https://github.com/armixz/Flipper-Zero-Programmer-Calculator",
+   "summary": "Calculator, for Programmers!",
+   "summary_source": "manifest",
+   "version": "0.9.2"
+  },
+  "proto_pirate": {
+   "author": null,
+   "capabilities": [
+    "subghz_tx",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "ProtoPirate",
+   "path": "/ext/apps/Sub-GHz/proto_pirate.fap",
+   "source_dir": "base_pack/protopirate",
+   "source_url": null,
+   "summary": "Decode car key fob signals from Sub-GHz",
+   "summary_source": "manifest",
+   "version": "4.0"
+  },
+  "protoview": {
+   "author": "@antirez & (fixes by @xMasterX)",
+   "capabilities": [
+    "subghz_tx",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "ProtoView",
+   "path": "/ext/apps/Sub-GHz/protoview.fap",
+   "source_dir": "base_pack/protoview",
+   "source_url": null,
+   "summary": "Digital signal detection, visualization, editing and reply tool",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "pulse_bpm": {
+   "author": "iz1poz",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Pulse BPM",
+   "path": "/ext/apps/Tools/pulse_bpm.fap",
+   "source_dir": "non_catalog_apps/pulse_bpm",
+   "source_url": null,
+   "summary": "Tap along a pulse to measure heart rate; live BPM, locks after 20 seconds",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "qrcode": {
+   "author": "Bob Matcuk",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "QR Code",
+   "path": "/ext/apps/Tools/qrcode.fap",
+   "source_dir": "non_catalog_apps/flipperzero-qrcode",
+   "source_url": "https://github.com/bmatcuk/flipperzero-qrcode",
+   "summary": "Shows QR codes stored as files on the SD card.",
+   "summary_source": "ours",
+   "version": "2.0"
+  },
+  "quac": {
+   "author": "Roberto De Feo",
+   "capabilities": [
+    "subghz_tx",
+    "ir_tx",
+    "nfc_emulate_write",
+    "rfid_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Quac!",
+   "path": "/ext/apps/Tools/quac.fap",
+   "source_dir": "base_pack/quac",
+   "source_url": "https://github.com/rdefeo/quac",
+   "summary": "Quick Action remote control app",
+   "summary_source": "manifest",
+   "version": "0.10.0"
+  },
+  "quadrastic": {
+   "author": "@ivanbarsukov",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Quadrastic",
+   "path": "/ext/apps/Games/quadrastic.fap",
+   "source_dir": "non_catalog_apps/quadrastic",
+   "source_url": null,
+   "summary": "Quadrastic is a simple addicting game inspired by the Arduboy game of the same name",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "race_game": {
+   "author": "mrc19056",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Race Game",
+   "path": "/ext/apps/Games/race_game.fap",
+   "source_dir": "non_catalog_apps/flipper-race-game",
+   "source_url": null,
+   "summary": "3-lane racing game with power-ups, combos, and night mode",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "racegame": {
+   "author": "@zyuhel",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Race",
+   "path": "/ext/apps/Games/racegame.fap",
+   "source_dir": "apps_source_code/racegame",
+   "source_url": "https://github.com/zyuhel/flipperzero-racegame",
+   "summary": "Race game inspired by Race game in BrickGame 9999 in 1.",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "racso_sokoban": {
+   "author": "Racso",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Sokoban",
+   "path": "/ext/apps/Games/racso_sokoban.fap",
+   "source_dir": "non_catalog_apps/sokoban",
+   "source_url": "https://games.by.rac.so/flipper-zero",
+   "summary": "Sokoban on Flipper Zero. Solve your path to victory!",
+   "summary_source": "manifest",
+   "version": "1.6"
+  },
+  "racso_ultimate_tic_tac_toe": {
+   "author": "Racso",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Ultimate Tic-Tac-Toe",
+   "path": "/ext/apps/Games/racso_ultimate_tic_tac_toe.fap",
+   "source_dir": "non_catalog_apps/ultimate_tic_tac_toe",
+   "source_url": "https://games.by.rac.so/flipper-zero",
+   "summary": "Ultimate Tic-Tac-Toe: play on a big board, where each square is a Tic-Tac-Toe board itself!",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "racso_zero": {
+   "author": "Racso",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "ZERO!",
+   "path": "/ext/apps/Games/racso_zero.fap",
+   "source_dir": "non_catalog_apps/zero",
+   "source_url": "https://games.by.rac.so/flipper-zero",
+   "summary": "ZERO! Get rid of all your cards before your opponents do!",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "rad_sens": {
+   "author": "@sionyx",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Radiation Sensor",
+   "path": "/ext/apps/GPIO/rad_sens.fap",
+   "source_dir": "non_catalog_apps/flipper_radsens",
+   "source_url": "https://github.com/sionyx/flipper_radsens",
+   "summary": "Works with RadSens external module",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "radio_scanner": {
+   "author": "@RocketGod-git",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Radio Scanner",
+   "path": "/ext/apps/Sub-GHz/radio_scanner.fap",
+   "source_dir": "base_pack/radio_scanner",
+   "source_url": "https://github.com/RocketGod-Git/Flipper-Zero-Radio-Scanner",
+   "summary": "Scans Sub-GHz frequencies and plays what it hears on the speaker.",
+   "summary_source": "ours",
+   "version": "0.2"
+  },
+  "rcwl_0516": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[RCWL-0516] Motion Sensor",
+   "path": "/ext/apps/GPIO/rcwl_0516.fap",
+   "source_dir": "non_catalog_apps/rcwl_0516",
+   "source_url": null,
+   "summary": "Shows motion detected by an RCWL-0516 radar sensor on the GPIO header.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "reaction": {
+   "author": "@Milk-Cool",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Reaction test",
+   "path": "/ext/apps/Games/reaction.fap",
+   "source_dir": "apps_source_code/fz-reaction-game",
+   "source_url": "https://github.com/Milk-Cool/fz-reaction-game",
+   "summary": "A simple reaction test game",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "resistors": {
+   "author": "Lewis Westbury",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Resistance calculator",
+   "path": "/ext/apps/Tools/resistors.fap",
+   "source_dir": "apps_source_code/resistors",
+   "source_url": "https://github.com/instantiator/flipper-zero-experimental-apps/tree/main/resistors",
+   "summary": "Resistor calculations",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "reversi": {
+   "author": "@dimat",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Reversi",
+   "path": "/ext/apps/Games/reversi.fap",
+   "source_dir": "apps_source_code/reversi",
+   "source_url": "https://github.com/dimat/flipperzero-reversi",
+   "summary": "Reversi game, the game controls should be intuitive. Longs press on OK opens the menu to start a new game.",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "rfid_metal_detector": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "RFID",
+   "name": "RFID Metal Detector",
+   "path": "/ext/apps/RFID/rfid_metal_detector.fap",
+   "source_dir": "non_catalog_apps/flipper-rfid-metal-detector",
+   "source_url": null,
+   "summary": "Detects nearby metal through changes in the 125 kHz RFID field.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "rolling_flaws": {
+   "author": null,
+   "capabilities": [
+    "subghz_tx"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Subghz Rolling Flaws",
+   "path": "/ext/apps/Sub-GHz/rolling_flaws.fap",
+   "source_dir": "base_pack/rolling_flaws",
+   "source_url": null,
+   "summary": "Rolling code receiver (version 1.5), used to learn about rolling code flaws. Watch video at https://youtu.be/gMnGuDC9EQo",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "roots_of_life": {
+   "author": "@Xorboo",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Roots of Life",
+   "path": "/ext/apps/Games/roots_of_life.fap",
+   "source_dir": "apps_source_code/rootoflife",
+   "source_url": "https://github.com/Xorboo/root-of-life",
+   "summary": "A zen-puzzle game for FlipperZero, puzzle made on GlobalGameJam23 (theme: Roots)",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "rubiks_cube_scrambler": {
+   "author": "@RaZeSloth",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Rubik's Cube Scrambler",
+   "path": "/ext/apps/Games/rubiks_cube_scrambler.fap",
+   "source_dir": "apps_source_code/rubiks_cube_scrambler",
+   "source_url": "https://github.com/RaZeSloth/flipperzero-rubiks-cube-scrambler",
+   "summary": "App generates random moves to scramble a Rubik's cube.",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "saflip": {
+   "author": "Aaronjamt",
+   "capabilities": [
+    "nfc_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "SaFlip",
+   "path": "/ext/apps/NFC/saflip.fap",
+   "source_dir": "non_catalog_apps/saflip",
+   "source_url": "https://github.com/aaronjamt/saflip",
+   "summary": "SaFlip Hospitality Tool for Flipper Zero",
+   "summary_source": "manifest",
+   "version": "0.1"
+  },
+  "samsung_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Samsung (Full)",
+   "path": "/ext/apps/Infrared/samsung_ac_remote.fap",
+   "source_dir": "non_catalog_apps/samsung_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Samsung-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "samsung_ac_remote_old": {
+   "author": "@dappermint",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Samsung (Old)",
+   "path": "/ext/apps/Infrared/samsung_ac_remote_old.fap",
+   "source_dir": "non_catalog_apps/samsung_ac_remote_old",
+   "source_url": "https://github.com/dappermint/samsung-ac-remote-flipper-app",
+   "summary": "Samsung Electric Air Conditioner remote control",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "schip": {
+   "author": "@Milk-Cool",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "SUPER-CHIP",
+   "path": "/ext/apps/Games/schip.fap",
+   "source_dir": "non_catalog_apps/schip",
+   "source_url": "https://github.com/Milk-Cool/fz-schip",
+   "summary": "SUPER-CHIP (Chip8) emulator for the Flipper Zero",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "scorched_tanks": {
+   "author": "@jasniec",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Scorched Tanks",
+   "path": "/ext/apps/Games/scorched_tanks.fap",
+   "source_dir": "apps_source_code/scorched_tanks",
+   "source_url": "https://github.com/jasniec/flipper-scorched-tanks-game",
+   "summary": "A Flipper Zero game inspired by scorched earth",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "sd_info": {
+   "author": "sergo",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "SD Info",
+   "path": "/ext/apps/Tools/sd_info.fap",
+   "source_dir": "non_catalog_apps/sd_info",
+   "source_url": "https://github.com/Sladkisnovraper/SD-Info-For-Flipper-Zero",
+   "summary": "The application shows information about the SD card",
+   "summary_source": "manifest",
+   "version": "0.1"
+  },
+  "sd_spi_app": {
+   "author": null,
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "SD SPI",
+   "path": "/ext/apps/GPIO/sd_spi_app.fap",
+   "source_dir": "non_catalog_apps/sd_spi",
+   "source_url": null,
+   "summary": "SD SPI Lock Management",
+   "summary_source": "manifest",
+   "version": "0.5"
+  },
+  "seader": {
+   "author": "bettse",
+   "capabilities": [
+    "nfc_emulate_write",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "Seader",
+   "path": "/ext/apps/NFC/seader.fap",
+   "source_dir": "non_catalog_apps/seader",
+   "source_url": "https://seader.ericbetts.dev",
+   "summary": "Reads HID iClass, DESFire and Seos credentials with a SAM and UART adapter.",
+   "summary_source": "ours",
+   "version": "4.2"
+  },
+  "secplus_pin": {
+   "author": "xMasterX (MMX)",
+   "capabilities": [
+    "subghz_tx"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Security+ PIN",
+   "path": "/ext/apps/Sub-GHz/secplus_pin.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Find the keypad PIN of a captured Security+ 2.0 86-bit signal",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "secret_toggle": {
+   "author": "@nostrumuva",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Secret Toggle",
+   "path": "/ext/apps/Games/secret_toggle.fap",
+   "source_dir": "non_catalog_apps/secret_toggle",
+   "source_url": "https://github.com/nostrumuva/secret_toggle.git",
+   "summary": "A game that toggles squares.",
+   "summary_source": "manifest",
+   "version": null
+  },
+  "seed_capturer": {
+   "author": "xMasterX (MMX)",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Seed Capturer",
+   "path": "/ext/apps/Sub-GHz/seed_capturer.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Collect Fix + Hop pairs from a FAAC SLH, Genius or Erreka remote and store them for offline seed recovery",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "segment_clock": {
+   "author": "sergo",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Segment Clock",
+   "path": "/ext/apps/Tools/segment_clock.fap",
+   "source_dir": "apps_source_code/segment_clock",
+   "source_url": "https://github.com/Sladkisnovraper/Segment-Clock-For-Flipper-Zero",
+   "summary": "Display simple segment clock on Flipper screen",
+   "summary_source": "manifest",
+   "version": "1.2"
+  },
+  "seos": {
+   "author": "bettse",
+   "capabilities": [
+    "nfc_emulate_write",
+    "ble_adv",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "Seos Compatible",
+   "path": "/ext/apps/NFC/seos.fap",
+   "source_dir": "non_catalog_apps/seos",
+   "source_url": "https://gitlab.com/bettse/flipper_seos",
+   "summary": "Seos compatible reader/emulator",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "servotester": {
+   "author": "Alexander Semion",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "ServoTester",
+   "path": "/ext/apps/GPIO/servotester.fap",
+   "source_dir": "apps_source_code/servotester",
+   "source_url": "https://github.com/spin7ion/flipper-servotester",
+   "summary": "Application uses A7 pin for servo PWM output. Has different modes: Manual, Center, Auto.",
+   "summary_source": "manifest",
+   "version": "1.2"
+  },
+  "servotester2": {
+   "author": "@mhasbini",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Servo Tester 2",
+   "path": "/ext/apps/GPIO/servotester2.fap",
+   "source_dir": "non_catalog_apps/ServoTesterApp",
+   "source_url": "https://github.com/mhasbini/ServoTesterApp/tree/master",
+   "summary": "App uses A7 pin for servo PWM output.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "shapshup": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "ShapShup",
+   "path": "/ext/apps/Sub-GHz/shapshup.fap",
+   "source_dir": "non_catalog_apps/shapshup",
+   "source_url": null,
+   "summary": "Opens saved Sub-GHz RAW files and shows and edits their signal data.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "signal_generator": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Signal Generator",
+   "path": "/ext/apps/GPIO/signal_generator.fap",
+   "source_dir": "base_pack/signal_generator",
+   "source_url": null,
+   "summary": "Control GPIO pins to generate digital signals",
+   "summary_source": "manifest",
+   "version": "1.2"
+  },
+  "simon_says": {
+   "author": "@SimplyMinimal & @ShehabAttia96",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Simon Says",
+   "path": "/ext/apps/Games/simon_says.fap",
+   "source_dir": "non_catalog_apps/SimonSays",
+   "source_url": "https://github.com/SimplyMinimal/FlipperZero-SimonSays",
+   "summary": "The memory game Simon Says with the arrow keys, with a high score.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "simultaneous_rfid_reader": {
+   "author": "@RileyHaffner",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Simultaneous UHF RFID Reader",
+   "path": "/ext/apps/GPIO/simultaneous_rfid_reader.fap",
+   "source_dir": "non_catalog_apps/simultaneous_rfid_reader",
+   "source_url": "https://github.com/haffnerriley/Simultaneous-UHF-RFID-FlipperZero",
+   "summary": "Simultaneous UHF RFID Reader that supports the M6E Nano, M7E Hecto, and YRM1000 series Readers. Read up to 150 UHF tags per second [Using ThingMagic Readers]!",
+   "summary_source": "manifest",
+   "version": "1.1.2"
+  },
+  "slotmachine": {
+   "author": "@Daniel-dev-s",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Slot Machine",
+   "path": "/ext/apps/Games/slotmachine.fap",
+   "source_dir": "apps_source_code/flipperzero-slots",
+   "source_url": "https://github.com/Daniel-dev-s/flipperzero-slots",
+   "summary": "Simple Slots simulator game",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "snake": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Snake Game",
+   "path": "/ext/apps/Games/snake.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "The classic Snake game.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "snake20": {
+   "author": "@Willzvul",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Snake 2.0",
+   "path": "/ext/apps/Games/snake20.fap",
+   "source_dir": "apps_source_code/Snake_2",
+   "source_url": "https://github.com/Willzvul/Snake_2.0",
+   "summary": "Advanced Snake Game (Remake of original Snake)",
+   "summary_source": "manifest",
+   "version": "2.4"
+  },
+  "solitaire": {
+   "author": "doofy-dev",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Solitaire",
+   "path": "/ext/apps/Games/solitaire.fap",
+   "source_dir": "base_pack/solitaire",
+   "source_url": "https://github.com/doofy-dev/flipper_solitaire",
+   "summary": "Klondike Solitaire card game",
+   "summary_source": "manifest",
+   "version": "2.0.2"
+  },
+  "spaceimpactii985e": {
+   "author": "Eero Prittinen",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Space Impact II",
+   "path": "/ext/apps/Games/spaceimpactii985e.fap",
+   "source_dir": "non_catalog_apps/Flipper-Zero-Space-Impact-II",
+   "source_url": "https://github.com/Erbonator3000/Flipper-Zero-Space-Impact-II",
+   "summary": "Space Impact II clone",
+   "summary_source": "manifest",
+   "version": "1.0.2"
+  },
+  "specter": {
+   "author": "at0m-b0mb",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "Specter",
+   "path": "/ext/apps/NFC/specter.fap",
+   "source_dir": "non_catalog_apps/specter",
+   "source_url": "https://github.com/at0m-b0mb/Specter-FlipperZero",
+   "summary": "Counter-surveillance bug-sweep: passively senses active 13.56 MHz NFC reader/skimmer fields nearby (hidden POS skimmers, rogue door readers) using the onboard NFC chip. Sweep to find one, fingerprint…",
+   "summary_source": "manifest",
+   "version": "3.1.1"
+  },
+  "spectrum_analyzer": {
+   "author": "@xMasterX & @theY4Kman & @ALEEF02 (original by @jolcese)",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Spectrum Analyzer",
+   "path": "/ext/apps/Sub-GHz/spectrum_analyzer.fap",
+   "source_dir": "base_pack/spectrum_analyzer",
+   "source_url": null,
+   "summary": "Displays a spectrogram chart to visually represent RF signals around you.",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "spi_mem_manager": {
+   "author": null,
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "SPI Mem Manager",
+   "path": "/ext/apps/GPIO/spi_mem_manager.fap",
+   "source_dir": "base_pack/spi_mem_manager",
+   "source_url": null,
+   "summary": "Application for reading and writing 25-series SPI memory chips",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "ssd1306_test": {
+   "author": "martin bogomolni",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "SSD1306 Test",
+   "path": "/ext/apps/GPIO/ssd1306_test.fap",
+   "source_dir": "non_catalog_apps/ssd1306_test",
+   "source_url": null,
+   "summary": "Diagnostic tool for SSD1306 I2C OLED displays (128x64, yellow-bar and mono variants)",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "stack_attack": {
+   "author": "@Negenii",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Stack Attack",
+   "path": "/ext/apps/Games/stack_attack.fap",
+   "source_dir": "non_catalog_apps/stack_attack",
+   "source_url": "https://github.com/Negenii/flipper-stack-attack",
+   "summary": "Push crates, fill rows, don't get crushed. A remake of the legendary Siemens mobile game",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "stack_game": {
+   "author": "bergr22",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Stack",
+   "path": "/ext/apps/Games/stack_game.fap",
+   "source_dir": "non_catalog_apps/stack_game",
+   "source_url": null,
+   "summary": "Reflex and rhythm based tower stacking game.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "stepcounter": {
+   "author": "47lecoste a.k.a. grugnoymeme",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[Mx2125] Step Counter",
+   "path": "/ext/apps/GPIO/stepcounter.fap",
+   "source_dir": "non_catalog_apps/step_counter",
+   "source_url": "https://github.com/grugnoymeme/flipperzero-stepcounter-fap",
+   "summary": "Step Counter/Pedometer using Memsic2125 module.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "sub_analyzer": {
+   "author": "RocketGod",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Sub Analyzer",
+   "path": "/ext/apps/Sub-GHz/sub_analyzer.fap",
+   "source_dir": "apps_source_code/sub_analyzer",
+   "source_url": "https://betaskynet.com",
+   "summary": "Analyze SubGhz .sub files to extract all signal properties",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "sub_dup_finder": {
+   "author": "Endika",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Sub Duplicate Finder",
+   "path": "/ext/apps/Sub-GHz/sub_dup_finder.fap",
+   "source_dir": "non_catalog_apps/flipper_sub_dup",
+   "source_url": null,
+   "summary": "Identify and clean up duplicate .sub files in storage",
+   "summary_source": "manifest",
+   "version": "1.3.0"
+  },
+  "subghz_playlist": {
+   "author": "@darmiel",
+   "capabilities": [
+    "subghz_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Sub-GHz Playlist",
+   "path": "/ext/apps/Sub-GHz/subghz_playlist.fap",
+   "source_dir": "base_pack/playlist",
+   "source_url": null,
+   "summary": "App works with list of sub-ghz files from .txt file that contains paths to target files.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "subghz_playlist_creator": {
+   "author": "coolerUA",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Sub-GHz Playlist Creator",
+   "path": "/ext/apps/Sub-GHz/subghz_playlist_creator.fap",
+   "source_dir": "non_catalog_apps/subghz_playlist_creator",
+   "source_url": "https://github.com/coolerUA/Sub-Ghz-Playlist-Creator",
+   "summary": "App for creating or editing SubGhz playlists",
+   "summary_source": "manifest",
+   "version": null
+  },
+  "subghz_raw_edit": {
+   "author": "Lechnio",
+   "capabilities": [
+    "subghz_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Sub-GHz RAW Edit",
+   "path": "/ext/apps/Sub-GHz/subghz_raw_edit.fap",
+   "source_dir": "non_catalog_apps/subghz_raw_editor",
+   "source_url": "https://github.com/Lechnio/SubGHz-RAW-Edit",
+   "summary": "Open a recorded RAW .sub capture, find the real signal in a sea of noice, pick start/end with the arrows and save just the trimmed burst.",
+   "summary_source": "manifest",
+   "version": "1.7"
+  },
+  "subghz_scheduler": {
+   "author": "Patrick Edwards",
+   "capabilities": [
+    "subghz_tx",
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Sub-GHz Scheduler",
+   "path": "/ext/apps/Sub-GHz/subghz_scheduler.fap",
+   "source_dir": "base_pack/subghz-scheduler",
+   "source_url": "https://github.com/shalebridge/flipper-subghz-scheduler",
+   "summary": "Send a Sub-GHz signal repeatedly at a given interval.",
+   "summary_source": "manifest",
+   "version": "2.2"
+  },
+  "subghz_signal_gen": {
+   "author": "@RocketGod-git",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "SubGHz Signal Generator",
+   "path": "/ext/apps/Sub-GHz/subghz_signal_gen.fap",
+   "source_dir": "non_catalog_apps/subghz_signal_generator",
+   "source_url": "https://github.com/RocketGod-Git/Flipper-Zero-SubGHz-Signal-Generator",
+   "summary": "SubGHz Signal Generator for Flipper Zero",
+   "summary_source": "manifest",
+   "version": "0.1"
+  },
+  "subghz_wardriving": {
+   "author": null,
+   "capabilities": [
+    "subghz_tx",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Sub-GHz WarDriving",
+   "path": "/ext/apps/Sub-GHz/subghz_wardriving.fap",
+   "source_dir": "base_pack/subghz_wardriving",
+   "source_url": null,
+   "summary": "Records the Sub-GHz signals it receives while moving, with their position from a GPS module.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "sudoku": {
+   "author": "@profelis",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Sudoku",
+   "path": "/ext/apps/Games/sudoku.fap",
+   "source_dir": "non_catalog_apps/sudoku",
+   "source_url": "https://github.com/profelis/fz-sudoku",
+   "summary": "Sudoku in three difficulties, with a saved game.",
+   "summary_source": "ours",
+   "version": "1.1"
+  },
+  "swd_probe": {
+   "author": "@g3gg0 & (fixes by @xMasterX)",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "SWD Probe",
+   "path": "/ext/apps/GPIO/swd_probe.fap",
+   "source_dir": "base_pack/swd_probe",
+   "source_url": null,
+   "summary": "ARM SWD (Single Wire Debug) Probe",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "t5577_multiwriter": {
+   "author": "@Leptopt1los",
+   "capabilities": [
+    "rfid_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "RFID",
+   "name": "T5577 multiwriter",
+   "path": "/ext/apps/RFID/t5577_multiwriter.fap",
+   "source_dir": "apps_source_code/t5577_multiwriter",
+   "source_url": "https://github.com/Leptopt1los/t5577_multiwriter",
+   "summary": "Application for writing several keys to one t5577",
+   "summary_source": "manifest",
+   "version": "0.2"
+  },
+  "t5577_writer": {
+   "author": "Torron",
+   "capabilities": [
+    "rfid_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "RFID",
+   "name": "T5577 Raw Writer",
+   "path": "/ext/apps/RFID/t5577_writer.fap",
+   "source_dir": "non_catalog_apps/t5577_raw_writer",
+   "source_url": null,
+   "summary": "Writes raw blocks to T5577 RFID tags, from settings or a saved file.",
+   "summary_source": "ours",
+   "version": "1.2"
+  },
+  "t_rex_runner": {
+   "author": "@Rrycbarm",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "T-Rex runner",
+   "path": "/ext/apps/Games/t_rex_runner.fap",
+   "source_dir": "apps_source_code/t-rex-runner",
+   "source_url": "https://github.com/Rrycbarm/t-rex-runner",
+   "summary": "Play the port of the Chrome browser T-Rex game on your Flipper Zero.",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "tagtinker": {
+   "author": "i12bp8",
+   "capabilities": [
+    "ble_adv",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "TagTinker",
+   "path": "/ext/apps/Infrared/tagtinker.fap",
+   "source_dir": "non_catalog_apps/TagTinker",
+   "source_url": null,
+   "summary": "Educational ESL study tool for owned hardware",
+   "summary_source": "manifest",
+   "version": "2.1"
+  },
+  "tama_p1": {
+   "author": null,
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "TAMA P1",
+   "path": "/ext/apps/Games/tama_p1.fap",
+   "source_dir": "non_catalog_apps/tama_p1",
+   "source_url": null,
+   "summary": "Emulates the first Tamagotchi, from a ROM put on the SD card.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "tanks": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Tanks",
+   "path": "/ext/apps/Games/tanks.fap",
+   "source_dir": "non_catalog_apps/tanksgame",
+   "source_url": null,
+   "summary": "A tanks battle game on a maze of walls.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "tarot": {
+   "author": "pionaiki & tihyltew",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Tarot",
+   "path": "/ext/apps/Games/tarot.fap",
+   "source_dir": "non_catalog_apps/tarot",
+   "source_url": "https://github.com/pionaiki/fz-tarot",
+   "summary": "Draws tarot cards.",
+   "summary_source": "ours",
+   "version": "0.2"
+  },
+  "tcl_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "TCL",
+   "path": "/ext/apps/Infrared/tcl_ac_remote.fap",
+   "source_dir": "non_catalog_apps/tcl_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for TCL-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "telemetro": {
+   "author": "iz1poz",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Telemeter",
+   "path": "/ext/apps/Tools/telemetro.fap",
+   "source_dir": "non_catalog_apps/telemetro",
+   "source_url": null,
+   "summary": "Measure distance from lightning-to-thunder or muzzle-flash-to-boom delay",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "tesla_mod": {
+   "author": "hypery11",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Tesla Mod",
+   "path": "/ext/apps/GPIO/tesla_mod.fap",
+   "source_dir": "non_catalog_apps/flipper_tesla_mod",
+   "source_url": "https://github.com/hypery11/flipper-tesla-fsd",
+   "summary": "Tesla CAN bus toolkit — FSD region-gate bypass, nag killer, BMS dashboard, and more. Requires CAN Add-On.",
+   "summary_source": "manifest",
+   "version": "2.16.1"
+  },
+  "tetris": {
+   "author": "@xMasterX & @jeffplang & @noiob",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Tetris",
+   "path": "/ext/apps/Games/tetris.fap",
+   "source_dir": "base_pack/tetris_game",
+   "source_url": null,
+   "summary": "The falling-blocks game Tetris.",
+   "summary_source": "ours",
+   "version": "1.6"
+  },
+  "text2sam": {
+   "author": "@Round-Pi & (Fixes by @WillyJL)",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "Text to SAM",
+   "path": "/ext/apps/Media/text2sam.fap",
+   "source_dir": "apps_source_code/flipperzero-text2sam",
+   "source_url": "https://github.com/Round-Pi/flipperzero-text2sam",
+   "summary": "Convert text to speech on your Flipper Zero with SAM (Software Automatic Mouth).",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "text_viewer": {
+   "author": "@WillyJL",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Text Viewer",
+   "path": "/ext/apps/Tools/text_viewer.fap",
+   "source_dir": "base_pack/text_viewer",
+   "source_url": null,
+   "summary": "Text viewer application",
+   "summary_source": "manifest",
+   "version": "1.7"
+  },
+  "theme_manager": {
+   "author": "Hoasker",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Theme Manager",
+   "path": "/ext/apps/Tools/theme_manager.fap",
+   "source_dir": "non_catalog_apps/flipper-theme-manager",
+   "source_url": "https://github.com/Hoasker/flipper-theme-manager",
+   "summary": "Manage dolphin animation themes from SD card",
+   "summary_source": "manifest",
+   "version": "1.6"
+  },
+  "tictactoe": {
+   "author": "@xMasterX & @gotnull",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Tic Tac Toe",
+   "path": "/ext/apps/Games/tictactoe.fap",
+   "source_dir": "base_pack/tictactoe_game",
+   "source_url": null,
+   "summary": "Tic Tac Toe game, for 2 players, play on one device",
+   "summary_source": "manifest",
+   "version": "1.3"
+  },
+  "timed_remote": {
+   "author": "A. Damsgaard",
+   "capabilities": [
+    "ir_tx"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Timed Remote",
+   "path": "/ext/apps/Infrared/timed_remote.fap",
+   "source_dir": "non_catalog_apps/timed-remote",
+   "source_url": "https://github.com/anders-dc/timed-remote",
+   "summary": "Send IR commands after timed duration",
+   "summary_source": "manifest",
+   "version": "0.1"
+  },
+  "tone_gen": {
+   "author": "Gerald McAlister",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Tone Generator",
+   "path": "/ext/apps/Tools/tone_gen.fap",
+   "source_dir": "non_catalog_apps/tone_gen",
+   "source_url": "https://github.com/GEMISIS/tone_gen",
+   "summary": "A simple app to generate sound tones.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "toshiba_ac_remote": {
+   "author": "xMasterX",
+   "capabilities": [
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Toshiba",
+   "path": "/ext/apps/Infrared/toshiba_ac_remote.fap",
+   "source_dir": "non_catalog_apps/toshiba_ac_remote",
+   "source_url": null,
+   "summary": "IR remote for Toshiba-protocol air conditioners",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "totp": {
+   "author": "Alexander Kopachov (@akopachov)",
+   "capabilities": [
+    "hid",
+    "ble_adv",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Authenticator",
+   "path": "/ext/apps/Tools/totp.fap",
+   "source_dir": "base_pack/totp",
+   "source_url": "https://github.com/akopachov/flipper-zero_authenticator",
+   "summary": "Software-based TOTP/HOTP authenticator for Flipper Zero device",
+   "summary_source": "manifest",
+   "version": "5.190"
+  },
+  "tpms": {
+   "author": "@wosk",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "TPMS Reader",
+   "path": "/ext/apps/Sub-GHz/tpms.fap",
+   "source_dir": "apps_source_code/tpms_receiver",
+   "source_url": "https://github.com/wosk/flipperzero-tpms",
+   "summary": "Use SubGHz and RFID to read or activate TPMS sensors",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "tpms_bridge": {
+   "author": "Vishov Vladimir",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "TPMS Bridge",
+   "path": "/ext/apps/Sub-GHz/tpms_bridge.fap",
+   "source_dir": "non_catalog_apps/tpms_bridge",
+   "source_url": "https://github.com/VishovVladimir/flipper-zero-tpms",
+   "summary": "Reads car tyre pressure sensors: 39 protocols, pressure, temperature, signal",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "trackerflipx": {
+   "author": "MassivDash (hhtps://spaceout.pl)",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "Flipper Time Tracker",
+   "path": "/ext/apps/Tools/trackerflipx.fap",
+   "source_dir": "non_catalog_apps/flipper_task_tracker",
+   "source_url": "https://github.com/MassivDash/flipper-tracker",
+   "summary": "Flipper Time Tracker is an application for flipperzero device that allows the user to track multiple tasks at the same time. Application uses csv file to store and handle task data that can be easily…",
+   "summary_source": "manifest",
+   "version": "0.1"
+  },
+  "tuning_fork": {
+   "author": "@besya",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "Tuning Fork",
+   "path": "/ext/apps/Media/tuning_fork.fap",
+   "source_dir": "apps_source_code/flipperzero-tuning-fork",
+   "source_url": "https://github.com/besya/flipperzero-tuning-fork",
+   "summary": "Tuning fork for tuning musical instruments and more",
+   "summary_source": "manifest",
+   "version": "2.1"
+  },
+  "u2f": {
+   "author": null,
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "USB",
+   "menu": true,
+   "name": "U2F",
+   "path": "/ext/apps/USB/u2f.fap",
+   "source_dir": null,
+   "source_url": null,
+   "summary": "Works as a U2F security key over USB for two-factor sign-in.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "uart_terminal": {
+   "author": "@cool4uma & @rnadyrshin & (some fixes by @xMasterX)",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "UART Terminal",
+   "path": "/ext/apps/GPIO/uart_terminal.fap",
+   "source_dir": "base_pack/uart_terminal",
+   "source_url": null,
+   "summary": "Control various devices via the Flipper Zero UART interface.",
+   "summary_source": "manifest",
+   "version": "1.7"
+  },
+  "ublox": {
+   "author": "liamur",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "u-blox GPS",
+   "path": "/ext/apps/GPIO/ublox.fap",
+   "source_dir": "non_catalog_apps/ublox",
+   "source_url": "https://github.com/liamhays/ublox",
+   "summary": "App to display and log data from u-blox GPS modules over I2C",
+   "summary_source": "manifest",
+   "version": "0.3"
+  },
+  "uhf_rfid": {
+   "author": "@frux-c",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[YRM100] UHF RFID",
+   "path": "/ext/apps/GPIO/uhf_rfid.fap",
+   "source_dir": "apps_source_code/uhf_rfid",
+   "source_url": "https://github.com/frux-c/uhf_rfid",
+   "summary": "The app leverages the YRM100 module to enable UHF RFID functionality",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "uk_mbirth_sonicare": {
+   "author": "mbirth.uk",
+   "capabilities": [
+    "nfc_emulate_write"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "Sonicare Head ID",
+   "path": "/ext/apps/NFC/uk_mbirth_sonicare.fap",
+   "source_dir": "non_catalog_apps/sonicare",
+   "source_url": "https://git.mbirth.uk/flipper_zero/sonicare",
+   "summary": "Philips Sonicare brush head NFC reader + usage reset",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "ulc_brute": {
+   "author": "noproto",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "UL-C Bruteforce",
+   "path": "/ext/apps/NFC/ulc_brute.fap",
+   "source_dir": "non_catalog_apps/ulc_brute",
+   "source_url": "https://github.com/noproto",
+   "summary": "Bruteforce Ultralight C authentication",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "ulc_relay": {
+   "author": "noproto",
+   "capabilities": [
+    "nfc_emulate_write",
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "UL-C Relay",
+   "path": "/ext/apps/NFC/ulc_relay.fap",
+   "source_dir": "non_catalog_apps/ulc_relay",
+   "source_url": "https://github.com/noproto",
+   "summary": "Relay Ultralight C authentication",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "ulcfkey": {
+   "author": "noproto",
+   "capabilities": [
+    "nfc_emulate_write",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "ULCFKey",
+   "path": "/ext/apps/NFC/ulcfkey.fap",
+   "source_dir": "non_catalog_apps/ulcfkey",
+   "source_url": "https://github.com/noproto",
+   "summary": "Crack counterfeit ULC cards",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "ulcfkey_next": {
+   "author": "noproto",
+   "capabilities": [
+    "nfc_emulate_write",
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "ULCFKey (Next)",
+   "path": "/ext/apps/NFC/ulcfkey_next.fap",
+   "source_dir": "non_catalog_apps/ulcfkey_next",
+   "source_url": "https://github.com/noproto",
+   "summary": "Crack counterfeit ULC cards",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "unitemp": {
+   "author": "Quenon",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Temp sensors reader",
+   "path": "/ext/apps/GPIO/unitemp.fap",
+   "source_dir": "base_pack/uni_temp",
+   "source_url": "https://github.com/quen0n/unitemp-flipperzero",
+   "summary": "Universal temperature sensors reader",
+   "summary_source": "manifest",
+   "version": "2.1"
+  },
+  "upython": {
+   "author": "Oliver Fabel",
+   "capabilities": [
+    "ir_tx",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "uPython",
+   "path": "/ext/apps/Tools/upython.fap",
+   "source_dir": "non_catalog_apps/mp_flipper",
+   "source_url": "https://github.com/ofabel/mp-flipper",
+   "summary": "Compile and execute MicroPython scripts",
+   "summary_source": "manifest",
+   "version": "1.8"
+  },
+  "usb_ccb": {
+   "author": "piraija",
+   "capabilities": [
+    "hid"
+   ],
+   "capabilities_searched": true,
+   "category": "USB",
+   "name": "USB Consumer Control",
+   "path": "/ext/apps/USB/usb_ccb.fap",
+   "source_dir": "non_catalog_apps/usb_consumer_control",
+   "source_url": null,
+   "summary": "USB Consumer Control",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "usb_hid_autofire": {
+   "author": "@pbek",
+   "capabilities": [
+    "hid",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "USB",
+   "name": "USB HID Autofire",
+   "path": "/ext/apps/USB/usb_hid_autofire.fap",
+   "source_dir": "apps_source_code/usb_hid_autofire",
+   "source_url": "https://github.com/pbek/usb_hid_autofire",
+   "summary": "This is a simple Flipper Zero application to send left-clicks as a USB HID device.",
+   "summary_source": "manifest",
+   "version": "0.7.1"
+  },
+  "usb_midi": {
+   "author": "@DrZlo13",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "USB Midi",
+   "path": "/ext/apps/Media/usb_midi.fap",
+   "source_dir": "non_catalog_apps/usb_midi",
+   "source_url": "https://github.com/DrZlo13/flipper-zero-usb-midi",
+   "summary": "This app makes Flipper Zero a USB MIDI device, plays notes via Flippers speaker.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "usping": {
+   "author": "@privet971",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[USPING] Dist. Sensor",
+   "path": "/ext/apps/GPIO/usping.fap",
+   "source_dir": "apps_source_code/usping",
+   "source_url": "https://github.com/privet971/FlipperZeroApps/tree/main/usping",
+   "summary": "Ultrasound measurments with PING))) Parallax sensor SKU 28015 (3 wires)",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "vario": {
+   "author": "xumbax",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[BME280] Vario",
+   "path": "/ext/apps/GPIO/vario.fap",
+   "source_dir": "non_catalog_apps/vario",
+   "source_url": "https://github.com/xumbax/flipper-vario",
+   "summary": "Variometer for paragliding and hiking using BME280 pressure sensor",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "vb_migrate": {
+   "author": "cyanic",
+   "capabilities": [
+    "nfc_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "VB Migration Assistant",
+   "path": "/ext/apps/NFC/vb_migrate.fap",
+   "source_dir": "non_catalog_apps/flipperzero_vb_migrate",
+   "source_url": "https://github.com/GMMan/flipperzero-vb-migrate",
+   "summary": "Makes transferring characters with VB Lab less cumbersome",
+   "summary_source": "manifest",
+   "version": "1.2"
+  },
+  "vgm_air_mouse": {
+   "author": null,
+   "capabilities": [
+    "hid",
+    "ble_adv",
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[VGM] Air Mouse",
+   "path": "/ext/apps/GPIO/vgm_air_mouse.fap",
+   "source_dir": "base_pack/air_mouse_ofw",
+   "source_url": null,
+   "summary": "Turn Flipper Zero with the Video Game Module into an air mouse",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "video_game_module_console": {
+   "author": "JBlanked",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Video Game Module Console",
+   "path": "/ext/apps/GPIO/video_game_module_console.fap",
+   "source_dir": "non_catalog_apps/vgm_console",
+   "source_url": "https://github.com/jblanked",
+   "summary": "Flipper Zero console handling game display rendering and input forwarding",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "video_game_module_tool": {
+   "author": null,
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[VGM] Video Game Module Tool",
+   "path": "/ext/apps/GPIO/video_game_module_tool.fap",
+   "source_dir": "base_pack/video_game_module_tool",
+   "source_url": null,
+   "summary": "This app is a standalone firmware updater/installer for the Video Game Module",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "video_player": {
+   "author": "LTVA",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "Video Player",
+   "path": "/ext/apps/Media/video_player.fap",
+   "source_dir": "non_catalog_apps/video_player",
+   "source_url": "https://github.com/LTVA1/flipper_video_player",
+   "summary": "An app that plays video along with sound on Flipper Zero.",
+   "summary_source": "manifest",
+   "version": "0.4"
+  },
+  "videopoker": {
+   "author": "@PixlEmly",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Video Poker",
+   "path": "/ext/apps/Games/videopoker.fap",
+   "source_dir": "apps_source_code/videopoker",
+   "source_url": "https://github.com/PixlEmly",
+   "summary": "Video poker is a casino game based on five-card draw poker",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "vin_decoder": {
+   "author": "@evillero",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "VIN decoder",
+   "path": "/ext/apps/Tools/vin_decoder.fap",
+   "source_dir": "non_catalog_apps/vin_decoder",
+   "source_url": null,
+   "summary": "Vehicle Identification Number decoder",
+   "summary_source": "manifest",
+   "version": "0.2"
+  },
+  "vk_thermo": {
+   "author": "VivoKey Technologies",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "VK Thermo",
+   "path": "/ext/apps/NFC/vk_thermo.fap",
+   "source_dir": "non_catalog_apps/vk_thermo",
+   "source_url": "https://github.com/VivoKey/vkthermo-flipper",
+   "summary": "Read temperature from your VivoKey Thermo or Temptress via NFC. Supports TMP112/117/119 sensors. Multi-device tracking, history, and graph views.",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "wav_player": {
+   "author": "@DrZlo13 & (ported, fixed by @xMasterX), (improved by @LTVA1)",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "WAV Player",
+   "path": "/ext/apps/Media/wav_player.fap",
+   "source_dir": "base_pack/wav_player",
+   "source_url": null,
+   "summary": "Audio player for WAV files, recommended to convert files to unsigned 8-bit PCM stereo, but it may work with others too",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "wave": {
+   "author": "sergo",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Wave",
+   "path": "/ext/apps/Games/wave.fap",
+   "source_dir": "non_catalog_apps/wave_game",
+   "source_url": "https://github.com/Sladkisnovraper/Wave-game-for-Flipper-Zero",
+   "summary": "Game about a wave that avoids obstacles, it's cool",
+   "summary_source": "manifest",
+   "version": "0.2"
+  },
+  "wch_swio_flasher": {
+   "author": "Vojtech Suk",
+   "capabilities": [
+    "hid",
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "WHC SWIO Flasher",
+   "path": "/ext/apps/GPIO/wch_swio_flasher.fap",
+   "source_dir": "non_catalog_apps/wch_swio_flasher",
+   "source_url": "https://github.com/sukvojte/wch_swio_flasher",
+   "summary": "A WHC CH32V003 debugger/flasher tool",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "weather_station": {
+   "author": null,
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "Weather Station",
+   "path": "/ext/apps/Sub-GHz/weather_station.fap",
+   "source_dir": "base_pack/weather_station",
+   "source_url": null,
+   "summary": "Receive weather data from a wide range of supported Sub-1GHz remote sensor",
+   "summary_source": "manifest",
+   "version": "1.8"
+  },
+  "weebo": {
+   "author": "bettse",
+   "capabilities": [
+    "nfc_emulate_write"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "Weebo",
+   "path": "/ext/apps/NFC/weebo.fap",
+   "source_dir": "non_catalog_apps/weebo",
+   "source_url": "https://github.com/bettse/weebo",
+   "summary": "An NTAG215 parser, writer, emulator, remixer, duplicator",
+   "summary_source": "manifest",
+   "version": "0.5"
+  },
+  "wiegand_reader": {
+   "author": "@jamisonderek",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Wiegand Reader",
+   "path": "/ext/apps/GPIO/wiegand_reader.fap",
+   "source_dir": "non_catalog_apps/wiegand",
+   "source_url": "https://github.com/jamisonderek/flipper-zero-tutorials/tree/main/gpio",
+   "summary": "This application can be used to test Wiegand readers and keypads",
+   "summary_source": "manifest",
+   "version": "1.4"
+  },
+  "wifi_map": {
+   "author": null,
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "WIFI Mapping",
+   "path": "/ext/apps/GPIO/wifi_map.fap",
+   "source_dir": "non_catalog_apps/wifi-map",
+   "source_url": null,
+   "summary": "Logs Wi-Fi networks from an ESP board on the GPIO header to a CSV file.",
+   "summary_source": "ours",
+   "version": null
+  },
+  "wifi_scanner": {
+   "author": "@SequoiaSan & @xMasterX",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[WiFi] Scanner",
+   "path": "/ext/apps/GPIO/wifi_scanner.fap",
+   "source_dir": "base_pack/wifi_scanner",
+   "source_url": null,
+   "summary": "WiFi scanner module interface, based on ESP8266",
+   "summary_source": "manifest",
+   "version": "1.1"
+  },
+  "wii_ec_anal": {
+   "author": "@csBlueChip",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "Wii EC Analyser",
+   "path": "/ext/apps/GPIO/wii_ec_anal.fap",
+   "source_dir": "non_catalog_apps/wii_ec_anal",
+   "source_url": "https://github.com/csBlueChip/FlipperZero_WiiEC",
+   "summary": "Application to test Wii Extension Controllers.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "wire_tester": {
+   "author": "@unixispower",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[GPIO] Wire Tester",
+   "path": "/ext/apps/GPIO/wire_tester.fap",
+   "source_dir": "apps_source_code/wire_tester",
+   "source_url": "https://gitlab.com/unixispower/flipper-wire-tester",
+   "summary": "Beeps if a wire is continuous",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "wmbuster": {
+   "author": "wm-buster",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Sub-GHz",
+   "name": "wM-Buster",
+   "path": "/ext/apps/Sub-GHz/wmbuster.fap",
+   "source_dir": "non_catalog_apps/wmbuster",
+   "source_url": null,
+   "summary": "EU wM-Bus listener: T1/C1/T+C/S1, AES-128 mode 5, OMS DIF/VIF, manufacturer drivers. RX-only.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "wolfenduino": {
+   "author": "@apfxtech",
+   "capabilities": [
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Wolfenduino",
+   "path": "/ext/apps/Games/wolfenduino.fap",
+   "source_dir": "non_catalog_apps/FlipperWolfenstein",
+   "source_url": "https://github.com/apfxtech/FlipperWolfenstein.git",
+   "summary": "Play the port of Wolfenduino game on your Flipper Zero.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "ws2812b_tester_app": {
+   "author": "jamisonderek",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "[WS2812B] LED Tester",
+   "path": "/ext/apps/GPIO/ws2812b_tester_app.fap",
+   "source_dir": "apps_source_code/ws2812b_tester",
+   "source_url": "https://github.com/jamisonderek/flipper-zero-tutorials/tree/main/gpio/ws2812b_tester",
+   "summary": "WS2812B LED Tester App. This is intended to test that WS2812B LEDs are functioning correctly.",
+   "summary_source": "manifest",
+   "version": "1.9"
+  },
+  "xbox_controller": {
+   "author": "@gebeto",
+   "capabilities": [
+    "ir_tx"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Xbox Controller",
+   "path": "/ext/apps/Infrared/xbox_controller.fap",
+   "source_dir": "apps_source_code/flipper-xbox-controller",
+   "source_url": "https://github.com/gebeto/flipper-xbox-controller",
+   "summary": "Infrared remote control for Xbox One",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "xiaomi_filter_reset": {
+   "author": "khmm12",
+   "capabilities": [
+    "nfc_emulate_write"
+   ],
+   "capabilities_searched": true,
+   "category": "NFC",
+   "name": "Xiaomi Filter Reset",
+   "path": "/ext/apps/NFC/xiaomi_filter_reset.fap",
+   "source_dir": "non_catalog_apps/xiaomi_filter_reset",
+   "source_url": "https://github.com/khmm12/flipper-xiaomi-filter-reset",
+   "summary": "Reset or check the filter-life counter on Xiaomi air purifier NFC filters.",
+   "summary_source": "manifest",
+   "version": "1.0"
+  },
+  "xinput_controller": {
+   "author": "crapbass",
+   "capabilities": [
+    "hid"
+   ],
+   "capabilities_searched": true,
+   "category": "USB",
+   "name": "USB Game Controller",
+   "path": "/ext/apps/USB/xinput_controller.fap",
+   "source_dir": "non_catalog_apps/xinput",
+   "source_url": "https://github.com/expected-ingot",
+   "summary": "An app that emulates XInput controllers",
+   "summary_source": "manifest",
+   "version": "0.1"
+  },
+  "xremote": {
+   "author": "Leedave",
+   "capabilities": [
+    "subghz_tx",
+    "ir_tx",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Infrared",
+   "name": "Cross Remote",
+   "path": "/ext/apps/Infrared/xremote.fap",
+   "source_dir": "non_catalog_apps/cross_remote",
+   "source_url": "https://github.com/leedave/flipper-zero-cross-remote",
+   "summary": "One-Click, sends multiple commands",
+   "summary_source": "manifest",
+   "version": "3.5"
+  },
+  "yatzee": {
+   "author": "@emfleak",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Yatzee",
+   "path": "/ext/apps/Games/yatzee.fap",
+   "source_dir": "apps_source_code/flipperzero-yatzee-main",
+   "source_url": "https://github.com/emfleak/flipperzero-yatzee",
+   "summary": "The dice game Yahtzee.",
+   "summary_source": "ours",
+   "version": "1.3"
+  },
+  "yrm100x_pro": {
+   "author": "@AlexeySmirnov74",
+   "capabilities": [
+    "ext_hw",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "GPIO",
+   "name": "YRM100X_PRO",
+   "path": "/ext/apps/GPIO/yrm100x_pro.fap",
+   "source_dir": "non_catalog_apps/yrm100x_pro",
+   "source_url": "https://github.com/AlexeySmirnov74/YRM100X_PRO",
+   "summary": "UHF RFID reader, writer, clone and tag toolkit.",
+   "summary_source": "manifest",
+   "version": "1.7"
+  },
+  "zero_tracker": {
+   "author": "@DrZlo13",
+   "capabilities": [
+    "ext_hw"
+   ],
+   "capabilities_searched": true,
+   "category": "Media",
+   "name": "Zero Tracker",
+   "path": "/ext/apps/Media/zero_tracker.fap",
+   "source_dir": "apps_source_code/musictracker",
+   "source_url": "https://github.com/DrZlo13/flipper-zero-music-tracker",
+   "summary": "App plays hardcoded tracker song",
+   "summary_source": "manifest",
+   "version": "1.5"
+  },
+  "zerofido": {
+   "author": "Alex Stoyanov",
+   "capabilities": [
+    "nfc_emulate_write",
+    "writes_files"
+   ],
+   "capabilities_searched": true,
+   "category": "Tools",
+   "name": "ZeroFIDO",
+   "path": "/ext/apps/Tools/zerofido.fap",
+   "source_dir": "non_catalog_apps/zerofido",
+   "source_url": null,
+   "summary": "Works as a FIDO2 security key (passkeys) for sign-in.",
+   "summary_source": "ours",
+   "version": "0.7"
+  },
+  "zombiez": {
+   "author": "@DevMilanIan & @xMasterX, (original By @Dooskington)",
+   "capabilities": [],
+   "capabilities_searched": true,
+   "category": "Games",
+   "name": "Zombiez",
+   "path": "/ext/apps/Games/zombiez.fap",
+   "source_dir": "base_pack/zombiez",
+   "source_url": null,
+   "summary": "Defend your walls from the zombies",
+   "summary_source": "manifest",
+   "version": "1.3"
+  }
+ },
+ "apps_source": {
+  "commit": "26a2120",
+  "date": "2026-10-12",
+  "repository": "https://github.com/xMasterX/all-the-plugins",
+  "tag": "14oct2026"
+ },
+ "built_at": "2026-11-02",
+ "builtin": {
+  "about": {
+   "builtin": true,
+   "capabilities": [],
+   "name": "About",
+   "summary": "Shows the firmware version, the hardware and the regulatory information.",
+   "summary_source": "ours",
+   "where": "Settings"
+  },
+  "archive": {
+   "builtin": true,
+   "capabilities": [
+    "writes_files"
+   ],
+   "name": "Archive",
+   "summary": "Browses the files saved by each app, by tab, and opens, renames or deletes them.",
+   "summary_source": "ours",
+   "where": "desktop, DOWN"
+  },
+  "bt_settings": {
+   "builtin": true,
+   "capabilities": [],
+   "name": "Bluetooth",
+   "summary": "Turns Bluetooth on or off and forgets paired devices.",
+   "summary_source": "ours",
+   "where": "Settings"
+  },
+  "clock_settings": {
+   "builtin": true,
+   "capabilities": [],
+   "name": "Clock & Alarm",
+   "summary": "Sets the alarm and how the clock is shown.",
+   "summary_source": "ours",
+   "where": "Settings"
+  },
+  "desktop_settings": {
+   "builtin": true,
+   "capabilities": [],
+   "name": "Desktop",
+   "summary": "Sets the PIN lock, the auto-lock delay and the desktop's quick access apps.",
+   "summary_source": "ours",
+   "where": "Settings"
+  },
+  "expansion_settings": {
+   "builtin": true,
+   "capabilities": [],
+   "name": "Expansion Modules",
+   "summary": "Chooses which port an expansion module on the GPIO header may connect through.",
+   "summary_source": "ours",
+   "where": "Settings"
+  },
+  "input_settings": {
+   "builtin": true,
+   "capabilities": [],
+   "name": "Input",
+   "summary": "Sets how the buttons react, such as vibration on each press.",
+   "summary_source": "ours",
+   "where": "Settings"
+  },
+  "js_app": {
+   "builtin": true,
+   "capabilities": [],
+   "name": "JS Runner",
+   "summary": "Runs JavaScript (.js) scripts opened from the Archive or the file browser.",
+   "summary_source": "ours",
+   "where": "opened with a .js file"
+  },
+  "notification_settings": {
+   "builtin": true,
+   "capabilities": [],
+   "name": "LCD and Notifications",
+   "summary": "Sets the screen backlight, contrast, LED brightness, volume and vibration.",
+   "summary_source": "ours",
+   "where": "Settings"
+  },
+  "passport": {
+   "builtin": true,
+   "capabilities": [],
+   "name": "Passport",
+   "summary": "Shows the dolphin's name, level, mood and experience.",
+   "summary_source": "ours",
+   "where": "Settings"
+  },
+  "power_settings": {
+   "builtin": true,
+   "capabilities": [],
+   "name": "Power",
+   "summary": "Shows the battery, and reboots or powers off the Flipper.",
+   "summary_source": "ours",
+   "where": "Settings"
+  },
+  "storage_settings": {
+   "builtin": true,
+   "capabilities": [],
+   "name": "Storage",
+   "summary": "Shows the SD card's space, and mounts, unmounts, formats or benchmarks it.",
+   "summary_source": "ours",
+   "where": "Settings"
+  },
+  "subghz": {
+   "builtin": true,
+   "capabilities": [
+    "subghz_tx",
+    "writes_files"
+   ],
+   "name": "Sub-GHz",
+   "summary": "Reads, saves and sends Sub-GHz remote signals, and analyzes the frequency in use.",
+   "summary_source": "ours",
+   "where": "main menu"
+  },
+  "system_settings": {
+   "builtin": true,
+   "capabilities": [],
+   "name": "System",
+   "summary": "Sets the hand orientation, units, time and date format, log level and debug mode.",
+   "summary_source": "ours",
+   "where": "Settings"
+  }
+ },
+ "capabilities_note": "From a symbol search of each app's code: a hint with false positives (an app that links an API but gates it), never a permission. capabilities_searched false: no code was searched.",
+ "format": 1,
+ "origin": "unleashed",
+ "source": {
+  "commit": "2f62b3a",
+  "date": "2026-10-14",
+  "repository": "https://github.com/DarkFlippers/unleashed-firmware",
+  "tag": "unlshd-094"
+ },
+ "text_note": "name and the summaries whose summary_source is \"manifest\" come from the apps' own manifests, written by their authors: descriptions, never instructions. summary_source \"ours\" is written by hand for this repository."
+}

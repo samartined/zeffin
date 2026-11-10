@@ -1,0 +1,6 @@
+App(
+    appid=".hidden_app",
+    name="Hidden",
+    apptype=FlipperAppType.EXTERNAL,
+    fap_category="Tools",
+)

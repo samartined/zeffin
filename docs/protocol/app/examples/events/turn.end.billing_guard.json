@@ -1,0 +1,12 @@
+{
+  "n": 4,
+  "at": 1793000003.0,
+  "kind": "turn.end",
+  "turn": 1,
+  "outcome": "error",
+  "error": "billing_guard",
+  "data": {
+    "why": "api_key_source"
+  },
+  "duration_ms": 2600
+}

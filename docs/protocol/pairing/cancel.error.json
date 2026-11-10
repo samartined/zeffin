@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/pairing/cancel.error.json",
+  "title": "POST /app/pair/cancel, refused",
+  "description": "404 unknown (not a waiting ticket), 413 too_large.",
+  "type": "object",
+  "properties": {
+    "error": {
+      "enum": [
+        "unknown",
+        "too_large"
+      ]
+    }
+  },
+  "required": [
+    "error"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,13 @@
+{
+  "type": "error",
+  "error": "model_unavailable",
+  "data": {
+    "model": "fable",
+    "models": [
+      "opus",
+      "sonnet"
+    ]
+  },
+  "request": "chat.send",
+  "message": "chat.send failed: model_unavailable"
+}

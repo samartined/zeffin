@@ -1,0 +1,7 @@
+{
+  "type": "chat.settings",
+  "default_mode": "default",
+  "default_model": "opus",
+  "default_effort": "medium",
+  "permission_timeout_s": 300
+}

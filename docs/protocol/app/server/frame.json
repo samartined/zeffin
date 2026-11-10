@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/frame.json",
+  "title": "frame",
+  "description": "The live screen, at most 10 per second (the newest wins).",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "frame"
+    },
+    "seq": {
+      "type": "integer"
+    },
+    "orientation": {
+      "type": "integer"
+    },
+    "stale": {
+      "type": "boolean"
+    },
+    "data": {
+      "$ref": "../defs.json#/$defs/frame64"
+    }
+  },
+  "required": [
+    "type",
+    "seq",
+    "orientation",
+    "stale",
+    "data"
+  ],
+  "additionalProperties": false
+}

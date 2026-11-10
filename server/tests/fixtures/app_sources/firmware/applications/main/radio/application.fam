@@ -1,0 +1,14 @@
+App(
+    appid="radio_app",
+    name="Radio",
+    apptype=FlipperAppType.MENUEXTERNAL,
+    entry_point="radio_main",
+    stack_size=2 * 1024,
+    fap_category="Sub-GHz",
+)
+
+App(
+    appid="radio_cli",
+    apptype=FlipperAppType.PLUGIN,
+    entry_point="radio_cli_ep",
+)

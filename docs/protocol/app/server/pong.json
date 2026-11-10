@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/pong.json",
+  "title": "pong",
+  "description": "Reply to ping.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "pong"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false
+}

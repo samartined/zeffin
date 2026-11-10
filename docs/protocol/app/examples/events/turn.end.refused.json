@@ -1,0 +1,15 @@
+{
+  "n": 14,
+  "at": 1793000003.0,
+  "kind": "turn.end",
+  "turn": 1,
+  "outcome": "error",
+  "error": "agent_failed",
+  "data": {
+    "exit": null,
+    "subtype": null,
+    "problem": "unsafe_agent_settings",
+    "reason": "its configuration the permission of the configuration allows * without asking: remove that rule, the app's card asks for it"
+  },
+  "duration_ms": 2900
+}

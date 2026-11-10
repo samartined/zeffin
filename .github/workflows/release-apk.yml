@@ -1,0 +1,213 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 samartined
+# Builds the Zeffin app in ./android of this repository, signs it and publishes a GitHub
+# release. Triggers:
+# - a push to main: publishes apk-v<fb.version> (android/gradle.properties) when that tag does not
+#   exist yet; a push that keeps the version publishes nothing (main holds what is released, and only
+#   the maintainer's release branch sets versions: CLAUDE.md, "Branches and versions");
+# - a push to a release branch release/<fb.version>: publishes a pre-release apk-v<version>-rc.<n>, the
+#   next n, built and signed like the release, so the candidate the maintainer tries is the binary that ships.
+#   Its version name ends in -rc.<n>; its version code is the release's, so the final release installs on
+#   top of it. Once apk-v<version> exists, the branch publishes nothing more;
+# - run it from the Actions tab (or the API) with the version, such as 0.1.0, which creates the tag
+#   apk-v0.1.0 on the current commit (to publish again after a failed run);
+# - push a tag named apk-v*.
+#
+# When Actions cannot run (no minutes left), the run fails without spending any, and
+# android/scripts/release-apk.sh builds and signs the same APK; the maintainer publishes it by hand
+# (docs/android-app.md, "Publish a version").
+#
+# It builds without running the tests: they ran locally and in the Tests workflow on the release pull request
+# (the release gate). It restores and writes no cache: the binary that ships
+# is built only from the commit and the dependencies Gradle checks, never from what another run left (zizmor's
+# cache-poisoning). That costs a few minutes per run, to download Gradle and the dependencies.
+#
+# Permissions: none for the workflow; the job that decides reads, and only the job that publishes writes.
+#
+# The release notes come from android/scripts/release-notes.py, which release-apk.sh uses too: the version's
+# docs/release-notes/<version>.md, then for a candidate the paragraph that says so, then the APK's part. A release
+# without that file fails before it is built; a candidate without it is published with a line saying it is not
+# written yet, and a warning.
+#
+# Signing: Android only installs signed APKs, and only accepts an update signed with the
+# same key. If the repository secrets ANDROID_KEYSTORE_B64 and ANDROID_KEYSTORE_PASSWORD
+# exist, that stable key is used (alias: flipper-bridge). Otherwise a one-off key is
+# generated for this release, and installing a later release requires uninstalling first.
+name: Release APK
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version, e.g. 0.1.0 (creates tag apk-v<version>)"
+        required: true
+        default: "0.1.0"
+  push:
+    branches: [main, "release/**"]
+    tags: ["apk-v*"]
+
+permissions: {}
+
+# Two pushes to main in a row publish one after the other, never at once.
+concurrency:
+  group: release-apk
+  cancel-in-progress: false
+
+env:
+  GRADLE_WRAPPER_SHA256: 3b8a25775a69158b5ad2b1d17a80a88dc7b40a352a73eb27d06c612a7ce68e98
+  BUILD_TOOLS: 36.0.0
+
+jobs:
+  decide:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read  # checkout, and the tags it looks up
+    outputs:
+      tag: ${{ steps.tag.outputs.tag }}
+      publish: ${{ steps.tag.outputs.publish }}
+      prerelease: ${{ steps.tag.outputs.prerelease }}
+    steps:
+      - name: Check out this repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+
+      - name: Choose the tag, and on a branch whether to publish
+        id: tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
+          REF_TYPE: ${{ github.ref_type }}
+          REF_NAME: ${{ github.ref_name }}
+          INPUT_VERSION: ${{ inputs.version }}
+        run: |
+          set -euo pipefail
+          VERSION="$(grep -E '^fb.version=' android/gradle.properties | cut -d= -f2)"
+          PUBLISH=true
+          PRERELEASE=false
+          if [ "$EVENT" = workflow_dispatch ]; then
+            TAG="apk-v$INPUT_VERSION"
+          elif [ "$REF_TYPE" = tag ]; then
+            TAG="$REF_NAME"
+          elif [[ "$REF_NAME" == release/* ]]; then
+            [ "$REF_NAME" = "release/$VERSION" ] || { echo "Branch $REF_NAME does not match fb.version=$VERSION"; exit 1; }
+            if gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/apk-v$VERSION" > /dev/null 2>&1; then
+              echo "apk-v$VERSION is already released: no more candidates from $REF_NAME"
+              PUBLISH=false
+            fi
+            N=$(( $(gh api "repos/$GITHUB_REPOSITORY/git/matching-refs/tags/apk-v$VERSION-rc." --jq length) + 1 ))
+            TAG="apk-v$VERSION-rc.$N"
+            PRERELEASE=true
+          else
+            TAG="apk-v$VERSION"
+            if gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$TAG" > /dev/null 2>&1; then
+              echo "$TAG already exists: nothing to publish for this push to main"
+              PUBLISH=false
+            fi
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "publish=$PUBLISH" >> "$GITHUB_OUTPUT"
+          echo "prerelease=$PRERELEASE" >> "$GITHUB_OUTPUT"
+
+  release:
+    needs: decide
+    if: needs.decide.outputs.publish == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: write  # gh release create, and the tag it makes
+    env:
+      TAG: ${{ needs.decide.outputs.tag }}
+      PRERELEASE: ${{ needs.decide.outputs.prerelease }}
+    steps:
+      - name: Validate release tag
+        run: |
+          echo "$TAG" | grep -Eq '^apk-v[0-9]+\.[0-9]+\.[0-9]+(-rc\.[0-9]+)?$' || { echo "Invalid tag $TAG"; exit 1; }
+
+      - name: Check out this repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+
+      - name: Verify Gradle wrapper
+        run: echo "$GRADLE_WRAPPER_SHA256  android/gradle/wrapper/gradle-wrapper.jar" | sha256sum -c -
+
+      - name: Check that the tag matches the app version
+        run: |
+          VERSION="$(grep -E '^fb.version=' android/gradle.properties | cut -d= -f2)"
+          [ "apk-v$VERSION" = "${TAG%%-rc.*}" ] || { echo "Tag $TAG does not match fb.version=$VERSION in android/gradle.properties"; exit 1; }
+
+      - name: Check the release notes (docs/release-notes/<version>.md)
+        # A release without its "What's new" fails here, before anything is built or tagged; a candidate without it
+        # gets a warning, and its notes say it is not written yet.
+        run: |
+          KIND=final; [ "$PRERELEASE" = true ] && KIND=rc
+          VERSION="${TAG#apk-v}"
+          python3 -I android/scripts/release-notes.py --check --version "${VERSION%%-rc.*}" --kind "$KIND"
+
+      - name: Install build tools
+        # AGP downloads the platform it compiles against (API 37) by itself once licenses are accepted.
+        run: |
+          SDKM="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          yes | "$SDKM" --licenses > /dev/null || true
+          "$SDKM" "build-tools;$BUILD_TOOLS" > /dev/null
+
+      - name: Build release APK
+        working-directory: android
+        run: |
+          export JAVA_HOME="$JAVA_HOME_21_X64"
+          # A candidate's version name ends in -rc.<n>; its version code stays the release's.
+          SUFFIX=""
+          case "$TAG" in *-rc.*) SUFFIX="-rc.${TAG##*-rc.}" ;; esac
+          ./gradlew --no-daemon -Pfb.releaseSuffix="$SUFFIX" :app:assembleRelease
+
+      - name: Sign
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        run: |
+          set -euo pipefail
+          BT="$ANDROID_HOME/build-tools/$BUILD_TOOLS"
+          IN=android/app/build/outputs/apk/release/app-release-unsigned.apk
+          OUT="zeffin-${TAG#apk-}.apk"
+          "$BT/zipalign" -p -f 4 "$IN" aligned.apk
+          umask 077
+          if [ -n "$KEYSTORE_B64" ] && [ -n "$KEYSTORE_PASSWORD" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > release.jks
+            export KS_PASS="$KEYSTORE_PASSWORD"
+            echo "KEY_KIND=stable" >> "$GITHUB_ENV"
+          else
+            KS_PASS="$(openssl rand -hex 24)"; export KS_PASS
+            keytool -genkeypair -keystore release.jks -storetype PKCS12 -storepass "$KS_PASS" \
+              -alias flipper-bridge -keyalg RSA -keysize 3072 -validity 10000 \
+              -dname "CN=Zeffin (one-off key ${TAG})" > /dev/null 2>&1
+            echo "KEY_KIND=one-off" >> "$GITHUB_ENV"
+          fi
+          "$BT/apksigner" sign --v4-signing-enabled false --ks release.jks --ks-pass env:KS_PASS --ks-key-alias flipper-bridge --out "$OUT" aligned.apk
+          rm -f release.jks aligned.apk
+          "$BT/apksigner" verify --verbose --print-certs "$OUT" | tee verify.txt
+          if "$BT/aapt2" dump badging "$OUT" | grep -q "application-debuggable"; then
+            echo "Refusing to publish a debuggable APK"; exit 1
+          fi
+          sha256sum "$OUT" > "$OUT.sha256"
+          echo "APK=$OUT" >> "$GITHUB_ENV"
+          echo "CERT_SHA256=$(grep -m1 'certificate SHA-256 digest' verify.txt | awk '{print $NF}')" >> "$GITHUB_ENV"
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          # The notes come from the one builder the script uses too: the version's "What's new", then for a candidate
+          # the paragraph that says so, then the APK's part (docs/android-app.md, "Publish a version").
+          KIND=final; [ "$PRERELEASE" = true ] && KIND=rc
+          VERSION="${TAG#apk-v}"
+          python3 -I android/scripts/release-notes.py --version "${VERSION%%-rc.*}" \
+            --kind "$KIND" --built-by actions --branch "$GITHUB_REF_NAME" --commit "$GITHUB_SHA" --apk "$APK" \
+            --apk-sha256 "$(cut -d' ' -f1 "${APK}.sha256")" --cert-sha256 "$CERT_SHA256" --key "$KEY_KIND" \
+            --run-url "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" > notes.md
+          FLAGS=()
+          [ "$PRERELEASE" = true ] && FLAGS+=(--prerelease)
+          gh release create "$TAG" "$APK" "$APK.sha256" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --title "Zeffin ${TAG#apk-}" --notes-file notes.md "${FLAGS[@]}"

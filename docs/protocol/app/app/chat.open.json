@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/app/chat.open.json",
+  "title": "chat.open",
+  "description": "Ask for a page of a conversation's history (answered with chat.history).",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.open"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "before": {
+      "type": "integer"
+    },
+    "after": {
+      "type": "integer"
+    },
+    "limit": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "type",
+    "conversation"
+  ],
+  "additionalProperties": false
+}

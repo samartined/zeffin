@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/events/turn.start.json",
+  "title": "chat.event: turn.start",
+  "description": "A turn starts. In chat.event it also carries type and conversation; in chat.history it does not.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.event"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "n": {
+      "type": "integer"
+    },
+    "at": {
+      "type": "number"
+    },
+    "kind": {
+      "const": "turn.start"
+    },
+    "turn": {
+      "type": "integer"
+    },
+    "mode": {
+      "$ref": "../defs.json#/$defs/mode"
+    },
+    "model": {
+      "type": "string"
+    },
+    "effort": {
+      "anyOf": [
+        {
+          "$ref": "../defs.json#/$defs/effort"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "via": {
+      "const": "remote",
+      "description": "It came from the other device (Remote Control)"
+    }
+  },
+  "required": [
+    "n",
+    "at",
+    "kind",
+    "turn",
+    "mode",
+    "model",
+    "effort"
+  ],
+  "additionalProperties": false
+}

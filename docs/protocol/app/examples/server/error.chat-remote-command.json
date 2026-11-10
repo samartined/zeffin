@@ -1,0 +1,7 @@
+{
+  "type": "error",
+  "error": "remote_command",
+  "data": {},
+  "request": "chat.send",
+  "message": "chat.send failed: remote_command"
+}

@@ -1,0 +1,21 @@
+{
+  "type": "status",
+  "connected": false,
+  "phone_attached": false,
+  "transport": null,
+  "relay": null,
+  "gate": "paused",
+  "gate_changed_at": 1792996400.0,
+  "gate_by": "app",
+  "busy": false,
+  "screen": {
+    "seq": 0,
+    "stale": true,
+    "age_s": null
+  },
+  "session_uptime_s": null,
+  "last_ping_ms": null,
+  "session_frames": null,
+  "session_bytes_in": null,
+  "session_bytes_out": null
+}

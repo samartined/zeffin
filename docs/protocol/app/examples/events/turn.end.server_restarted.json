@@ -1,0 +1,10 @@
+{
+  "n": 8,
+  "at": 1793000030.0,
+  "kind": "turn.end",
+  "turn": 2,
+  "outcome": "error",
+  "error": "server_restarted",
+  "data": {},
+  "duration_ms": null
+}

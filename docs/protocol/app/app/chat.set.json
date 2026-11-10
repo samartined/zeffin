@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/app/chat.set.json",
+  "title": "chat.set",
+  "description": "The conversation's mode, model or effort, from its next turn.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.set"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "mode": {
+      "$ref": "../defs.json#/$defs/mode"
+    },
+    "model": {
+      "type": "string"
+    },
+    "effort": {
+      "$ref": "../defs.json#/$defs/effort"
+    }
+  },
+  "required": [
+    "type",
+    "conversation"
+  ],
+  "additionalProperties": false
+}

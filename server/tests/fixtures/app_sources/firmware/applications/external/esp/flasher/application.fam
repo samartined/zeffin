@@ -1,0 +1,10 @@
+App(
+    appid="esp_flasher",
+    name="[ESP] " + "Flasher",
+    apptype=FlipperAppType.EXTERNAL,
+    fap_category="GPIO/ESP",
+    fap_description="Flash ESP chips over the GPIO header's UART.",
+    fap_author="Demo",
+    fap_version=(1, 2),
+    fap_weburl="https://example.invalid/esp_flasher",
+)

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/hello.json",
+  "title": "hello",
+  "description": "First message on every connection.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "hello"
+    },
+    "protocol": {
+      "const": 1
+    },
+    "server": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "description": "The server's host name"
+        },
+        "home": {
+          "type": "string",
+          "description": "The server user's home folder, absolute. The app shows it as ~ in the permission cards and notifications (display only: the answer sends the rules as offered). Optional: older servers do not send it"
+        }
+      },
+      "required": [
+        "version",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "chat",
+          "attachments",
+          "delete",
+          "remote"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "agents": {
+      "$ref": "../defs.json#/$defs/agents",
+      "description": "Every agent the server knows, as chat.status has them when the connection opens; only with the chat (chat.status brings each change)"
+    },
+    "free_only": {
+      "type": "boolean",
+      "description": "The owner's \"free only\" switch (zf set-free-only), on: the agents run only on a subscription or free providers and models. The app words what it promises by it; only with the chat"
+    }
+  },
+  "required": [
+    "type",
+    "protocol",
+    "server",
+    "features"
+  ],
+  "additionalProperties": false
+}

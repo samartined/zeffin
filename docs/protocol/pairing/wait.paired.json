@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/pairing/wait.paired.json",
+  "title": "POST /app/pair/wait, 200",
+  "description": "The owner confirmed: the address and the two tokens. Sent once; the ticket is spent.",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "phone": {
+      "type": "string",
+      "minLength": 32,
+      "description": "The relay's token (/phone)"
+    },
+    "app": {
+      "type": "string",
+      "minLength": 32,
+      "description": "The app's token (/app)"
+    }
+  },
+  "required": [
+    "url",
+    "phone",
+    "app"
+  ],
+  "additionalProperties": false
+}

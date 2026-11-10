@@ -1,0 +1,11 @@
+/* Zeffin — generated from tokens.json */
+:root{--surface:#000000;--surface-raised:#1c1c1c;--surface-sunken:#101010;--ink:#ffffff;--ink-muted:#999999;--ink-faint:#8a8a8a;--line:#333333;--line-strong:#777777;--accent:#ff8200;--on-accent:#000000;--accent-strong:#ff8200;--accent-soft:#492502;--action:#589dff;--on-action:#000000;--success:#34c7a4;--success-soft:#0f2a24;--warning:#fecf5d;--warning-soft:#242000;--danger:#f63f3f;--danger-soft:#340006;--on-danger:#000000;--info:#589dff;--info-soft:#1b2a41;--screen-bezel:#804100;--screen-paper:#ff8c29;--screen-pixel:#000000;--focus:#589dff;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-12:48px;--radius-sm:4px;--radius-md:10px;--radius-lg:16px;--radius-pill:999px;--shadow-raised:0 1px 2px rgba(0, 0, 0, 0.6);--font-sans:"Roboto", system-ui, sans-serif;--font-mono:"Roboto Mono", ui-monospace, monospace;}
+.display{font-family:var(--font-sans);font-size:24px;line-height:30px;font-weight:700;}
+.title{font-family:var(--font-sans);font-size:20px;line-height:26px;font-weight:700;}
+.heading{font-family:var(--font-sans);font-size:16px;line-height:22px;font-weight:700;}
+.body{font-family:var(--font-sans);font-size:14px;line-height:20px;font-weight:400;}
+.body-strong{font-family:var(--font-sans);font-size:14px;line-height:20px;font-weight:500;}
+.label{font-family:var(--font-sans);font-size:12px;line-height:16px;font-weight:500;}
+.caption{font-family:var(--font-sans);font-size:12px;line-height:16px;font-weight:400;}
+.mono{font-family:var(--font-mono);font-size:14px;line-height:20px;font-weight:500;}
+.mono-small{font-family:var(--font-mono);font-size:12px;line-height:16px;font-weight:500;}

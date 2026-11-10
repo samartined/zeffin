@@ -1,0 +1,11 @@
+{
+  "n": 11,
+  "at": 1793000050.0,
+  "kind": "denied",
+  "tool": "Bash",
+  "input": {
+    "command": "rm -rf build"
+  },
+  "by": "auto",
+  "reason": "Deleting files outside the task"
+}

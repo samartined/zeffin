@@ -1,0 +1,11 @@
+{
+  "n": 25,
+  "at": 1793001300.0,
+  "kind": "turn.end",
+  "turn": 4,
+  "outcome": "interrupted",
+  "error": "permission_stale",
+  "data": {},
+  "duration_ms": 960000,
+  "via": "remote"
+}

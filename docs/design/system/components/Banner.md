@@ -1,0 +1,1 @@
+A notice inside the content: a neutral `surface-raised` card whose title carries the color (`danger` error, `warning` warning, `info` help in blue, `success` correct), with gray text and, when needed, a technical detail in `mono`. There are no colored background blocks: the color goes in the text. For errors that block an action, prefer a dialog.

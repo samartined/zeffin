@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/app/chat.update.json",
+  "title": "chat.update",
+  "description": "Title, pinned or favorite.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.update"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "title": {
+      "type": "string"
+    },
+    "pinned": {
+      "type": "boolean"
+    },
+    "favorite": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "type",
+    "conversation"
+  ],
+  "additionalProperties": false
+}

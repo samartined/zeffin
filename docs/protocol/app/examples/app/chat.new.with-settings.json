@@ -1,0 +1,7 @@
+{
+  "type": "chat.new",
+  "agent": "claude-code",
+  "mode": "plan",
+  "model": "sonnet",
+  "effort": "high"
+}

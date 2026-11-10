@@ -1,0 +1,25 @@
+{
+  "type": "diag",
+  "hours": 24,
+  "session": {
+    "frames": 2210,
+    "bytes_in": 1830211,
+    "bytes_out": 40422,
+    "uptime_s": 845.3
+  },
+  "connections": 4,
+  "reached_ready": 4,
+  "reconnect_median_s": 3.1,
+  "rejected": {
+    "bad_token": 1
+  },
+  "last_rejected": {
+    "reason": "bad_token",
+    "ts": 1792995000.0
+  },
+  "pings": 90,
+  "pings_ok": 89,
+  "rtt_median_ms": 41,
+  "stream_failures": 0,
+  "agent_actions": 37
+}

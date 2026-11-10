@@ -1,0 +1,17 @@
+{
+  "about": "The free models the bridge offers with OpenCode, for the 'free only' switch. NVIDIA NIM's catalog says cost 0 for every model, so its free ones are this curated list; OpenCode Zen's are those its catalog prices at 0, but for the ones listed under zen_excluded. Each model says whether it takes images (the Flipper's screen reaches the model as an image).",
+  "providers": ["opencode", "nvidia"],
+  "default": "nvidia/nvidia/nemotron-3.5-super-vl-120b-a12b",
+  "fallback": "opencode/nemotron-3.5-super-vl-free",
+  "nvidia": [
+    {"value": "nvidia/nvidia/nemotron-3.5-super-vl-120b-a12b", "label": "Nemotron 3.5 Super VL", "images": true}
+  ],
+  "max_images": {
+    "about": "The images a model takes in one request, where its provider caps them below what the bridge would send: NVIDIA's hosted API refuses 14 or more (HTTP 422, 'input rejected by content safety screening'), and so does Zen's route to the same model (422, 'Endpoint is unavailable'). The agent resends the whole conversation each time, so the bridge compacts it before it gets there (chat/turn.py).",
+    "nvidia/nvidia/nemotron-3.5-super-vl-120b-a12b": 13,
+    "opencode/nemotron-3.5-super-vl-free": 13
+  },
+  "zen_excluded": {
+    "opencode/glm-5.3-flash-free": "read the simulator's menu one row off in the trial"
+  }
+}

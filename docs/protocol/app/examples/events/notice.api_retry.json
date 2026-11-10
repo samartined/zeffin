@@ -1,0 +1,12 @@
+{
+  "n": 5,
+  "at": 1793000009.0,
+  "kind": "notice",
+  "code": "api_retry",
+  "data": {
+    "attempt": 1,
+    "max_retries": 10,
+    "retry_delay_ms": 600,
+    "error_status": 529
+  }
+}

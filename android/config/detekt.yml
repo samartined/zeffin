@@ -1,0 +1,31 @@
+# detekt, check-only (`./gradlew detekt`), on top of detekt's default rules. Formatting rules are not used.
+# Rules the code does not follow on purpose are off here; what the default rules found in the code as it was when
+# detekt came in is in detekt-baseline.xml, by signature, so moving code does not bring it back.
+style:
+  MaxLineLength:
+    active: false  # the code wraps at its own width
+  MagicNumber:
+    active: false  # dimensions, colors and protocol figures are written where they are used
+  ForbiddenImport:
+    active: true
+    # docs/architecture.md, "Android app": outside the relay module, only RelayController and the relay's data types.
+    # The package rules inside the app are app/src/test/kotlin/dev/zeffin/AppLayersTest.kt.
+    excludes: ['**/relay/src/**']
+    imports:
+      - value: 'dev.zeffin.relay.ble.*'
+        reason: 'The Bluetooth side is the relay''s own: use RelayController (radioState, bondedDevices).'
+      - value: 'dev.zeffin.relay.OkHttp*'
+        reason: 'The relay''s sockets are its own: use RelayController.checkServer.'
+      - value: 'dev.zeffin.relay.RelaySession'
+        reason: 'Internal to the relay: use RelayController.'
+      - value: 'dev.zeffin.relay.rpc.*'
+        reason: 'The relay''s RPC codec is its own: use RelayController (frames, remote, press).'
+      - value: 'dev.zeffin.relay.RemoteSession'
+        reason: 'Internal to the relay: use RelayController.'
+      - value: 'dev.zeffin.relay.RelayEngine'
+        reason: 'Internal to the relay: use RelayController.'
+      - value: 'dev.zeffin.relay.RelayService'
+        reason: 'Internal to the relay: use RelayController (EXTRA_OPEN, start, stop).'
+naming:
+  FunctionNaming:
+    ignoreAnnotated: ['Composable']  # composables are named like types

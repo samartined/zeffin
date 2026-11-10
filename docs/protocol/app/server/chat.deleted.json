@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/server/chat.deleted.json",
+  "title": "chat.deleted",
+  "description": "A conversation was deleted for good.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.deleted"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    }
+  },
+  "required": [
+    "type",
+    "conversation"
+  ],
+  "additionalProperties": false
+}

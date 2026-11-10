@@ -1,0 +1,18 @@
+{
+  "type": "chat.event",
+  "conversation": "3f2b8c1e-5d4a-4e6f-9b7c-2a1d0e9f8c7b",
+  "n": 9,
+  "at": 1793000030.2,
+  "kind": "permission",
+  "id": "4c1f9a7e2b3d",
+  "tool": "Bash",
+  "input": {
+    "command": "touch fb-test.txt",
+    "description": "Create an empty file"
+  },
+  "deadline": 1793000150.2,
+  "always": true,
+  "rules": [
+    "Bash(touch fb-test.txt)"
+  ]
+}

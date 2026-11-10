@@ -1,0 +1,9 @@
+{
+  "n": 2,
+  "at": 1793000000.1,
+  "kind": "turn.start",
+  "turn": 1,
+  "mode": "default",
+  "model": "opus",
+  "effort": "medium"
+}

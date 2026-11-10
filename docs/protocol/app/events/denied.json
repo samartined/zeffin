@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/events/denied.json",
+  "title": "chat.event: denied",
+  "description": "A tool call the mode or automatic mode blocked. In chat.event it also carries type and conversation; in chat.history it does not.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "chat.event"
+    },
+    "conversation": {
+      "$ref": "../defs.json#/$defs/conversationId"
+    },
+    "n": {
+      "type": "integer"
+    },
+    "at": {
+      "type": "number"
+    },
+    "kind": {
+      "const": "denied"
+    },
+    "tool": {
+      "type": "string"
+    },
+    "input": {},
+    "by": {
+      "enum": [
+        "auto",
+        "mode"
+      ]
+    },
+    "reason": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "n",
+    "at",
+    "kind",
+    "tool",
+    "input",
+    "by",
+    "reason"
+  ],
+  "additionalProperties": false
+}

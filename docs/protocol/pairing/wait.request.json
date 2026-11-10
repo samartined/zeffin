@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/pairing/wait.request.json",
+  "title": "POST /app/pair/wait, the request",
+  "description": "Wait for the owner's answer. The server holds it for at most 20 s.",
+  "type": "object",
+  "properties": {
+    "pairing": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "pairing"
+  ],
+  "additionalProperties": false
+}

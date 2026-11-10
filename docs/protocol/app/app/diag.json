@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/app/diag.json",
+  "title": "diag",
+  "description": "Ask for the Diagnostics figures.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "diag"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false
+}

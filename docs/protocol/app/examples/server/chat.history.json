@@ -1,0 +1,49 @@
+{
+  "type": "chat.history",
+  "conversation": "3f2b8c1e-5d4a-4e6f-9b7c-2a1d0e9f8c7b",
+  "events": [
+    {
+      "n": 1,
+      "at": 1793000000.0,
+      "kind": "user",
+      "text": "What does the Flipper show?"
+    },
+    {
+      "n": 2,
+      "at": 1793000000.1,
+      "kind": "turn.start",
+      "turn": 1,
+      "mode": "default",
+      "model": "opus",
+      "effort": "medium"
+    },
+    {
+      "n": 3,
+      "at": 1793000002.4,
+      "kind": "turn.info",
+      "mode": "default",
+      "model": "claude-opus-example",
+      "effort": "medium",
+      "version": "2.1.308",
+      "flipper_mcp": "connected"
+    },
+    {
+      "n": 4,
+      "at": 1793000005.0,
+      "kind": "text",
+      "id": "msg_01:0",
+      "text": "The Flipper shows its **main menu**."
+    },
+    {
+      "n": 14,
+      "at": 1793000120.5,
+      "kind": "turn.end",
+      "turn": 1,
+      "outcome": "done",
+      "error": null,
+      "data": {},
+      "duration_ms": 120400
+    }
+  ],
+  "more": true
+}

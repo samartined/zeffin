@@ -1,0 +1,133 @@
+{
+  "type": "chat.status",
+  "agents": [
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "version": "2.1.308",
+      "configured": true,
+      "ready": false,
+      "problem": "not_logged_in",
+      "login": {
+        "method": null,
+        "subscription": false
+      },
+      "models": [
+        {
+          "value": "opus",
+          "label": "Opus",
+          "efforts": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "auto": true,
+          "images": true,
+          "available": true,
+          "reason": null,
+          "paid": false
+        },
+        {
+          "value": "sonnet",
+          "label": "Sonnet",
+          "efforts": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "auto": true,
+          "images": true,
+          "available": true,
+          "reason": null,
+          "paid": false
+        },
+        {
+          "value": "haiku",
+          "label": "Haiku",
+          "efforts": [],
+          "auto": false,
+          "images": true,
+          "available": true,
+          "reason": null,
+          "paid": false
+        }
+      ],
+      "mode_options": [
+        {
+          "value": "default",
+          "label": "Manual"
+        },
+        {
+          "value": "acceptEdits",
+          "label": "Accept edits"
+        },
+        {
+          "value": "plan",
+          "label": "Plan"
+        },
+        {
+          "value": "auto",
+          "label": "Auto"
+        }
+      ],
+      "remote": {
+        "name": "Remote Control",
+        "keeper": "Anthropic",
+        "answers": "elsewhere",
+        "attachments": true
+      },
+      "attachments": true
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "version": null,
+      "configured": false,
+      "ready": false,
+      "problem": "not_configured",
+      "login": {
+        "method": null,
+        "subscription": false
+      },
+      "models": [],
+      "mode_options": [
+        {
+          "value": "default",
+          "label": "Manual"
+        },
+        {
+          "value": "acceptEdits",
+          "label": "Accept edits"
+        },
+        {
+          "value": "plan",
+          "label": "Plan"
+        }
+      ],
+      "remote": null,
+      "attachments": true
+    }
+  ],
+  "settings": {
+    "default_agent": "claude-code",
+    "permission_timeout_s": 120,
+    "agents": {
+      "claude-code": {
+        "default_mode": "default",
+        "default_model": "opus",
+        "default_effort": "medium"
+      },
+      "opencode": {
+        "default_mode": "default",
+        "default_model": "opencode/nemotron-3.5-super-vl-free",
+        "default_effort": "medium"
+      }
+    }
+  },
+  "turn": null,
+  "pending": [],
+  "remote": null,
+  "free_only": true
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/app/ping.json",
+  "title": "ping",
+  "description": "Check that the connection is alive.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "ping"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "additionalProperties": false
+}

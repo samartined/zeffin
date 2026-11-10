@@ -1,0 +1,9 @@
+{
+  "type": "error",
+  "error": "too_long",
+  "data": {
+    "max": 16000
+  },
+  "request": "chat.send",
+  "message": "chat.send failed: too_long"
+}

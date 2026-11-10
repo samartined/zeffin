@@ -1,0 +1,142 @@
+[
+ {
+  "appid": "about",
+  "name": "About",
+  "summary": "Shows the firmware version, the hardware and the regulatory information.",
+  "capabilities": [],
+  "builtin": true,
+  "path": "/ext/apps/assets/about.fap",
+  "where": "Settings"
+ },
+ {
+  "appid": "archive",
+  "name": "Archive",
+  "summary": "Browses the files saved by each app, by tab, and opens, renames or deletes them.",
+  "capabilities": [
+   "writes_files"
+  ],
+  "builtin": true,
+  "where": "desktop, DOWN"
+ },
+ {
+  "appid": "bt_settings",
+  "name": "Bluetooth",
+  "summary": "Turns Bluetooth on or off and forgets paired devices.",
+  "capabilities": [],
+  "builtin": true,
+  "path": "/ext/apps/assets/bt_settings.fap",
+  "where": "Settings"
+ },
+ {
+  "appid": "clock_settings",
+  "name": "Clock & Alarm",
+  "summary": "Sets the alarm and how the clock is shown.",
+  "capabilities": [],
+  "builtin": true,
+  "path": "/ext/apps/assets/clock_settings.fap",
+  "where": "Settings"
+ },
+ {
+  "appid": "desktop_settings",
+  "name": "Desktop",
+  "summary": "Sets the PIN lock, the auto-lock delay and the desktop's quick access apps.",
+  "capabilities": [],
+  "builtin": true,
+  "path": "/ext/apps/assets/desktop_settings.fap",
+  "where": "Settings"
+ },
+ {
+  "appid": "expansion_settings",
+  "name": "Expansion Modules",
+  "summary": "Chooses which port an expansion module on the GPIO header may connect through.",
+  "capabilities": [],
+  "builtin": true,
+  "path": "/ext/apps/assets/expansion_settings.fap",
+  "where": "Settings"
+ },
+ {
+  "appid": "input_settings",
+  "name": "Input",
+  "summary": "Sets how the buttons react, such as vibration on each press.",
+  "capabilities": [],
+  "builtin": true,
+  "path": "/ext/apps/assets/input_settings.fap",
+  "where": "Settings"
+ },
+ {
+  "appid": "js_app",
+  "name": "JS Runner",
+  "summary": "Runs JavaScript (.js) scripts opened from the Archive or the file browser.",
+  "capabilities": [],
+  "builtin": true,
+  "path": "/ext/apps/assets/js_app.fap",
+  "where": "opened with a .js file"
+ },
+ {
+  "appid": "momentum_app",
+  "name": "MNTM",
+  "summary": "Momentum's own settings: Interface, Protocols and Misc (the main menu's apps, the asset packs and more inside).",
+  "capabilities": [
+   "writes_files"
+  ],
+  "builtin": true,
+  "path": "/ext/apps/assets/momentum_app.fap",
+  "where": "main menu"
+ },
+ {
+  "appid": "notification_settings",
+  "name": "LCD and Notifications",
+  "summary": "Sets the screen backlight, contrast, LED brightness, volume and vibration.",
+  "capabilities": [],
+  "builtin": true,
+  "path": "/ext/apps/assets/notification_settings.fap",
+  "where": "Settings"
+ },
+ {
+  "appid": "passport",
+  "name": "Passport",
+  "summary": "Shows the dolphin's name, level, mood and experience.",
+  "capabilities": [],
+  "builtin": true,
+  "path": "/ext/apps/assets/passport.fap",
+  "where": "Settings; desktop, RIGHT"
+ },
+ {
+  "appid": "power_settings",
+  "name": "Power",
+  "summary": "Shows the battery, and reboots or powers off the Flipper.",
+  "capabilities": [],
+  "builtin": true,
+  "path": "/ext/apps/assets/power_settings.fap",
+  "where": "Settings"
+ },
+ {
+  "appid": "storage_settings",
+  "name": "Storage",
+  "summary": "Shows the SD card's space, and mounts, unmounts, formats or benchmarks it.",
+  "capabilities": [],
+  "builtin": true,
+  "path": "/ext/apps/assets/storage_settings.fap",
+  "where": "Settings"
+ },
+ {
+  "appid": "subghz_add_manually",
+  "name": "Add Manually",
+  "summary": "Sub-GHz's Add Manually: makes a saved signal from a chosen protocol and key, without receiving it.",
+  "capabilities": [
+   "writes_files"
+  ],
+  "builtin": true,
+  "path": "/ext/apps/assets/subghz_add_manually.fap",
+  "where": "Sub-GHz, Add Manually"
+ },
+ {
+  "appid": "system_settings",
+  "name": "System",
+  "summary": "Sets the hand orientation, units, time and date format, log level and debug mode.",
+  "capabilities": [],
+  "builtin": true,
+  "path": "/ext/apps/assets/system_settings.fap",
+  "where": "Settings"
+ }
+]

@@ -1,0 +1,3 @@
+[
+ {"appid": "archive", "name": "Archive", "summary": "Browses the saved files of every app, by tab.", "capabilities": [], "builtin": true, "where": "main menu"}
+]

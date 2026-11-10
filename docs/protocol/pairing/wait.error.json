@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/pairing/wait.error.json",
+  "title": "POST /app/pair/wait, refused",
+  "description": "403 refused (the owner said no), 410 expired (120 s passed, the owner cancelled, or a new pairing started), 404 unknown (not a ticket, or the tokens were already given), 413 too_large.",
+  "type": "object",
+  "properties": {
+    "error": {
+      "enum": [
+        "refused",
+        "expired",
+        "unknown",
+        "too_large"
+      ]
+    }
+  },
+  "required": [
+    "error"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zeffin.invalid/protocol/app/app/gate.json",
+  "title": "gate",
+  "description": "Pause, resume or stop the agent's control, as the web view's buttons. \"via\" names who on the phone sent it: \"remote\" is the phone's remote for the Flipper, recorded as \"remote\" in the gate's \"by\" and the audit (else \"app\").",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "gate"
+    },
+    "action": {
+      "enum": [
+        "pause",
+        "resume",
+        "stop"
+      ]
+    },
+    "via": {
+      "enum": [
+        "remote"
+      ]
+    }
+  },
+  "required": [
+    "type",
+    "action"
+  ],
+  "additionalProperties": false
+}
