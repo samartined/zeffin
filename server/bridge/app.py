@@ -367,6 +367,8 @@ class _Tls13Config(uvicorn.Config):
         super().load()
         assert self.ssl is not None
         self.ssl.minimum_version = ssl.TLSVersion.TLSv1_3
+        # The server does not resume sessions, so every connection presents the key and the pin is always checked
+        self.ssl.num_tickets = 0
 
 
 def listener_config(app, host: str, port: int, *, tls: tlskey.ServerKey | None = None, **options) -> uvicorn.Config:
