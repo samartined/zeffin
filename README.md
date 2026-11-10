@@ -106,6 +106,7 @@ The Flipper Zero can transmit: Sub-GHz radio, infrared, NFC and RFID emulation, 
 - **[The user's guide](docs/guide/README.md):** what Zeffin needs, [installing the server](docs/guide/install-the-server.md), [pairing the app](docs/guide/pair-the-app.md), [using the agent](docs/guide/use-the-agent.md), [the Flipper tools](docs/guide/flipper-tools.md), [the remote](docs/guide/the-remote.md), [Pause and Stop](docs/guide/pause-and-stop.md), [security](docs/guide/security.md), [updating](docs/guide/updating.md), [the `zf` command](docs/guide/zf-command.md), [troubleshooting](docs/guide/troubleshooting.md) and the [FAQ](docs/guide/faq.md).
 - **[The documentation index](docs/README.md):** the reference, for whoever builds or reviews Zeffin: the architecture, the security model, the Android app, the protocols and the design.
 - **Contributing:** [CONTRIBUTING.md](CONTRIBUTING.md), with the checks and how to build. **Reporting a vulnerability:** [SECURITY.md](SECURITY.md).
+- **Questions:** ask in [Discussions](https://github.com/samartined/zeffin/discussions/categories/q-a), under Q&A. [Issues](https://github.com/samartined/zeffin/issues) are for bugs and feature requests.
 
 ## License
 

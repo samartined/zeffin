@@ -80,4 +80,4 @@ Start with `zf status` on the server and Settings, **Diagnostics** in the app (*
 
 - `zf report` summarizes the connection's stability over the last 24 hours (`zf report 72` for three days).
 - `zf logs -f` follows the service's log while you try again.
-- If you report a problem, include `zf status` and the app's **Copy diagnostics**, never a token, `config.json` or the key.
+- Ask in [Discussions](https://github.com/samartined/zeffin/discussions/categories/q-a) (Q&A), or open an issue for a bug. Include `zf status` and the app's **Copy diagnostics**, never a token, `config.json` or the key.
