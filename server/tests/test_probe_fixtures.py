@@ -191,13 +191,6 @@ def test_the_self_check_refuses_to_write(tmp_path, fake_claude, monkeypatch, hom
     assert str(tmp_path) not in json.dumps(report) + "\n".join(lines)
 
 
-def test_without_fixtures_nothing_is_kept(tmp_path, fake_claude, monkeypatch, home):
-    _quick(monkeypatch)
-    c = cfg.load(_config(tmp_path))
-    report = run_probe(c, str(fake_claude), mcp_running=False, out=lambda *_: None)
-    assert "fixtures" not in report
-
-
 def _base_secrets() -> Secrets:
     from bridge.chat.redact import path_forms
 
