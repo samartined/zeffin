@@ -153,6 +153,8 @@ The last scan ran on 2026-11-03, before the fixes that went into 1.0.0, over the
   - server: `privnet.lookup` and `_read_capped` (a subprocess per device, its output capped), `peers.py` (the devices list: what enters it, its bound, the background lookups), the hooks after each credential check in `phonews.py`, `appws.py`, `view.py` and `app.py`, and `/status`'s `devices`.
 - **1.0.0, the notes per app:**
   - server: `notes.py` (the cleaning, the caps, the key and the files under `state/notes/`), `flipper_note` and the three read paths in `tools.py` (`note_text`, `find_note`, `notes_lines`, and `flipper_app_start`'s `note`), `zf notes`, and `CLAUDE_CODE_DISABLE_AUTO_MEMORY` in `command.base_env`.
+- **1.0.1, no session tickets:**
+  - server: `_Tls13Config.load` in `app.py` sets `num_tickets = 0` on the public listener: no session is resumed, so every connection presents the key and the pin is checked each time.
 - **Known limits to look at again:** the user-scope MCP entry (see "Tokens"); the private network's limits (see "What is trusted"); shell commands that write the agents' own files without naming them (see "The agent").
 
 ## Findings

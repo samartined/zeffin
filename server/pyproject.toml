@@ -1,6 +1,6 @@
 [project]
 name = "zeffin"
-version = "1.0.0"
+version = "1.0.1"
 description = "Generic Flipper Zero control from Claude Code through an Android phone relay and Tailscale"
 requires-python = ">=3.11"
 license = "AGPL-3.0-or-later"

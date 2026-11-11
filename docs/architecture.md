@@ -145,10 +145,10 @@ Who does what across the pieces:
     - the TLS trust lives only in `ServerHttp`: a trust manager and an `SSLContext` per pin, TLS 1.3 only, no CA, no host name check, `Proxy.NO_PROXY`, and every socket still bound to the tunnel;
   - **server:**
     - `tlskey.py` in persistence: the key and certificate files, `0600` and written atomically, the pin and the fingerprint;
-    - TLS 1.3 in `listener_config`, on the public listener only;
+    - TLS 1.3 in `listener_config`, on the public listener only, with no session tickets;
     - the pairing session in `paircodes.py`, and its routes in `pairing.py`, `view.py` and `cli.py`.
 - **What it exposes:**
-  - the public listener speaks only TLS 1.3 with that key;
+  - the public listener speaks only TLS 1.3 with that key, and resumes no session, so every connection presents the key;
   - the QR code `{"fb": 3, "url", "code", "key"}` holds no secret;
   - `zf status` prints the fingerprint, and `zf key` the fingerprint and the pin;
   - `/status` gives the running pin.
