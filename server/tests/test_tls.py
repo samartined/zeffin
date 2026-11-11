@@ -119,3 +119,11 @@ def test_both_listeners_keep_the_kernels_peer(tmp_path):
     assert public.ssl_keyfile == str(key.key_path) and loopback.ssl_keyfile is None
     public.load()
     assert public.ssl.minimum_version == ssl.TLSVersion.TLSv1_3
+
+
+def test_the_public_listener_sends_no_session_tickets(tmp_path):
+    """The server does not resume sessions: every connection presents the key, so the pin is always checked."""
+    key, _ = tlskey.ensure(tmp_path, "127.0.0.1")
+    config = listener_config(hello, "127.0.0.1", free_port(), tls=key)
+    config.load()
+    assert config.ssl.num_tickets == 0

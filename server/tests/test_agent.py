@@ -104,6 +104,7 @@ def test_probe_against_the_fake(tmp_path, fake_claude, monkeypatch, home):
     text = json.dumps(report) + "\n".join(lines)
     assert c.mcp_token not in text and str(tmp_path) not in text and "tangerine" not in text
     assert not list(c.state.glob("probe-*"))
+    assert "fixtures" not in report  # without --fixtures nothing is kept
     assert report["trusted"] == "trusted"  # and the temporary folder's entry is gone again
     assert json.loads((home / ".claude.json").read_text()) == {"projects": {"/elsewhere": {"hasTrustDialogAccepted": True}},
                                                                 "theme": "dark"}
@@ -172,15 +173,19 @@ def _remote_probe(tmp_path, fake_claude, monkeypatch):
 
 def test_remote_probe_against_the_fake(tmp_path, fake_claude, monkeypatch, home):
     """The whole probe with --remote: run_probe trusts its temporary folder, so the interactive
-    process asks no trust question, and the trust entry is gone afterwards."""
+    process asks no trust question, and the trust entry is gone afterwards. The MCP token never leaves:
+    whatever listens on the MCP port while the bridge is down gets it neither from a -p turn nor from a
+    Remote Control launch."""
     _quick_remote_steps(monkeypatch)
     monkeypatch.setattr(Probe, "HOLD_S", 0.3)
     monkeypatch.setattr(Probe, "TIMEOUT_HOOK_S", 1)
     monkeypatch.setattr(Probe, "TIMEOUT_DELAY_S", 2.0)
+    tokens = _record_mcp_tokens(monkeypatch)
     c = cfg.load(_config(tmp_path))
     lines = []
     report = run_probe(c, str(fake_claude), mcp_running=False, out=lines.append, remote=True)
     checks = report["checks"]
+    assert checks["flipper_mcp"]["ok"] is None and "skipped" in checks["flipper_mcp"]["summary"]
     assert checks["rc_start"]["trust_question"] is False and report["trusted"] == "trusted"
     assert json.loads((home / ".claude.json").read_text()) == {"projects": {}}
     for name in ("rc_start", "rc_prompt_hooks", "rc_permission_notice", "rc_block", "rc_interrupt", "rc_bridge_header",
@@ -213,6 +218,10 @@ def test_remote_probe_against_the_fake(tmp_path, fake_claude, monkeypatch, home)
     assert c.mcp_token not in text and str(tmp_path) not in text and "tangerine" not in text
     assert "6131" not in text and "cse_fake" not in text and "sierra" not in text
     assert not list(c.state.glob("probe-files-*"))
+    all_runs = fake_runs(fake_claude)
+    assert any(r.get("interactive") for r in all_runs) and any("-p" in r["argv"] for r in all_runs)
+    leaked = sum(1 for token in tokens if token)  # a count: a failure never prints a token
+    assert tokens and leaked == 0, lines
 
 
 def test_remote_probe_when_the_interactive_session_forks(tmp_path, fake_claude, monkeypatch, home):
@@ -287,24 +296,6 @@ def _record_mcp_tokens(monkeypatch) -> list[str]:
 
     monkeypatch.setattr(command, "turn_env", turn_env)
     return tokens
-
-
-def test_probe_sends_no_mcp_token_without_the_bridge(tmp_path, fake_claude, monkeypatch, home):
-    """Whatever listens on the MCP port while the bridge is down never gets the token,
-    neither from a -p turn nor from a Remote Control launch."""
-    _quick_remote_steps(monkeypatch)
-    monkeypatch.setattr(Probe, "HOLD_S", 0.3)
-    monkeypatch.setattr(Probe, "TIMEOUT_HOOK_S", 1)
-    monkeypatch.setattr(Probe, "TIMEOUT_DELAY_S", 2.0)
-    tokens = _record_mcp_tokens(monkeypatch)
-    c = cfg.load(_config(tmp_path))
-    lines = []
-    report = run_probe(c, str(fake_claude), mcp_running=False, out=lines.append, remote=True)
-    assert report["checks"]["flipper_mcp"]["ok"] is None and "skipped" in report["checks"]["flipper_mcp"]["summary"]
-    runs = fake_runs(fake_claude)
-    assert any(r.get("interactive") for r in runs) and any("-p" in r["argv"] for r in runs)
-    leaked = sum(1 for token in tokens if token)  # a count: a failure never prints a token
-    assert tokens and leaked == 0, lines
 
 
 def test_probe_stops_at_a_listener_of_another_user(tmp_path, fake_claude, monkeypatch, capsys):

@@ -53,17 +53,27 @@ class Live:
         self.proc = subprocess.Popen([sys.executable, "-I", *run, "--config", str(self.path), "run"],
                                      env=env, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
         self.ws = None
-        deadline = time.monotonic() + 15
-        while True:
+        try:
+            deadline = time.monotonic() + 15
+            while True:
+                try:
+                    self.ws = app_ws(self.c, self.folder, max_size=16 * 1024 * 1024).__enter__()
+                    break
+                except OSError:
+                    if time.monotonic() > deadline or self.proc.poll() is not None:
+                        raise RuntimeError("server did not start: " + (self.proc.stderr.read() if self.proc.poll() is not None else ""))
+                    time.sleep(0.1)
+            self.send("chat.list")
+            self.until(lambda m: m["type"] == "chat.status" and m["agents"][0]["problem"] != "checking", 15)
+        except BaseException:
+            # Whatever fails after the Popen, the server is not left running
+            self.proc.terminate()
             try:
-                self.ws = app_ws(self.c, self.folder, max_size=16 * 1024 * 1024).__enter__()
-                break
-            except OSError:
-                if time.monotonic() > deadline or self.proc.poll() is not None:
-                    raise RuntimeError("server did not start: " + (self.proc.stderr.read() if self.proc.poll() is not None else ""))
-                time.sleep(0.1)
-        self.send("chat.list")
-        self.until(lambda m: m["type"] == "chat.status" and m["agents"][0]["problem"] != "checking", 15)
+                self.proc.wait(timeout=20)
+            except subprocess.TimeoutExpired:
+                self.proc.kill()
+                self.proc.wait()
+            raise
 
     def send(self, kind: str, **fields) -> None:
         self.ws.send(json.dumps({"type": kind, **fields}))
