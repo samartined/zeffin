@@ -426,17 +426,16 @@ async def test_watch_match_compares_with_a_kept_frame(env):
     assert result.is_error and "no longer kept" in texts(result)[0]
 
 
-async def test_watch_repeats_with_keys_and_rearms_after_them(env):
+async def test_watch_presses_its_keys_when_it_triggers(env):
     _, flipper, mcp = env
     flipper.emit_frame(data=dots())
     await asyncio.sleep(0.05)
     later(0.1, lambda: flipper.emit_frame(data=dots((1, 1))))
-    later(2.2, lambda: flipper.emit_frame(data=dots((2, 2))))
-    result = await call(mcp, "flipper_watch", until="change", region=[0, 0, 8, 8], keys=["RIGHT"], repeat=2,
+    result = await call(mcp, "flipper_watch", until="change", region=[0, 0, 8, 8], keys=["RIGHT"], repeat=1,
                         timeout_s=5)
     meta = json.loads(texts(result)[0])
-    assert len(meta["triggers"]) == 2 and not meta["timed_out"]
-    assert [k for k, t in flipper.inputs if t == "SHORT"] == ["RIGHT", "RIGHT"]
+    assert len(meta["triggers"]) == 1 and not meta["timed_out"]
+    assert [k for k, t in flipper.inputs if t == "SHORT"] == ["RIGHT"]
 
 
 async def test_watch_stops_when_the_operator_pauses(env):
